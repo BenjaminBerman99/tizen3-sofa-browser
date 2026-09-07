@@ -1,11 +1,12 @@
 {
   "name": "tizen3-sofa-browser",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A remote-friendly TizenBrew browser for Tizen 3 with best-effort ad blocking and direct-stream playback.",
   "license": "MIT",
   "packageType": "mods",
   "appName": "Sofa Browser \u00b7 Tizen 3",
   "websiteURL": "http://127.0.0.1:8081/#sofa-home",
+  "main": "browser.js",
   "evaluateScriptOnDocumentStart": false,
   "keys": [
     "MediaPlayPause",
@@ -19,5 +20,11 @@
     "ColorF2Yellow",
     "ColorF3Blue"
   ],
-  "main": "browser.js"
+  "keywords": [
+    "tizenbrew",
+    "tizen3",
+    "samsung-tv",
+    "browser",
+    "remote"
+  ]
 }

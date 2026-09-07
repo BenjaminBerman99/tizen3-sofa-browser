@@ -58,7 +58,7 @@ window.__sofaBrowserInstalled = true;
     return {domains: domains, host: host, blocked: blocked, normalize: normalize, isMedia: isMedia, nearest: nearest, time: time};
 }));
 
-var SOFA_CSS = ".sofa-root { all: initial; position: fixed; z-index: 2147483646; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; font-family: Arial, Helvetica, sans-serif; color: #eef2f5; font-size: 22px; line-height: 1.5; text-align: left; }\n.sofa-root * { box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; }\n.sofa-root h1,.sofa-root h2,.sofa-root p { padding: 0; margin: 0; color: inherit; }\n.sofa-root h1 { font-size: 42px; font-weight: 500; line-height: 1.15; letter-spacing: -1px; }\n.sofa-root h2 { font-size: 24px; font-weight: 500; }\n.sofa-panel { pointer-events: auto; position: absolute; top: 0; left: 0; width: 100%; height: 100%; padding: 55px 6%; background: #0c1119; overflow-y: auto; }\n.sofa-dialog-head { margin-bottom: 28px; }\n.sofa-dialog-head h1 { margin: 12px 0 16px; }\n.sofa-eyebrow { color: #99a4b2; font-size: 13px; letter-spacing: 2px; font-weight: bold; }\n.sofa-muted { color: #96a1b0 !important; font-size: 17px; line-height: 1.6; }\n.sofa-button { all: initial; display: inline-block; box-sizing: border-box; cursor: pointer; pointer-events: auto; font: 20px/1.35 Arial, Helvetica, sans-serif; text-align: center; border: 2px solid #293341; border-radius: 10px; padding: 16px 23px; margin: 0 12px 12px 0; color: #edf2f6; background: #18212d; min-height: 60px; vertical-align: middle; transition: background-color .12s, border-color .12s; }\n.sofa-button:focus,.sofa-input:focus,.sofa-keyboard-display:focus { outline: 3px solid #a9f3d0 !important; outline-offset: 4px; border-color: #a9f3d0; background-color: #243c3a; }\n.sofa-button:hover { border-color: #a9f3d0; }\n.sofa-primary { background: #b3f1d3; color: #10221e; border-color: #b3f1d3; font-weight: bold; }\n.sofa-primary:focus { color: #0c211a; background: #ccffe7; }\n.sofa-secondary { color: #aeb9c6; }\n.sofa-row { display: flex; flex-wrap: wrap; align-items: center; margin-top: 22px; }\n.sofa-input { display: block; width: 100%; padding: 20px 25px; font-size: 26px; color: #edf2f6; background: #141e2a; border: 2px solid #3c4858; border-radius: 10px; margin-bottom: 24px; }\n.sofa-list { max-width: 1100px; }\n.sofa-list .sofa-button { display: block; width: 100%; text-align: left; overflow-wrap: break-word; word-wrap: break-word; }\n.sofa-menu-grid { display: flex; flex-wrap: wrap; margin-bottom: 22px; }\n.sofa-menu-grid .sofa-button { width: 31%; margin-bottom: 18px; text-align: left; font-size: 19px; }\n.sofa-home { padding: 0; display: flex !important; }\n.sofa-sidebar { flex: 0 0 235px; width: 235px; border-right: 1px solid #242b35; padding: 45px 26px; position: relative; }\n.sofa-brand-mark { display: inline-block; width: 45px; height: 45px; text-align: center; border: 2px solid #b3f1d3; border-radius: 15px; color: #b3f1d3; font-size: 33px; line-height: 35px; margin-right: 10px; vertical-align: middle; }\n.sofa-brand { display: inline-block; font-size: 39px; font-weight: bold; letter-spacing: -2px; vertical-align: middle; }\n.sofa-brand-sub { font-size: 9px; letter-spacing: 1.7px; color: #788492; margin: 16px 0 60px; }\n.sofa-nav { width: 100%; text-align: left; font-size: 17px; border: 1px solid transparent; background: transparent; padding: 16px 12px; margin: 0 0 10px; min-height: 54px; color: #96a1ae; }\n.sofa-selected { color: #b3f1d3; background: #172e2a; border-color: #29433b; }\n.sofa-device { white-space: pre-line; font-size: 12px; line-height: 1.9; position: absolute; bottom: 35px; left: 38px; color: #748292; }\n.sofa-main { flex: 1; min-width: 0; padding: 42px 48px 28px; }\n.sofa-home-top { display: flex; justify-content: space-between; align-items: center; }\n.sofa-pill { font-size: 12px; color: #b3f1d3; border: 1px solid #35443e; border-radius: 30px; padding: 8px 14px; background: #16261f; }\n.sofa-hero { display: flex; position: relative; height: 275px; margin: 32px 0 12px; align-items: center; }\n.sofa-hero-copy { width: 65%; z-index: 1; }\n.sofa-hero h1 { font-size: 62px; line-height: 1.02; font-weight: 500; letter-spacing: -2.6px; }\n.sofa-accent { color: #b3f1d3 !important; }\n.sofa-intro { color: #96a1af !important; font-size: 17px; line-height: 1.7; margin-top: 22px !important; white-space: pre-line; }\n.sofa-remote-art { position: relative; flex: 1; height: 260px; }\n.sofa-orbit { width: 260px; height: 260px; position: absolute; top: -5px; left: -14px; border-radius: 50%; border: 1px solid #2a403c; background: radial-gradient(ellipse at center, #224237 0%, #16251f 38%, #0c1119 70%); }\n.sofa-orbit:after { content: ''; position: absolute; top: 35px; left: 35px; right: 35px; bottom: 35px; border: 1px solid #294039; border-radius: 50%; }\n.sofa-remote { position: absolute; left: 68px; top: -10px; width: 92px; height: 236px; border-radius: 38px; transform: rotate(19deg); background: linear-gradient(110deg, #44514f, #222d2d 40%, #151e20 100%); box-shadow: -8px 12px 35px rgba(0,0,0,.4); border: 2px solid #50605a; }\n.sofa-remote i { position: absolute; top: 20px; left: 38px; width: 11px; height: 11px; border-radius: 100%; border: 2px solid #b3f1d3; }\n.sofa-dpad { position: absolute; top: 55px; left: 12px; width: 64px; height: 64px; border-radius: 100%; border: 1px solid #668075; background: #263d34; text-align: center; font-size: 11px; line-height: 16px; }\n.sofa-dpad b { display: block; font-size: 12px; line-height: 29px; color: #b3f1d3; }\n.sofa-remote-keys { position: absolute; top: 135px; left: 18px; color: #a8b9b2; font-size: 19px; }\n.sofa-remote-line { position: absolute; top: 183px; left: 31px; width: 24px; height: 3px; border-radius: 5px; background: #52655d; }\n.sofa-art-label { position: absolute; bottom: 0; width: 250px; text-align: center; font-size: 8px; letter-spacing: 1.4px; color: #73877d; }\n.sofa-address-launch { width: 100%; display: flex; align-items: center; text-align: left; background: #151e28; padding: 20px 25px; margin: 0; font-size: 20px; border-color: #45584f; border-radius: 12px; }\n.sofa-address-icon { color: #b3f1d3; font-size: 25px; margin-right: 18px; }\n.sofa-address-hint { font-size: 12px; color: #93a097; margin-left: auto; padding-left: 15px; }\n.sofa-section-label { display: flex; align-items: center; justify-content: space-between; margin: 30px 0 20px; }\n.sofa-section-label .sofa-muted { font-size: 9px; letter-spacing: 1.4px; }\n.sofa-cards { display: flex; }\n.sofa-card { flex: 1; display: block; min-width: 0; height: 147px; text-align: left; padding: 19px; background: #192026; border-color: #2f3c43; margin-right: 15px; }\n.sofa-card:last-child { margin-right: 0; }\n.sofa-card-symbol { display: block; color: #b3f1d3; font-size: 26px; margin-bottom: 15px; line-height: 1; }\n.sofa-card strong { display: block; font-size: 18px; margin-bottom: 6px; }\n.sofa-card small { display: block; font-size: 11px; color: #84919e; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }\n.sofa-card-0 { background: linear-gradient(130deg, #253433, #172127); }\n.sofa-card-1 { background: linear-gradient(130deg, #282d40, #181e2c); }\n.sofa-card-1 .sofa-card-symbol { color: #bcbdf5; }\n.sofa-card-2 { background: linear-gradient(130deg, #39342b, #211f20); }\n.sofa-add-card { background: transparent; border-style: dashed; }\n.sofa-add-card .sofa-card-symbol { color: #93a09c; }\n.sofa-home-footer { display: flex; justify-content: space-between; margin-top: 29px; padding-top: 20px; border-top: 1px solid #242c37; font-size: 11px; color: #acb7c0; }\n.sofa-home-footer .sofa-muted { font-size: 11px; }\n.sofa-keyboard { pointer-events: auto; position: absolute; z-index: 8; bottom: 3%; left: 10%; width: 80%; background: #121c29; border: 2px solid #43574f; border-radius: 20px; padding: 24px 30px; box-shadow: 0 0 0 2000px rgba(0,0,0,.65); }\n.sofa-keyboard-display { display: block; background: #0a1018; color: #eef2f5; border: 1px solid #50615b; border-radius: 8px; width: 100%; padding: 12px 18px; font-size: 26px; margin: 10px 0 20px; }\n.sofa-key-row { display: flex; margin-bottom: 9px; }\n.sofa-key { flex: 1; padding: 8px 0; margin: 0 8px 0 0; min-height: 40px; font-size: 21px; border-radius: 7px; }\n.sofa-key:last-child { margin-right: 0; }\n.sofa-keyboard .sofa-row { margin-top: 16px; }\n.sofa-keyboard .sofa-row .sofa-button { flex: 1; padding: 10px 8px; font-size: 17px; min-height: 42px; margin-bottom: 0; }\n.sofa-toast { pointer-events: none; display: none; position: absolute; bottom: 6%; left: 15%; width: 70%; padding: 18px 26px; border: 1px solid #587666; color: #ebfff4; background: #1b3029; border-radius: 12px; text-align: center; z-index: 10; font-size: 21px; }\n.sofa-cursor { pointer-events: none; position: absolute; display: none; z-index: 5; width: 22px; height: 22px; margin-top: -11px; margin-left: -11px; border: 3px solid #fff; border-radius: 50%; background: rgba(112,255,170,.6); box-shadow: 0 0 0 2px #102d21, 0 2px 12px #000; }\n.sofa-page-focus { outline: 4px solid #73f3b7 !important; outline-offset: 4px !important; box-shadow: 0 0 0 7px rgba(12,30,21,.7) !important; }\n.sofa-guide p { font-size: 20px; margin: 0 0 16px; color: #abb8c4; }\n.sofa-guide b { color: #b3f1d3; }\n.sofa-diagnostics { font-size: 13px; color: #929fab !important; white-space: pre-line; padding: 18px; border: 1px solid #303c49; border-radius: 8px; margin: 20px 0 !important; word-break: break-word; }\n.sofa-guide + .sofa-muted { margin: 20px 0; }\n.sofa-player { pointer-events: auto; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #000; }\n.sofa-player-surface,.sofa-av-object,.sofa-html-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }\n.sofa-player-controls { position: absolute; z-index: 2; bottom: 0; left: 0; width: 100%; padding: 20px 5% 22px; background: linear-gradient(transparent, rgba(0,0,0,.88)); }\n.sofa-player-status { font-size: 22px; }\n.sofa-player-controls p { color: #b4c0cb; font-size: 15px; }\n@media (max-height: 760px) { .sofa-main { padding-top: 30px; } .sofa-hero { height: 210px; margin-top: 18px; } .sofa-remote-art { transform: scale(.8); transform-origin: center; } .sofa-section-label { margin-top: 22px; margin-bottom: 16px; } .sofa-card { height: 128px; padding: 15px 19px; } .sofa-card-symbol { margin-bottom: 10px; } .sofa-home-footer { margin-top: 17px; padding-top: 15px; } .sofa-keyboard { padding: 18px 25px; } .sofa-keyboard-display { font-size: 23px; margin-bottom: 16px; } }\n@media (min-width: 1600px) { .sofa-sidebar { flex-basis: 300px; width: 300px; padding: 65px 40px; } .sofa-main { padding: 65px 70px 35px; } .sofa-hero { height: 390px; margin: 45px 0 24px; } .sofa-hero h1 { font-size: 88px; } .sofa-intro { font-size: 23px; } .sofa-remote-art { transform: scale(1.3); transform-origin: center; margin-left: 70px; } .sofa-address-launch { padding: 29px 32px; font-size: 28px; } .sofa-address-hint { font-size: 18px; } .sofa-section-label { margin-top: 45px; } .sofa-card { height: 195px; padding: 28px; } .sofa-card strong { font-size: 24px; } .sofa-card small { font-size: 16px; } .sofa-card-symbol { font-size: 34px; margin-bottom: 24px; } .sofa-nav { font-size: 22px; margin-bottom: 20px; } .sofa-device { font-size: 16px; } .sofa-home-footer { font-size: 16px; margin-top: 40px; } .sofa-home-footer .sofa-muted { font-size: 15px; } .sofa-keyboard { width: 70%; left: 15%; padding: 35px; } .sofa-key { min-height: 65px; font-size: 28px; } }\n@media (max-width: 1050px) { .sofa-sidebar { flex-basis: 180px; width: 180px; padding: 25px 15px; } .sofa-main { padding: 28px; } .sofa-brand-sub { margin-bottom: 28px; } .sofa-hero h1 { font-size: 46px; } .sofa-hero { height: 220px; } .sofa-remote-art { transform: scale(.75); transform-origin: left center; } .sofa-intro { font-size: 13px; } .sofa-device { left: 22px; font-size: 10px; } .sofa-address-hint { display: none; } .sofa-card { height: 125px; padding: 14px; } .sofa-home-footer { margin-top: 20px; } .sofa-pill { font-size: 10px; } .sofa-home-top .sofa-eyebrow { font-size: 10px; } }\n";
+var SOFA_CSS = ".sofa-root { all: initial; position: fixed; z-index: 2147483646; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; font-family: Arial, Helvetica, sans-serif; color: #eef2f5; font-size: 22px; line-height: 1.5; text-align: left; }\n.sofa-root * { box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; }\n.sofa-root h1,.sofa-root h2,.sofa-root p { padding: 0; margin: 0; color: inherit; }\n.sofa-root h1 { font-size: 42px; font-weight: 500; line-height: 1.15; letter-spacing: -1px; }\n.sofa-root h2 { font-size: 24px; font-weight: 500; }\n.sofa-panel { pointer-events: auto; position: absolute; top: 0; left: 0; width: 100%; height: 100%; padding: 55px 6%; background: #0c1119; overflow-y: auto; }\n.sofa-dialog-head { margin-bottom: 28px; }\n.sofa-dialog-head h1 { margin: 12px 0 16px; }\n.sofa-eyebrow { color: #99a4b2; font-size: 13px; letter-spacing: 2px; font-weight: bold; }\n.sofa-muted { color: #96a1b0 !important; font-size: 17px; line-height: 1.6; }\n.sofa-button { all: initial; display: inline-block; box-sizing: border-box; cursor: pointer; pointer-events: auto; font: 20px/1.35 Arial, Helvetica, sans-serif; text-align: center; border: 2px solid #293341; border-radius: 10px; padding: 16px 23px; margin: 0 12px 12px 0; color: #edf2f6; background: #18212d; min-height: 60px; vertical-align: middle; transition: background-color .12s, border-color .12s; }\n.sofa-button:focus,.sofa-input:focus,.sofa-keyboard-display:focus { outline: 3px solid #a9f3d0 !important; outline-offset: 4px; border-color: #a9f3d0; background-color: #243c3a; }\n.sofa-button:hover { border-color: #a9f3d0; }\n.sofa-primary { background: #b3f1d3; color: #10221e; border-color: #b3f1d3; font-weight: bold; }\n.sofa-primary:focus { color: #0c211a; background: #ccffe7; }\n.sofa-secondary { color: #aeb9c6; }\n.sofa-row { display: flex; flex-wrap: wrap; align-items: center; margin-top: 22px; }\n.sofa-input { display: block; width: 100%; padding: 20px 25px; font-size: 26px; color: #edf2f6; background: #141e2a; border: 2px solid #3c4858; border-radius: 10px; margin-bottom: 24px; }\n.sofa-list { max-width: 1100px; }\n.sofa-list .sofa-button { display: block; width: 100%; text-align: left; overflow-wrap: break-word; word-wrap: break-word; }\n.sofa-menu-grid { display: flex; flex-wrap: wrap; margin-bottom: 22px; }\n.sofa-menu-grid .sofa-button { width: 31%; margin-bottom: 18px; text-align: left; font-size: 19px; }\n.sofa-home { padding: 0; display: flex !important; }\n.sofa-sidebar { flex: 0 0 235px; width: 235px; border-right: 1px solid #242b35; padding: 45px 26px; position: relative; }\n.sofa-brand-mark { display: inline-block; width: 45px; height: 45px; text-align: center; border: 2px solid #b3f1d3; border-radius: 15px; color: #b3f1d3; font-size: 33px; line-height: 35px; margin-right: 10px; vertical-align: middle; }\n.sofa-brand { display: inline-block; font-size: 39px; font-weight: bold; letter-spacing: -2px; vertical-align: middle; }\n.sofa-brand-sub { font-size: 9px; letter-spacing: 1.7px; color: #788492; margin: 16px 0 60px; }\n.sofa-nav { width: 100%; text-align: left; font-size: 17px; border: 1px solid transparent; background: transparent; padding: 16px 12px; margin: 0 0 10px; min-height: 54px; color: #96a1ae; }\n.sofa-selected { color: #b3f1d3; background: #172e2a; border-color: #29433b; }\n.sofa-device { white-space: pre-line; font-size: 12px; line-height: 1.9; position: absolute; bottom: 35px; left: 38px; color: #748292; }\n.sofa-main { flex: 1; min-width: 0; padding: 42px 48px 28px; }\n.sofa-home-top { display: flex; justify-content: space-between; align-items: center; }\n.sofa-pill { font-size: 12px; color: #b3f1d3; border: 1px solid #35443e; border-radius: 30px; padding: 8px 14px; background: #16261f; }\n.sofa-hero { display: flex; position: relative; height: 275px; margin: 32px 0 12px; align-items: center; }\n.sofa-hero-copy { width: 65%; z-index: 1; }\n.sofa-hero h1 { font-size: 62px; line-height: 1.02; font-weight: 500; letter-spacing: -2.6px; }\n.sofa-accent { color: #b3f1d3 !important; }\n.sofa-intro { color: #96a1af !important; font-size: 17px; line-height: 1.7; margin-top: 22px !important; white-space: pre-line; }\n.sofa-remote-art { position: relative; flex: 1; height: 260px; }\n.sofa-orbit { width: 260px; height: 260px; position: absolute; top: -5px; left: -14px; border-radius: 50%; border: 1px solid #2a403c; background: radial-gradient(ellipse at center, #224237 0%, #16251f 38%, #0c1119 70%); }\n.sofa-orbit:after { content: ''; position: absolute; top: 35px; left: 35px; right: 35px; bottom: 35px; border: 1px solid #294039; border-radius: 50%; }\n.sofa-remote { position: absolute; left: 68px; top: -10px; width: 92px; height: 236px; border-radius: 38px; transform: rotate(19deg); background: linear-gradient(110deg, #44514f, #222d2d 40%, #151e20 100%); box-shadow: -8px 12px 35px rgba(0,0,0,.4); border: 2px solid #50605a; }\n.sofa-remote i { position: absolute; top: 20px; left: 38px; width: 11px; height: 11px; border-radius: 100%; border: 2px solid #b3f1d3; }\n.sofa-dpad { position: absolute; top: 55px; left: 12px; width: 64px; height: 64px; border-radius: 100%; border: 1px solid #668075; background: #263d34; text-align: center; font-size: 11px; line-height: 16px; }\n.sofa-dpad b { display: block; font-size: 12px; line-height: 29px; color: #b3f1d3; }\n.sofa-remote-keys { position: absolute; top: 135px; left: 18px; color: #a8b9b2; font-size: 19px; }\n.sofa-remote-line { position: absolute; top: 183px; left: 31px; width: 24px; height: 3px; border-radius: 5px; background: #52655d; }\n.sofa-art-label { position: absolute; bottom: 0; width: 250px; text-align: center; font-size: 8px; letter-spacing: 1.4px; color: #73877d; }\n.sofa-address-launch { width: 100%; display: flex; align-items: center; text-align: left; background: #151e28; padding: 20px 25px; margin: 0; font-size: 20px; border-color: #45584f; border-radius: 12px; }\n.sofa-address-icon { color: #b3f1d3; font-size: 25px; margin-right: 18px; }\n.sofa-address-hint { font-size: 12px; color: #93a097; margin-left: auto; padding-left: 15px; }\n.sofa-section-label { display: flex; align-items: center; justify-content: space-between; margin: 30px 0 20px; }\n.sofa-section-label .sofa-muted { font-size: 9px; letter-spacing: 1.4px; }\n.sofa-cards { display: flex; }\n.sofa-card { flex: 1; display: block; min-width: 0; height: 147px; text-align: left; padding: 19px; background: #192026; border-color: #2f3c43; margin-right: 15px; }\n.sofa-card:last-child { margin-right: 0; }\n.sofa-card-symbol { display: block; color: #b3f1d3; font-size: 26px; margin-bottom: 15px; line-height: 1; }\n.sofa-card strong { display: block; font-size: 18px; margin-bottom: 6px; }\n.sofa-card small { display: block; font-size: 11px; color: #84919e; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }\n.sofa-card-0 { background: linear-gradient(130deg, #253433, #172127); }\n.sofa-card-1 { background: linear-gradient(130deg, #282d40, #181e2c); }\n.sofa-card-1 .sofa-card-symbol { color: #bcbdf5; }\n.sofa-card-2 { background: linear-gradient(130deg, #39342b, #211f20); }\n.sofa-add-card { background: transparent; border-style: dashed; }\n.sofa-add-card .sofa-card-symbol { color: #93a09c; }\n.sofa-home-footer { display: flex; justify-content: space-between; margin-top: 29px; padding-top: 20px; border-top: 1px solid #242c37; font-size: 11px; color: #acb7c0; }\n.sofa-home-footer .sofa-muted { font-size: 11px; }\n.sofa-keyboard { pointer-events: auto; position: absolute; z-index: 8; bottom: 3%; left: 10%; width: 80%; background: #121c29; border: 2px solid #43574f; border-radius: 20px; padding: 24px 30px; box-shadow: 0 0 0 2000px rgba(0,0,0,.65); }\n.sofa-keyboard-display { display: block; background: #0a1018; color: #eef2f5; border: 1px solid #50615b; border-radius: 8px; width: 100%; padding: 12px 18px; font-size: 26px; margin: 10px 0 20px; }\n.sofa-key-row { display: flex; margin-bottom: 9px; }\n.sofa-key { flex: 1; padding: 8px 0; margin: 0 8px 0 0; min-height: 40px; font-size: 21px; border-radius: 7px; }\n.sofa-key:last-child { margin-right: 0; }\n.sofa-keyboard .sofa-row { margin-top: 16px; }\n.sofa-keyboard .sofa-row .sofa-button { flex: 1; padding: 10px 8px; font-size: 17px; min-height: 42px; margin-bottom: 0; }\n.sofa-toast { pointer-events: none; display: none; position: absolute; bottom: 6%; left: 15%; width: 70%; padding: 18px 26px; border: 1px solid #587666; color: #ebfff4; background: #1b3029; border-radius: 12px; text-align: center; z-index: 10; font-size: 21px; }\n.sofa-cursor { pointer-events: none; position: absolute; display: none; z-index: 20; width: 36px; height: 46px; margin: 0; filter: drop-shadow(0 2px 3px #000); }\n.sofa-cursor svg,.sofa-cursor path { pointer-events: none; }\n.sofa-cursor-link svg path { fill: #ffffff; }\n.sofa-pointer-target { outline: 3px solid #b3ffd7 !important; outline-offset: 3px !important; }\n.sofa-hud { pointer-events: auto; position: absolute; display: none; z-index: 4; right: 30px; bottom: 18px; padding: 8px 12px 8px 18px; background: rgba(10,24,20,.95); border: 1px solid #5e8975; border-radius: 10px; color: #e1f9eb; }\n.sofa-hud-label { font-size: 17px; margin-right: 16px; }\n.sofa-hud .sofa-button { min-height: 34px; font-size: 16px; padding: 8px 12px; margin: 0; }\n.sofa-loading-message { padding: 28px 0; font-size: 26px; max-width: 1000px; line-height: 1.5; }\n.sofa-streams { padding: 32px 4% 80px; overflow: hidden; }\n.sofa-streams .sofa-dialog-head { margin-bottom: 10px; }\n.sofa-streams .sofa-dialog-head h1 { margin: 6px 0; }\n.sofa-streams .sofa-dialog-head .sofa-muted { font-size: 20px; }\n.sofa-streams .sofa-row { margin-top: 10px; }\n.sofa-streams .sofa-row .sofa-button,.sofa-stream-tabs .sofa-button { min-height: 44px; padding: 10px 15px; font-size: 18px; }\n.sofa-stream-tabs { white-space: nowrap; overflow-x: auto; padding: 6px; margin: 0 -6px 12px; }\n.sofa-stream-list { display: flex; flex-wrap: wrap; align-content: flex-start; overflow-y: auto; height: calc(100vh - 360px); padding: 8px; margin: -8px; }\n.sofa-match { display: block; width: calc(50% - 16px); min-height: 160px; text-align: left; padding: 22px 25px; margin: 8px; background: #1b303c; border-color: #3e6169; }\n.sofa-match-meta { display: block; font-size: 16px; color: #b3f1d3; margin-bottom: 12px; }\n.sofa-match-title { display: block; font-size: 27px; line-height: 1.3; white-space: normal; }\n.sofa-match-footer { display: block; font-size: 19px; color: #bccbd5; margin-top: 14px; }\n@media (min-width: 1600px) { .sofa-streams { padding: 45px 5% 80px; } .sofa-stream-list { height: calc(100vh - 390px); } .sofa-match { min-height: 205px; padding: 30px; } .sofa-match-title { font-size: 35px; } .sofa-match-meta { font-size: 20px; } .sofa-match-footer { font-size: 24px; } }\n.sofa-page-focus { outline: 4px solid #73f3b7 !important; outline-offset: 4px !important; box-shadow: 0 0 0 7px rgba(12,30,21,.7) !important; }\n.sofa-guide p { font-size: 20px; margin: 0 0 16px; color: #abb8c4; }\n.sofa-guide b { color: #b3f1d3; }\n.sofa-diagnostics { font-size: 13px; color: #929fab !important; white-space: pre-line; padding: 18px; border: 1px solid #303c49; border-radius: 8px; margin: 20px 0 !important; word-break: break-word; }\n.sofa-guide + .sofa-muted { margin: 20px 0; }\n.sofa-player { pointer-events: auto; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #000; }\n.sofa-player-surface,.sofa-av-object,.sofa-html-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }\n.sofa-player-controls { position: absolute; z-index: 2; bottom: 0; left: 0; width: 100%; padding: 20px 5% 22px; background: linear-gradient(transparent, rgba(0,0,0,.88)); }\n.sofa-player-status { font-size: 22px; }\n.sofa-player-controls p { color: #b4c0cb; font-size: 15px; }\n@media (max-height: 760px) { .sofa-main { padding-top: 30px; } .sofa-hero { height: 210px; margin-top: 18px; } .sofa-remote-art { transform: scale(.8); transform-origin: center; } .sofa-section-label { margin-top: 22px; margin-bottom: 16px; } .sofa-card { height: 128px; padding: 15px 19px; } .sofa-card-symbol { margin-bottom: 10px; } .sofa-home-footer { margin-top: 17px; padding-top: 15px; } .sofa-keyboard { padding: 18px 25px; } .sofa-keyboard-display { font-size: 23px; margin-bottom: 16px; } }\n@media (min-width: 1600px) { .sofa-sidebar { flex-basis: 300px; width: 300px; padding: 65px 40px; } .sofa-main { padding: 65px 70px 35px; } .sofa-hero { height: 390px; margin: 45px 0 24px; } .sofa-hero h1 { font-size: 88px; } .sofa-intro { font-size: 23px; } .sofa-remote-art { transform: scale(1.3); transform-origin: center; margin-left: 70px; } .sofa-address-launch { padding: 29px 32px; font-size: 28px; } .sofa-address-hint { font-size: 18px; } .sofa-section-label { margin-top: 45px; } .sofa-card { height: 195px; padding: 28px; } .sofa-card strong { font-size: 24px; } .sofa-card small { font-size: 16px; } .sofa-card-symbol { font-size: 34px; margin-bottom: 24px; } .sofa-nav { font-size: 22px; margin-bottom: 20px; } .sofa-device { font-size: 16px; } .sofa-home-footer { font-size: 16px; margin-top: 40px; } .sofa-home-footer .sofa-muted { font-size: 15px; } .sofa-keyboard { width: 70%; left: 15%; padding: 35px; } .sofa-key { min-height: 65px; font-size: 28px; } }\n@media (max-width: 1050px) { .sofa-sidebar { flex-basis: 180px; width: 180px; padding: 25px 15px; } .sofa-main { padding: 28px; } .sofa-brand-sub { margin-bottom: 28px; } .sofa-hero h1 { font-size: 46px; } .sofa-hero { height: 220px; } .sofa-remote-art { transform: scale(.75); transform-origin: left center; } .sofa-intro { font-size: 13px; } .sofa-device { left: 22px; font-size: 10px; } .sofa-address-hint { display: none; } .sofa-card { height: 125px; padding: 14px; } .sofa-home-footer { margin-top: 20px; } .sofa-pill { font-size: 10px; } .sofa-home-top .sofa-eyebrow { font-size: 10px; } }\n";
 /* Deliberately small first-party rule set. No remote filter downloads. */
 function SofaBlocker(core, enabled, notify) {
     'use strict';
@@ -296,17 +296,145 @@ function SofaPlayer(core, status) {
     return {open: open, close: close, command: command, active: function () { return active; }};
 }
 
+function SofaSites(core) {
+    'use strict';
+    function words(node) { return node ? String(node.textContent || '').replace(/\s+/g, ' ').replace(/^ | $/g, '') : ''; }
+    function parentCard(node) {
+        while (node && node !== document.body) {
+            if (/(^|\s)m-card(?:\s|$)/.test(node.className || '')) return node;
+            node = node.parentElement;
+        }
+        return null;
+    }
+    function matches() {
+        var list = [], seen = {}, anchors = document.querySelectorAll('#ort-matches-wrap a.m-card__link, #ort-matches-wrap a.m-card[href]');
+        for (var i = 0; i < anchors.length && list.length < 240; i++) {
+            var a = anchors[i], card = parentCard(a), url = core.normalize(a.href);
+            if (!url || !card || seen[url]) continue;
+            seen[url] = true;
+            var title = a.getAttribute('aria-label') || card.getAttribute('data-team-names');
+            if (title) title = title.replace(/\|/g, ' vs ');
+            if (!title) title = words(card.querySelector('.m-card__title')) || words(card.querySelector('.m-card__body')) || words(a);
+            var section = card.parentElement, sport = '';
+            while (section && section.id !== 'ort-matches-wrap') {
+                var heading = section.querySelector('h3');
+                if (heading) { sport = words(heading); break; }
+                section = section.parentElement;
+            }
+            var scores = card.querySelectorAll('.m-card__score'), score = '';
+            if (scores.length === 2 && words(scores[0]) && words(scores[1])) score = words(scores[0]) + ' – ' + words(scores[1]);
+            list.push({url: url, title: (title || 'Open stream').slice(0, 180), sport: sport || 'Events', score: score,
+                status: words(card.querySelector('.m-card__pill')) || words(card.querySelector('time')) || 'Open event',
+                live: /m-card--live/.test(card.className) || /\bLIVE\b/.test(words(card)),
+                premium: /Premium/i.test(words(card)) || !!card.querySelector('[aria-label="Premium"]')});
+        }
+        return list;
+    }
+    function cardLink(node) {
+        var card = parentCard(node);
+        if (!card) return null;
+        return card.tagName === 'A' ? card : card.querySelector('a.m-card__link[href]');
+    }
+    return {matches: matches, cardLink: cardLink, isStreamEast: /(^|\.)streameast\.ga$/.test(core.host(location.href)), isAether: core.host(location.href) === 'aether.ist'};
+}
+
+/* Site code stays on its original origin. Only this loader and public library URLs ship. */
+function SofaCompatibility(progress) {
+    'use strict';
+    var running = false, completed = false, failure = '', cancelled = false, startupTimer;
+    var CDN = 'https://cdn.jsdelivr.net/npm/';
+    var libraries = [
+        'core-js-bundle@3.46.0/minified.js',
+        'systemjs@6.15.1/dist/system.min.js',
+        'systemjs@6.15.1/dist/extras/transform.min.js',
+        '@babel/standalone@7.28.4/babel.min.js'
+    ];
+    function script(path, done) {
+        var node = document.createElement('script'), ended = false;
+        var timer = setTimeout(function () { finish(new Error('Compatibility download timed out.')); }, 30000);
+        function finish(error) { if (ended) return; ended = true; clearTimeout(timer); node.onload = null; node.onerror = null; done(error); }
+        node.onload = function () { finish(); };
+        node.onerror = function () { finish(new Error('A compatibility library was blocked or could not be downloaded.')); };
+        node.src = CDN + path; (document.head || document.documentElement).appendChild(node);
+    }
+    function fail(error) {
+        if (cancelled) return;
+        clearTimeout(startupTimer); cancelled = true;
+        running = false; failure = String(error && error.message || error).slice(0, 260);
+        progress('failed', failure);
+    }
+    function begin(force) {
+        if (running || completed) return;
+        var scripts = document.querySelectorAll('script[type="module"][src]'), entries = [];
+        if (!force && 'noModule' in document.createElement('script')) return;
+        for (var i = 0; i < scripts.length; i++) {
+            var link = document.createElement('a'); link.href = scripts[i].src;
+            if (link.protocol === location.protocol && link.host === location.host && /^\/assets\//.test(link.pathname)) entries.push(link.href);
+        }
+        if (!entries.length) { fail('No supported app entry was found. Use Retry to reload the website.'); return; }
+        running = true; cancelled = false; failure = '';
+        startupTimer = setTimeout(function () { fail(new Error('The compatibility startup took too long. Try reloading the website.')); }, 120000);
+        progress('loading', 'Preparing Aether for this TV. The first load can take a while.');
+        var index = 0;
+        function next(error) {
+            if (error) { fail(error); return; }
+            if (cancelled) { running = false; return; }
+            if (index < libraries.length) { script(libraries[index++], next); return; }
+            try {
+                if (!window.System || !window.Babel || !window.fetch) throw new Error('Required compatibility tools or browser APIs are unavailable.');
+                var loader = new window.System.constructor();
+                // Keep the global register callback in sync with the loader evaluating modules.
+                window.System = loader;
+                loader.transform = function (url, source) {
+                    if (cancelled) return Promise.reject(new Error('Loading cancelled.'));
+                    if (running) progress('compiling', 'Adapting website code for the TV…');
+                    return new Promise(function (resolve, reject) {
+                        setTimeout(function () {
+                            try {
+                                var result = window.Babel.transform(source, {
+                                    filename: url, sourceType: 'module', compact: true, comments: false,
+                                    presets: [['env', {targets: {ie: '11'}, modules: 'systemjs', bugfixes: true}]],
+                                    plugins: ['transform-dynamic-import']
+                                });
+                                resolve(result.code);
+                            } catch (error) { reject(error); }
+                        }, 20);
+                    });
+                };
+                var sequence = Promise.resolve();
+                entries.forEach(function (url) { sequence = sequence.then(function () { return loader.import(url); }); });
+                sequence.then(function () {
+                    if (cancelled) return;
+                    clearTimeout(startupTimer);
+                    running = false; completed = true;
+                    progress('ready', 'Aether compatibility loader started.');
+                    // CSS custom properties are also missing on Chromium 47.
+                    if (!window.CSS || !CSS.supports || !CSS.supports('color', 'var(--sofa-test)')) {
+                        script('css-vars-ponyfill@2.4.9/dist/css-vars-ponyfill.min.js', function (error) {
+                            if (!error && window.cssVars) window.cssVars({onlyLegacy: true, watch: true, silent: true, exclude: '[data-sofa-style]'});
+                        });
+                    }
+                }, fail);
+            } catch (problem) { fail(problem); }
+        }
+        next();
+    }
+    return {begin: begin, cancel: function () { cancelled = true; running = false; clearTimeout(startupTimer); }, status: function () { return {running: running, completed: completed, error: failure}; }};
+}
+
 (function () {
     'use strict';
     var C = window.SofaCore;
     var HOME = window.__SOFA_PREVIEW_HOME__ || 'http://127.0.0.1:8081/';
     var atHome = location.href.split('#')[0] === HOME;
     var topFrame = window === window.top;
-    var root, panel, toastBox, cursor, outline, focused, keyboard, focusBeforeKeyboard;
-    var mode = 'focus', panelOpen = false, enterTimer = null, enterHeld = false, enterDown = false;
+    var root, panel, toastBox, cursor, outline, focused, keyboard, focusBeforeKeyboard, hud, hoverTarget;
+    var mode = 'pointer', panelOpen = false, enterTimer = null, enterHeld = false, enterDown = false;
     var px = window.innerWidth / 2, py = window.innerHeight / 2;
     var currentView = 'home', toastTimer, playerStatus, playerPanel, lastVideoWindow = null;
     var storageWarning = false;
+    var sites = SofaSites(C), matchCategory = 'All', matchLiveOnly = false, matchQuery = '', matchViewDismissed = false;
+    var loadingTimer = null, navigationNumber = 0, compatibilityText = null, compatibilityState = '';
     function get(key, fallback) {
         try { var raw = localStorage.getItem('sofa.' + key); return raw === null ? fallback : JSON.parse(raw); }
         catch (ignore) { storageWarning = true; return fallback; }
@@ -315,6 +443,22 @@ function SofaPlayer(core, status) {
         try { localStorage.setItem('sofa.' + key, JSON.stringify(value)); return true; }
         catch (ignore) { storageWarning = true; toast('Storage unavailable. Changes last for this session only.'); return false; }
     }
+    mode = get('navigation', 'pointer') === 'focus' ? 'focus' : 'pointer';
+    var pageZoom = Number(get('pageZoom', sites.isStreamEast ? 1.5 : 1.25));
+    if ([1, 1.25, 1.5, 1.75, 2].indexOf(pageZoom) === -1) pageZoom = 1.25;
+    var compatibility = SofaCompatibility(function (state, message) {
+        compatibilityState = state;
+        if (state === 'ready') { if (currentView === 'compatibility') closePanel(); toast('Aether loader started. Some features still depend on the TV.'); return; }
+        if (!compatibilityText || !document.documentElement.contains(compatibilityText)) {
+            var box = base('Opening Aether', 'Compatibility mode for Tizen 3'); currentView = 'compatibility';
+            compatibilityText = el('p', 'sofa-loading-message'); box.appendChild(compatibilityText);
+            var buttons = row(box);
+            buttons.appendChild(button('Back to Sofa', function () { compatibility.cancel(); home(); }, 'sofa-primary'));
+            buttons.appendChild(button('Retry website', function () { location.reload(); }));
+            choose(buttons.querySelector('button'));
+        }
+        compatibilityText.textContent = state === 'failed' ? 'Aether could not start: ' + message + ' The TV may also be missing browser features this loader cannot supply.' : message;
+    });
     var blocker = SofaBlocker(C, get('blocking', true) !== false, function (message) { if (topFrame) toast(message); });
     var player = SofaPlayer(C, function (message) { if (playerStatus) playerStatus.textContent = message; });
     var saved = get('saved', [{name: 'Aether', url: 'https://aether.ist/'}, {name: 'StreamEast', url: 'https://v2.streameast.ga/'}]);
@@ -335,6 +479,33 @@ function SofaPlayer(core, status) {
         if (!toastBox) return;
         toastBox.textContent = message; toastBox.style.display = 'block';
         clearTimeout(toastTimer); toastTimer = setTimeout(function () { toastBox.style.display = 'none'; }, 4200);
+    }
+    function pointerActive() { return mode === 'pointer' && !keyboard && !playerPanel && (!panelOpen || currentView === 'streams'); }
+    function updateCursor() {
+        if (!cursor) return;
+        cursor.style.display = !atHome && pointerActive() ? 'block' : 'none';
+        cursor.style.left = px + 'px'; cursor.style.top = py + 'px';
+        if (hud) hud.style.display = !atHome && !keyboard && !playerPanel && (!panelOpen || currentView === 'streams') ? 'block' : 'none';
+    }
+    function clickable(node) {
+        var current = node;
+        while (current && current !== document.body && current !== document.documentElement) {
+            if (/^(A|BUTTON|INPUT|TEXTAREA|SELECT|VIDEO|IFRAME)$/.test(current.tagName) || current.getAttribute('role') === 'button' || current.isContentEditable || current.hasAttribute('onclick')) return current;
+            current = current.parentElement;
+        }
+        return node;
+    }
+    function pointAtTarget() {
+        var hit = document.elementFromPoint(px, py), target = hit && (sites.cardLink(hit) || clickable(hit));
+        if (hoverTarget && hoverTarget !== target && hoverTarget.classList) hoverTarget.classList.remove('sofa-pointer-target');
+        hoverTarget = target;
+        if (target && target.classList) target.classList.add('sofa-pointer-target');
+        cursor.className = 'sofa-cursor' + (target && target !== document.body && (target.tagName === 'A' || target.tagName === 'BUTTON' || root.contains(target)) ? ' sofa-cursor-link' : '');
+        if (hit) hit.dispatchEvent(new MouseEvent('mousemove', {bubbles: true, clientX: px, clientY: py}));
+    }
+    function applyZoom() {
+        if (!atHome && topFrame) document.body.style.zoom = String(pageZoom);
+        if (hud) hud.querySelector('.sofa-hud-label').textContent = (mode === 'pointer' ? 'Arrows move cursor · OK opens' : 'Arrows select · OK opens') + ' · ' + Math.round(pageZoom * 100) + '%';
     }
     function choose(node) {
         if (!node) return;
@@ -365,14 +536,13 @@ function SofaPlayer(core, status) {
         return result;
     }
     function move(key) {
-        if (!panelOpen && !keyboard && mode === 'pointer') {
-            if (key === 37) px -= 30; if (key === 39) px += 30;
-            if (key === 38) py -= 30; if (key === 40) py += 30;
-            if (py < 25 || py > innerHeight - 25) scrollAtPoint(key === 38 ? -150 : 150);
-            px = Math.max(12, Math.min(innerWidth - 12, px)); py = Math.max(25, Math.min(innerHeight - 25, py));
-            cursor.style.left = px + 'px'; cursor.style.top = py + 'px';
-            var target = document.elementFromPoint(px, py);
-            if (target) target.dispatchEvent(new MouseEvent('mousemove', {bubbles: true, clientX: px, clientY: py}));
+        if (pointerActive()) {
+            if (key === 37) px -= 24; if (key === 39) px += 24;
+            if (key === 38) py -= 24; if (key === 40) py += 24;
+            if ((key === 38 && py < 55) || (key === 40 && py > innerHeight - 75)) scrollAtPoint(key === 38 ? -170 : 170);
+            if ((key === 37 && px < 24) || (key === 39 && px > innerWidth - 32)) window.scrollBy(key === 37 ? -150 : 150, 0);
+            px = Math.max(12, Math.min(innerWidth - 32, px)); py = Math.max(55, Math.min(innerHeight - 75, py));
+            updateCursor(); pointAtTarget();
             return;
         }
         var scope = keyboard || (panelOpen ? panel : document), list = candidates(scope);
@@ -383,7 +553,8 @@ function SofaPlayer(core, status) {
         else if (!panelOpen) window.scrollBy(key === 37 ? -250 : key === 39 ? 250 : 0, key === 38 ? -250 : key === 40 ? 250 : 0);
     }
     function scrollAtPoint(amount) {
-        var n = document.elementFromPoint(px, py);
+        if (panelOpen && currentView === 'streams') { var scroller = panel.querySelector('.sofa-stream-list'); if (scroller) { scroller.scrollTop += amount; return; } }
+        var n = document.elementFromPoint(Math.max(1, Math.min(innerWidth - 1, px)), Math.max(1, Math.min(innerHeight - 1, py)));
         while (n && n !== document.body) {
             if (n.scrollHeight > n.clientHeight + 10 && /auto|scroll/.test(getComputedStyle(n).overflowY)) { n.scrollTop += amount; return; }
             n = n.parentElement;
@@ -394,8 +565,10 @@ function SofaPlayer(core, status) {
         return node && (/^(INPUT|TEXTAREA)$/.test(node.tagName) && !/^(button|submit|checkbox|radio|range|file|hidden)$/.test(node.type) || node.isContentEditable);
     }
     function activate() {
-        var target = !panelOpen && !keyboard && mode === 'pointer' ? document.elementFromPoint(px, py) : focused || document.activeElement;
+        var target = pointerActive() ? document.elementFromPoint(px, py) : focused || document.activeElement;
         if (!target) return;
+        var streamLink = !root.contains(target) && sites.cardLink(target);
+        if (streamLink) { go(streamLink.href); return; }
         var parent = target;
         while (parent && parent !== document.body && !/^(A|BUTTON|INPUT|TEXTAREA|SELECT|VIDEO|IFRAME)$/.test(parent.tagName) && parent.getAttribute('role') !== 'button' && !parent.isContentEditable) parent = parent.parentElement;
         if (parent && parent !== document.body) target = parent;
@@ -416,6 +589,9 @@ function SofaPlayer(core, status) {
             target.dispatchEvent(new MouseEvent('mousedown', {bubbles: true, clientX: px, clientY: py}));
             target.dispatchEvent(new MouseEvent('mouseup', {bubbles: true, clientX: px, clientY: py}));
         }
+        if (target.tagName === 'A' && !root.contains(target) && !String(target.getAttribute('href') || '').match(/^#/)) {
+            if (!C.normalize(target.href)) { toast('This link type is not supported.'); return; }
+        }
         target.click();
     }
     function go(value, forceMedia) {
@@ -423,7 +599,22 @@ function SofaPlayer(core, status) {
         if (!url) { toast('Enter a website address, such as https://example.com'); return; }
         if (blocker.enabled && C.blocked(url)) { toast('That address matches the ad blocklist.'); return; }
         if (forceMedia || C.isMedia(url)) { startStream(url); return; }
-        location.href = url;
+        clearTimeout(loadingTimer);
+        var number = ++navigationNumber;
+        var p = base('Opening ' + C.host(url), 'Connecting to the website…'); currentView = 'opening';
+        var message = el('p', 'sofa-loading-message', sites.isAether || C.host(url) === 'aether.ist' ? 'Aether may need extra time to start on this TV.' : 'Please wait while the website opens.'); p.appendChild(message);
+        var cancel = button('Cancel', cancelNavigation); p.appendChild(cancel); choose(cancel);
+        loadingTimer = setTimeout(function () {
+            if (number !== navigationNumber || currentView !== 'opening') return;
+            message.textContent = 'The TV has not finished opening this site. Its connection, certificates, or browser requirements may be incompatible. Try again or return to Sofa.';
+            var actions = row(p); actions.appendChild(button('Retry', function () { go(url); })); actions.appendChild(button('Back to Sofa', function () { window.stop(); home(); }));
+        }, 15000);
+        // Defer navigation so loading feedback is painted before a slow TLS handshake.
+        setTimeout(function () { if (number === navigationNumber) location.assign(url); }, 50);
+    }
+    function cancelNavigation() {
+        navigationNumber++; clearTimeout(loadingTimer); window.stop();
+        atHome ? renderHome() : closePanel();
     }
     function home(action, value) {
         if (atHome && !action) { renderHome(); return; }
@@ -435,19 +626,52 @@ function SofaPlayer(core, status) {
         if (keyboard) { dismissKeyboard(); return; }
         if (atHome) return;
         panelOpen = false; panel.style.display = 'none';
-        cursor.style.display = mode === 'pointer' ? 'block' : 'none';
+        updateCursor();
         if (focused && root.contains(focused)) focused = null;
     }
     function base(title, subtitle) {
         if (keyboard) dismissKeyboard();
         panelOpen = true; panel.style.display = 'block'; panel.className = 'sofa-panel'; panel.textContent = '';
         cursor.style.display = 'none'; currentView = title;
+        if (hud) hud.style.display = 'none';
         var head = el('div', 'sofa-dialog-head');
         head.appendChild(el('div', 'sofa-eyebrow', 'SOFA / BROWSER'));
         head.appendChild(el('h1', '', title));
         if (subtitle) head.appendChild(el('p', 'sofa-muted', subtitle));
         panel.appendChild(head);
         return panel;
+    }
+    function showMatches() {
+        var matches = sites.matches();
+        if (!matches.length) { toast('No match links are available yet. Use the page cursor or try Refresh.'); return; }
+        var p = base('StreamEast', 'Choose an event to open its stream page.'); currentView = 'streams'; p.className = 'sofa-panel sofa-streams';
+        var top = row(p);
+        top.appendChild(button(matchLiveOnly ? 'Live only: On' : 'Live only: Off', function () { matchLiveOnly = !matchLiveOnly; showMatches(); }));
+        top.appendChild(button(matchQuery ? 'Search: ' + matchQuery : 'Search teams / events', function () {
+            var search = el('input'); search.value = matchQuery;
+            showKeyboard(search, 'Search teams or events', function () { matchQuery = search.value; showMatches(); });
+        }));
+        top.appendChild(button('Refresh matches', function () { location.reload(); }));
+        top.appendChild(button('Original page', function () { matchViewDismissed = true; closePanel(); }));
+        top.appendChild(button('Browser menu', showMenu));
+        var categories = ['All']; matches.forEach(function (m) { if (categories.indexOf(m.sport) === -1) categories.push(m.sport); });
+        var tabs = el('div', 'sofa-stream-tabs'); p.appendChild(tabs);
+        categories.forEach(function (category) { tabs.appendChild(button(category, function () { matchCategory = category; showMatches(); }, category === matchCategory ? 'sofa-primary' : '')); });
+        var list = el('div', 'sofa-stream-list'); p.appendChild(list); var count = 0;
+        matches.forEach(function (match) {
+            if ((matchCategory !== 'All' && match.sport !== matchCategory) || (matchLiveOnly && !match.live) || (matchQuery && match.title.toLowerCase().indexOf(matchQuery.toLowerCase()) === -1)) return;
+            var b = button('', function () { go(match.url); }, 'sofa-match'); b.setAttribute('data-stream-url', match.url);
+            b.appendChild(el('span', 'sofa-match-meta', match.sport + '  /  ' + match.status + (match.premium ? '  /  Premium' : '')));
+            b.appendChild(el('strong', 'sofa-match-title', match.title));
+            b.appendChild(el('span', 'sofa-match-footer', (match.score ? match.score + '    ' : '') + 'Open stream →'));
+            list.appendChild(b); count++;
+        });
+        if (!count) list.appendChild(el('p', 'sofa-muted', 'No events match these filters. Choose All or clear the search.'));
+        if (!matchViewDismissed && !focused) {
+            var first = list.querySelector('button');
+            if (first) { var r = first.getBoundingClientRect(); px = r.left + 40; py = r.top + 55; }
+        }
+        choose(list.querySelector('button') || top.querySelector('button')); updateCursor(); pointAtTarget();
     }
     function row(parent) { var r = el('div', 'sofa-row'); parent.appendChild(r); return r; }
     function showList(title, items, subtitle) {
@@ -457,6 +681,7 @@ function SofaPlayer(core, status) {
         choose(list.querySelector('button'));
     }
     function renderHome() {
+        navigationNumber++; clearTimeout(loadingTimer);
         player.close();
         var p = base('home'); p.className = 'sofa-panel sofa-home'; p.textContent = '';
         var side = el('aside', 'sofa-sidebar');
@@ -468,7 +693,7 @@ function SofaPlayer(core, status) {
         side.appendChild(button('▷  Play a stream', function () { address(true); }, 'sofa-nav'));
         side.appendChild(button('☆  Saved sites', savedSites, 'sofa-nav'));
         side.appendChild(button('?  Remote guide', help, 'sofa-nav'));
-        side.appendChild(el('div', 'sofa-device', 'MADE FOR YOUR TV\nSamsung UN55MU630D\nTizen 3 · Sofa 0.1.0'));
+        side.appendChild(el('div', 'sofa-device', 'MADE FOR YOUR TV\nSamsung UN55MU630D\nTizen 3 · Sofa 0.2.0'));
         p.appendChild(side);
         var main = el('main', 'sofa-main'); p.appendChild(main);
         var top = el('div', 'sofa-home-top');
@@ -589,13 +814,14 @@ function SofaPlayer(core, status) {
         actions.appendChild(button('Clear', function () { display.value = ''; }));
         actions.appendChild(button('Done', function () { apply(); dismissKeyboard(); done(); }, 'sofa-primary'));
         actions.appendChild(button('Cancel', dismissKeyboard));
-        root.appendChild(keyboard); choose(keyboard.querySelector('button'));
+        root.appendChild(keyboard); choose(keyboard.querySelector('button')); updateCursor();
         display.setSelectionRange(display.value.length, display.value.length);
     }
     function dismissKeyboard() {
         if (!keyboard) return;
         keyboard.parentNode.removeChild(keyboard); keyboard = null;
         if (focusBeforeKeyboard && document.documentElement.contains(focusBeforeKeyboard)) choose(focusBeforeKeyboard);
+        updateCursor();
     }
     function showMenu() {
         if (!topFrame) { window.top.postMessage({sofa: 1, action: 'menu'}, '*'); return; }
@@ -604,12 +830,16 @@ function SofaPlayer(core, status) {
         var p = base('Make yourself comfortable.', C.host(location.href));
         var actions = el('div', 'sofa-menu-grid'); p.appendChild(actions);
         actions.appendChild(button('Resume browsing', closePanel, 'sofa-primary'));
+        if (sites.isStreamEast) actions.appendChild(button('StreamEast TV match list', showMatches));
         actions.appendChild(button('Open another website', function () { address(false); }));
         actions.appendChild(button('← Page back', function () { closePanel(); if (history.length > 1) history.back(); else home(); }));
         actions.appendChild(button('⌂ Home & saved sites', function () { home(); }));
         actions.appendChild(button('Find video on this page', findVideos));
         actions.appendChild(button('Play a direct stream', function () { address(true); }));
         actions.appendChild(button('Navigation: ' + (mode === 'focus' ? 'Focus → Pointer' : 'Pointer → Focus'), toggleMode));
+        actions.appendChild(button('Page size: ' + Math.round(pageZoom * 100) + '%', function () {
+            var levels = [1, 1.25, 1.5, 1.75, 2]; pageZoom = levels[(levels.indexOf(pageZoom) + 1) % levels.length]; put('pageZoom', pageZoom); applyZoom(); showMenu();
+        }));
         actions.appendChild(button('Ad blocking: ' + (blocker.enabled ? 'On' : 'Off') + ' for this site', function () { blocker.setEnabled(!blocker.enabled); put('blocking', blocker.enabled); showMenu(); toast('Setting saved for this origin. Reload the page if needed.'); }));
         actions.appendChild(button('Allow next pop-up', function () { blocker.allowNextPopup = true; setTimeout(function () { blocker.allowNextPopup = false; }, 15000); closePanel(); toast('Next pop-up allowed in this tab for 15 seconds.'); }));
         actions.appendChild(button('☆ Save this website', function () { home('save', JSON.stringify({url: location.href, name: document.title.slice(0, 60)})); }));
@@ -620,7 +850,7 @@ function SofaPlayer(core, status) {
     }
     function toggleMode() {
         mode = mode === 'focus' ? 'pointer' : 'focus';
-        closePanel(); cursor.style.display = mode === 'pointer' ? 'block' : 'none';
+        put('navigation', mode); closePanel(); updateCursor(); applyZoom();
         if (focused && focused.classList) focused.classList.remove('sofa-page-focus');
         focused = null; toast(mode === 'pointer' ? 'Pointer mode · Arrows move · OK clicks · Back opens menu' : 'Focus mode · Arrows move between links and controls');
     }
@@ -745,12 +975,15 @@ function SofaPlayer(core, status) {
     function back() {
         if (keyboard) { dismissKeyboard(); return; }
         if (playerPanel) { stopStream(); return; }
+        if (currentView === 'opening' && panelOpen) { cancelNavigation(); return; }
+        if (currentView === 'compatibility' && panelOpen) { compatibility.cancel(); home(); return; }
         if (!topFrame) { window.top.postMessage({sofa: 1, action: 'menu'}, '*'); return; }
         if (atHome) {
             if (currentView !== 'home') { renderHome(); return; }
             showList('Leave Sofa Browser?', [{text: 'Keep browsing', action: renderHome}, {text: 'Exit to TV', action: function () { try { tizen.application.getCurrentApplication().exit(); } catch (ignore) { toast('Exit is available when running on your TV.'); } }}]); return;
         }
-        if (panelOpen) closePanel(); else showMenu();
+        if (panelOpen && currentView === 'streams') showMenu();
+        else if (panelOpen) closePanel(); else showMenu();
     }
     function cancelEnter() { clearTimeout(enterTimer); enterTimer = null; enterDown = false; enterHeld = false; }
     function handleKey(event) {
@@ -770,7 +1003,7 @@ function SofaPlayer(core, status) {
         }
         else if (key >= 37 && key <= 40) move(key);
         else if (key === 13) {
-            if (panelOpen || keyboard) { if (!event.repeat) activate(); }
+            if ((panelOpen && currentView !== 'streams') || keyboard) { if (!event.repeat) activate(); }
             else if (!enterDown) {
                 enterDown = true; enterHeld = false;
                 enterTimer = setTimeout(function () { enterHeld = true; showMenu(); }, 700);
@@ -790,11 +1023,13 @@ function SofaPlayer(core, status) {
     }
     function boot() {
         if (!document.body) return;
-        var style = el('style'); style.textContent = SOFA_CSS; document.documentElement.appendChild(style);
-        root = el('div', 'sofa-root'); root.id = 'sofa-browser'; document.body.appendChild(root);
+        var style = el('style'); style.setAttribute('data-sofa-style', 'true'); style.textContent = SOFA_CSS; document.documentElement.appendChild(style);
+        root = el('div', 'sofa-root'); root.id = 'sofa-browser'; document.documentElement.appendChild(root);
         panel = el('section', 'sofa-panel'); root.appendChild(panel); panel.style.display = 'none';
         toastBox = el('div', 'sofa-toast'); toastBox.setAttribute('role', 'status'); root.appendChild(toastBox);
-        cursor = el('div', 'sofa-cursor'); cursor.style.left = px + 'px'; cursor.style.top = py + 'px'; root.appendChild(cursor);
+        cursor = el('div', 'sofa-cursor'); cursor.setAttribute('aria-hidden', 'true'); cursor.innerHTML = '<svg width="36" height="46" viewBox="0 0 36 46"><path d="M4 3 L4 35 L13 27 L21 43 L28 40 L20 25 L32 25 Z" fill="#b3ffd7" stroke="#06130c" stroke-width="3" stroke-linejoin="round"/></svg>'; root.appendChild(cursor);
+        hud = el('div', 'sofa-hud'); hud.appendChild(el('span', 'sofa-hud-label'));
+        hud.appendChild(button('Menu / Back', showMenu)); root.appendChild(hud); applyZoom(); updateCursor();
         document.addEventListener('focusin', function (event) { focused = event.target; }, true);
         window.addEventListener('keydown', handleKey, true);
         window.addEventListener('keyup', function (event) {
@@ -804,7 +1039,7 @@ function SofaPlayer(core, status) {
             }
         }, true);
         window.addEventListener('blur', cancelEnter);
-        window.addEventListener('resize', function () { px = Math.min(px, innerWidth - 12); py = Math.min(py, innerHeight - 25); });
+        window.addEventListener('resize', function () { px = Math.min(px, innerWidth - 32); py = Math.min(py, innerHeight - 75); updateCursor(); });
         if (topFrame) {
             ['MediaPlayPause', 'MediaPlay', 'MediaPause', 'MediaStop', 'MediaFastForward', 'MediaRewind', 'ColorF0Red', 'ColorF1Green', 'ColorF2Yellow', 'ColorF3Blue'].forEach(function (name) { try { tizen.tvinputdevice.registerKey(name); } catch (ignore) {} });
             if (atHome) {
@@ -815,9 +1050,19 @@ function SofaPlayer(core, status) {
                     if (match) { var url = C.normalize(decodeURIComponent(match[1])); if (url) startStream(url); }
                     if (save) { var data = JSON.parse(decodeURIComponent(save[1])); if (C.normalize(data.url)) addSite(data.url, typeof data.name === 'string' ? data.name : ''); }
                 } catch (ignore2) { toast('That saved address could not be read.'); }
-            } else toast('Sofa Browser · Hold OK or press Back for the menu');
+            } else {
+                toast('Arrows move the cursor · OK selects · Back opens menu');
+                if (sites.isStreamEast) {
+                    var attempts = 0, detectMatches = setInterval(function () {
+                        attempts++;
+                        if (sites.matches().length && !panelOpen && !matchViewDismissed) { clearInterval(detectMatches); showMatches(); }
+                        else if (attempts >= 20) clearInterval(detectMatches);
+                    }, 500);
+                }
+                if (sites.isAether) compatibility.begin(false);
+            }
         }
-        window.SofaBrowser = {version: '0.1.0', diagnostics: function () { return {blocking: blocker.enabled, blocked: blocker.count, popups: blocker.popups, atHome: atHome, topFrame: topFrame, mode: mode}; }};
+        window.SofaBrowser = {version: '0.2.0', diagnostics: function () { return {blocking: blocker.enabled, blocked: blocker.count, popups: blocker.popups, atHome: atHome, topFrame: topFrame, mode: mode, pageZoom: pageZoom, matches: sites.matches().length, compatibility: compatibility.status()}; }};
     }
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
 }());
