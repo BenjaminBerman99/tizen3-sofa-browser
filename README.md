@@ -1,49 +1,50 @@
-# Sofa Browser 0.5.0 for Tizen 3
+# Sofa Browser 0.6.0 for Tizen 3
 
-A remote-friendly TizenBrew browser for the Samsung UN55MU630D, with an arrow cursor, large event cards, bookmarks, best-effort ad filtering and an in-app video overlay.
+A remote-friendly TizenBrew browser for the Samsung UN55MU630D, with an arrow cursor, large event cards, bookmarks, best-effort ad filtering and a video overlay. **Movy movies now have a dedicated home card and a separate Mac companion.**
+
+A complete six-minute MPEG-TS/HLS sample played on this TV with an advancing clock, video and sound. The integrated Movy companion is undergoing its final Mac and TV checks; the sample does not establish that the complete interface or every movie works on the TV.
 
 ## Install or update
 
 In TizenBrew, open **Module Manager → Add GitHub Module** and enter:
 
 ```text
-BenjaminBerman99/tizen3-sofa-browser@v0.5.0
+BenjaminBerman99/tizen3-sofa-browser@v0.6.0
 ```
 
-Leave the field to save. Remove the older Sofa entry, fully close and reopen TizenBrew, then launch Sofa. Confirm **Sofa 0.5.0** on the home screen. No npm account or always-on computer is needed.
+Leave the field to save. Remove the older Sofa entry, fully close and reopen TizenBrew, then launch Sofa. Confirm **Sofa 0.6.0** on the home screen. No npm account is needed. Movy requires the companion to remain open on the Mac while watching; ordinary browsing and the Cinejoy catalog work independently of it.
 
-## Cinejoy TV catalog
+## Movy from your Mac
 
-Select **Cinejoy** from Sofa’s home screen. Browse collections and large title cards with the arrows and OK; Back returns to the previous catalog view. Each page holds up to 40 titles. Search and Movies/Series filters apply to the loaded page only. The collection catalog is a subset of Cinejoy’s website, not its full search service.
+1. Extract the separate **sofa-movy-helper** package on an **Apple Silicon Mac** with **Node.js 20 or newer**.
+2. Open **Start Movy.command**. First-time setup installs the pinned Chromium browser and FFmpeg tool inside the helper folder. Leave the window open.
+3. On the TV, select **Movy** in Sofa. Enter the Mac address displayed by the helper and choose **Save and open Movy**. Both devices must be on the same home network; the companion's `settings.json` must contain the TV's current address.
+4. Browse or search for a movie, open its details and select **Play movie**. Arrows move between controls, OK selects, and Back returns to the movie. Playback controls offer pause/resume and ten-second seeks.
 
-The overlay loads directly from Sofa using Cinejoy’s credential-free public collection service at `https://lists.shegu.st/joy` and posters from `image.tmdb.org`. It does not need Cinejoy’s original page to start. A Cinejoy shortcut is added once if there is room in saved sites; existing entries keep their order. You can also enter `https://cinejoy.to/` in Open website.
+Use **Movy settings** in Sofa if the Mac address changes. The address is saved on the local launcher. The helper uses HTTP port **8790** and accepts only the configured TV and Mac. Its dedicated card does not consume a bookmark slot or alter existing saved sites.
 
-**Cinejoy playback does not work on Tizen 3 through this overlay.** The observed website player requires modern browser features including WebAssembly, which [Samsung supports from Tizen 5.5](https://developer.samsung.com/smarttv/develop/extension-libraries/webassembly/overview.html). Title details state this limitation. The original website link is optional; no full movie is inferred from its background trailer. An interface change cannot upgrade the TV’s engine. Catalog and poster connections also still need a physical-TV check.
+The Mac opens Movy's ordinary website, obtains a current 720p H.264/AAC source and converts requested fragments to MPEG-TS without reencoding. It keeps source addresses and up to **192 MiB of media caches** in memory; it does not predownload full movies or save movie files to disk. The first release supports movies, not TV episodes. Keep the helper running while watching and press **Control+C** in its window to stop it.
 
-## Play in Sofa
+All 61 fragments in the six-minute sample retained their original audio/video timestamps when independently converted offline. Separately, the prepared MPEG-TS sample completed on the physical TV with video and sound. The independently converted fragments and integrated companion still need their final on-device check.
 
-Open a StreamEast event, press **Back → Play in Sofa**, and choose a detected HLS, DASH or video source. The original page and player frames remain loaded beneath the overlay. If no source is shown but **Start website player, then find stream** appears, select it to ask the existing player to start. Try another server if no usable source appears.
+## Existing sites and video overlay
 
-The chooser reads actual loaded video sources, current JW Player / Video.js source lists, and media requests exposed by the browser, including manifests associated with some in-memory videos. It does not decode obfuscated scripts, fetch hidden endpoints, invent URLs or handle DRM licenses. Cross-origin discovery requires TizenBrew injection in each player frame. Source URLs remain in memory; their signed details are not shown in labels or added to browsing history/storage by this flow.
+**StreamEast:** large match cards and the arrow cursor remain available. Open an event and use **Back → Play in Sofa** to choose a detected source. **Start website player, then find stream**, when offered, asks an existing player controller to start. Servers lists the site's original choices, retaining Premium labels and access requirements. Cross-origin player controls require TizenBrew injection in those frames. StreamEast playback on this TV remains unconfirmed.
 
-In the overlay, **Left/Right** choose a control and **OK** selects Play/Pause, seek, Retry stream or Close player. **Back** returns to the original event. Failures keep recovery controls available. PLAY-01 means native playback failed, PLAY-02 means HTML video failed, and PLAY-03 means loading/buffering timed out. Playing is reported only after a playback event.
+The generic overlay attempts Samsung AVPlay when available, otherwise HTML video. **Native AVPlay was unavailable in the hosted page context tested on this TV.** A detected source may still need unsupported browser features, special headers or the original website session. This overlay does not provide DRM licenses or guarantee HLS support through plain HTML video. Movy uses the companion's separate HLS.js player.
 
-Keeping the page loaded does not automatically pass its cookies or referrer headers to Samsung AVPlay. A detected source may still require the original website player or unsupported DRM/codecs. No live TV playback guarantee is implied.
+**Cinejoy:** the remote-friendly catalog loads directly from Sofa using `https://lists.shegu.st/joy`, with posters from `image.tmdb.org`. Browse collections and title details with arrows, OK and Back. Each page holds up to 40 titles; search and Movies/Series filters apply to that loaded page only. The shortcut is added once when space is available, preserving existing bookmarks. Entering `https://cinejoy.to/` also opens the catalog.
 
-## Browsing controls
+**Cinejoy playback is unsupported on Tizen 3.** Its observed player needs modern browser features including WebAssembly, which [Samsung supports from Tizen 5.5](https://developer.samsung.com/smarttv/develop/extension-libraries/webassembly/overview.html). Background trailers are not treated as full movies.
 
-Arrows move the cursor; OK selects; pushing at the screen edge scrolls. Hold OK or press Back for the menu. Servers lists the event's original choices, preserving Premium labels and access requirements. OK enters an embedded player frame; another OK clicks. Page size adjusts zoom. Ad-filter settings apply to injected nested players; reload after switching filtering off to restore previously blocked resources.
+**Aether still does not open on this TV**, including in its built-in browser. OPEN-01 means navigation never replaced Sofa's current page; it does not identify a certificate or connection diagnosis. The retained experimental loader cannot help until the site's HTML opens. This release does not fix Aether.
 
-Menu → Page and player diagnostics shows local errors and video/frame state. Earlier lines/More lines scroll the report. Query strings, credentials, fragments and arbitrary exception values are omitted. Reports are not uploaded.
+## Browsing controls and limits
 
-## Aether status
+Arrows move the cursor; OK selects; pushing at the screen edge scrolls. Hold OK or press Back for the menu. Page size adjusts zoom. OK enters an injected embedded frame; another OK clicks. In the generic video overlay, Left/Right choose controls and Back closes playback. Its recovery codes are PLAY-01 for native preparation failure, PLAY-02 for playback/HTML video failure and PLAY-03 for a loading or buffering timeout.
 
-**Aether remains unable to open on this TV.** OPEN-01 means the website did not replace Sofa's current page, so the compatibility loader never started. The module cannot identify the underlying connection error from the launcher. Test https://aether.ist/ in the TV's Internet app to obtain any more specific error. Recovery now ends a stalled request and focuses Back to Sofa. OPEN-02 identifies an immediately rejected navigation.
+Ad filtering is best effort. Switch it off and reload if it breaks a page; injected nested players inherit the main page's setting. **Page and player diagnostics** shows bounded local errors with remote scrolling, omitting query strings, credentials and arbitrary exception values. Reports are not uploaded.
 
-The experimental loader is retained for Aether HTML that successfully loads. AETHER-01 means no supported app entry; AETHER-02 a helper download failure; AETHER-03 app startup failure; AETHER-04 startup timeout. It downloads pinned core-js-bundle 3.46.0, SystemJS 6.15.1, Babel standalone 7.28.4 and css-vars-ponyfill 2.4.9 from jsDelivr as needed, adapting same-origin modules in memory. It can be slow or blocked by page policies. Website source is not distributed here or sent to another server.
+Sofa uses the TV's Chromium 47 engine and does not upgrade its certificates, codecs or browser APIs. **115 controlled Sofa checks passed: 62 unit and 53 desktop browser checks.** These use fixtures, ES5 parsing and mocked platform APIs; they are not a Samsung emulator or proof of every streaming site's compatibility.
 
-## Compatibility
-
-Tizen 3 uses Chromium 47. This module does not upgrade the browser engine, certificates or codecs. All 104 controlled checks passed, using ES5 parsing, desktop fixtures and mocked AVPlay; they cannot establish physical-TV streaming compatibility. Earlier home, match navigation and player layout improvements were confirmed on the target TV. Ad filtering is best effort.
-
-Default shortcuts: https://aether.ist/, https://v2.streameast.ga/ and https://cinejoy.to/.
+Default saved sites remain https://aether.ist/, https://v2.streameast.ga/ and https://cinejoy.to/.
