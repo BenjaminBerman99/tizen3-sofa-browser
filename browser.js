@@ -58,7 +58,7 @@ window.__sofaBrowserInstalled = true;
     return {domains: domains, host: host, blocked: blocked, normalize: normalize, isMedia: isMedia, nearest: nearest, time: time};
 }));
 
-var SOFA_CSS = ".sofa-root { all: initial; position: fixed; z-index: 2147483646; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; font-family: Arial, Helvetica, sans-serif; color: #eef2f5; font-size: 22px; line-height: 1.5; text-align: left; }\n.sofa-root * { box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; }\n.sofa-root h1,.sofa-root h2,.sofa-root p { padding: 0; margin: 0; color: inherit; }\n.sofa-root h1 { font-size: 42px; font-weight: 500; line-height: 1.15; letter-spacing: -1px; }\n.sofa-root h2 { font-size: 24px; font-weight: 500; }\n.sofa-panel { pointer-events: auto; position: absolute; top: 0; left: 0; width: 100%; height: 100%; padding: 55px 6%; background: #0c1119; overflow-y: auto; }\n.sofa-dialog-head { margin-bottom: 28px; }\n.sofa-dialog-head h1 { margin: 12px 0 16px; }\n.sofa-eyebrow { color: #99a4b2; font-size: 13px; letter-spacing: 2px; font-weight: bold; }\n.sofa-muted { color: #96a1b0 !important; font-size: 17px; line-height: 1.6; }\n.sofa-button { all: initial; display: inline-block; box-sizing: border-box; cursor: pointer; pointer-events: auto; font: 20px/1.35 Arial, Helvetica, sans-serif; text-align: center; border: 2px solid #293341; border-radius: 10px; padding: 16px 23px; margin: 0 12px 12px 0; color: #edf2f6; background: #18212d; min-height: 60px; vertical-align: middle; transition: background-color .12s, border-color .12s; }\n.sofa-button:focus,.sofa-input:focus,.sofa-keyboard-display:focus { outline: 3px solid #a9f3d0 !important; outline-offset: 4px; border-color: #a9f3d0; background-color: #243c3a; }\n.sofa-button:hover { border-color: #a9f3d0; }\n.sofa-primary { background: #b3f1d3; color: #10221e; border-color: #b3f1d3; font-weight: bold; }\n.sofa-primary:focus { color: #0c211a; background: #ccffe7; }\n.sofa-secondary { color: #aeb9c6; }\n.sofa-row { display: flex; flex-wrap: wrap; align-items: center; margin-top: 22px; }\n.sofa-input { display: block; width: 100%; padding: 20px 25px; font-size: 26px; color: #edf2f6; background: #141e2a; border: 2px solid #3c4858; border-radius: 10px; margin-bottom: 24px; }\n.sofa-list { max-width: 1100px; }\n.sofa-list .sofa-button { display: block; width: 100%; text-align: left; overflow-wrap: break-word; word-wrap: break-word; }\n.sofa-menu-grid { display: flex; flex-wrap: wrap; margin-bottom: 22px; }\n.sofa-menu-grid .sofa-button { width: 31%; margin-bottom: 18px; text-align: left; font-size: 19px; }\n.sofa-home { padding: 0; display: flex !important; }\n.sofa-sidebar { flex: 0 0 235px; width: 235px; border-right: 1px solid #242b35; padding: 45px 26px; position: relative; }\n.sofa-brand-mark { display: inline-block; width: 45px; height: 45px; text-align: center; border: 2px solid #b3f1d3; border-radius: 15px; color: #b3f1d3; font-size: 33px; line-height: 35px; margin-right: 10px; vertical-align: middle; }\n.sofa-brand { display: inline-block; font-size: 39px; font-weight: bold; letter-spacing: -2px; vertical-align: middle; }\n.sofa-brand-sub { font-size: 9px; letter-spacing: 1.7px; color: #788492; margin: 16px 0 60px; }\n.sofa-nav { width: 100%; text-align: left; font-size: 17px; border: 1px solid transparent; background: transparent; padding: 16px 12px; margin: 0 0 10px; min-height: 54px; color: #96a1ae; }\n.sofa-selected { color: #b3f1d3; background: #172e2a; border-color: #29433b; }\n.sofa-device { white-space: pre-line; font-size: 12px; line-height: 1.9; position: absolute; bottom: 35px; left: 38px; color: #748292; }\n.sofa-main { flex: 1; min-width: 0; padding: 42px 48px 28px; }\n.sofa-home-top { display: flex; justify-content: space-between; align-items: center; }\n.sofa-pill { font-size: 12px; color: #b3f1d3; border: 1px solid #35443e; border-radius: 30px; padding: 8px 14px; background: #16261f; }\n.sofa-hero { display: flex; position: relative; height: 275px; margin: 32px 0 12px; align-items: center; }\n.sofa-hero-copy { width: 65%; z-index: 1; }\n.sofa-hero h1 { font-size: 62px; line-height: 1.02; font-weight: 500; letter-spacing: -2.6px; }\n.sofa-accent { color: #b3f1d3 !important; }\n.sofa-intro { color: #96a1af !important; font-size: 17px; line-height: 1.7; margin-top: 22px !important; white-space: pre-line; }\n.sofa-remote-art { position: relative; flex: 1; height: 260px; }\n.sofa-orbit { width: 260px; height: 260px; position: absolute; top: -5px; left: -14px; border-radius: 50%; border: 1px solid #2a403c; background: radial-gradient(ellipse at center, #224237 0%, #16251f 38%, #0c1119 70%); }\n.sofa-orbit:after { content: ''; position: absolute; top: 35px; left: 35px; right: 35px; bottom: 35px; border: 1px solid #294039; border-radius: 50%; }\n.sofa-remote { position: absolute; left: 68px; top: -10px; width: 92px; height: 236px; border-radius: 38px; transform: rotate(19deg); background: linear-gradient(110deg, #44514f, #222d2d 40%, #151e20 100%); box-shadow: -8px 12px 35px rgba(0,0,0,.4); border: 2px solid #50605a; }\n.sofa-remote i { position: absolute; top: 20px; left: 38px; width: 11px; height: 11px; border-radius: 100%; border: 2px solid #b3f1d3; }\n.sofa-dpad { position: absolute; top: 55px; left: 12px; width: 64px; height: 64px; border-radius: 100%; border: 1px solid #668075; background: #263d34; text-align: center; font-size: 11px; line-height: 16px; }\n.sofa-dpad b { display: block; font-size: 12px; line-height: 29px; color: #b3f1d3; }\n.sofa-remote-keys { position: absolute; top: 135px; left: 18px; color: #a8b9b2; font-size: 19px; }\n.sofa-remote-line { position: absolute; top: 183px; left: 31px; width: 24px; height: 3px; border-radius: 5px; background: #52655d; }\n.sofa-art-label { position: absolute; bottom: 0; width: 250px; text-align: center; font-size: 8px; letter-spacing: 1.4px; color: #73877d; }\n.sofa-address-launch { width: 100%; display: flex; align-items: center; text-align: left; background: #151e28; padding: 20px 25px; margin: 0; font-size: 20px; border-color: #45584f; border-radius: 12px; }\n.sofa-address-icon { color: #b3f1d3; font-size: 25px; margin-right: 18px; }\n.sofa-address-hint { font-size: 12px; color: #93a097; margin-left: auto; padding-left: 15px; }\n.sofa-section-label { display: flex; align-items: center; justify-content: space-between; margin: 30px 0 20px; }\n.sofa-section-label .sofa-muted { font-size: 9px; letter-spacing: 1.4px; }\n.sofa-cards { display: flex; }\n.sofa-card { flex: 1; display: block; min-width: 0; height: 147px; text-align: left; padding: 19px; background: #192026; border-color: #2f3c43; margin-right: 15px; }\n.sofa-card:last-child { margin-right: 0; }\n.sofa-card-symbol { display: block; color: #b3f1d3; font-size: 26px; margin-bottom: 15px; line-height: 1; }\n.sofa-card strong { display: block; font-size: 18px; margin-bottom: 6px; }\n.sofa-card small { display: block; font-size: 11px; color: #84919e; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }\n.sofa-card-0 { background: linear-gradient(130deg, #253433, #172127); }\n.sofa-card-1 { background: linear-gradient(130deg, #282d40, #181e2c); }\n.sofa-card-1 .sofa-card-symbol { color: #bcbdf5; }\n.sofa-card-2 { background: linear-gradient(130deg, #39342b, #211f20); }\n.sofa-add-card { background: transparent; border-style: dashed; }\n.sofa-add-card .sofa-card-symbol { color: #93a09c; }\n.sofa-home-footer { display: flex; justify-content: space-between; margin-top: 29px; padding-top: 20px; border-top: 1px solid #242c37; font-size: 11px; color: #acb7c0; }\n.sofa-home-footer .sofa-muted { font-size: 11px; }\n.sofa-keyboard { pointer-events: auto; position: absolute; z-index: 8; bottom: 3%; left: 10%; width: 80%; background: #121c29; border: 2px solid #43574f; border-radius: 20px; padding: 24px 30px; box-shadow: 0 0 0 2000px rgba(0,0,0,.65); }\n.sofa-keyboard-display { display: block; background: #0a1018; color: #eef2f5; border: 1px solid #50615b; border-radius: 8px; width: 100%; padding: 12px 18px; font-size: 26px; margin: 10px 0 20px; }\n.sofa-key-row { display: flex; margin-bottom: 9px; }\n.sofa-key { flex: 1; padding: 8px 0; margin: 0 8px 0 0; min-height: 40px; font-size: 21px; border-radius: 7px; }\n.sofa-key:last-child { margin-right: 0; }\n.sofa-keyboard .sofa-row { margin-top: 16px; }\n.sofa-keyboard .sofa-row .sofa-button { flex: 1; padding: 10px 8px; font-size: 17px; min-height: 42px; margin-bottom: 0; }\n.sofa-toast { pointer-events: none; display: none; position: absolute; bottom: 6%; left: 15%; width: 70%; padding: 18px 26px; border: 1px solid #587666; color: #ebfff4; background: #1b3029; border-radius: 12px; text-align: center; z-index: 10; font-size: 21px; }\n.sofa-cursor { pointer-events: none; position: absolute; display: none; z-index: 20; width: 36px; height: 46px; margin: 0; filter: drop-shadow(0 2px 3px #000); }\n.sofa-cursor svg,.sofa-cursor path { pointer-events: none; }\n.sofa-cursor-link svg path { fill: #ffffff; }\n.sofa-pointer-target { outline: 3px solid #b3ffd7 !important; outline-offset: 3px !important; }\n.sofa-hud { pointer-events: auto; position: absolute; display: none; z-index: 4; right: 30px; bottom: 18px; padding: 8px 12px 8px 18px; background: rgba(10,24,20,.95); border: 1px solid #5e8975; border-radius: 10px; color: #e1f9eb; }\n.sofa-hud-label { font-size: 17px; margin-right: 16px; }\n.sofa-hud .sofa-button { min-height: 34px; font-size: 16px; padding: 8px 12px; margin: 0; }\n.sofa-loading-message { padding: 28px 0; font-size: 26px; max-width: 1000px; line-height: 1.5; }\n.sofa-error-report { white-space: pre-wrap; word-wrap: break-word; font: 20px/1.6 Arial,sans-serif; color: #eef2f5; background: #17222e; padding: 20px; margin: 20px 0; border: 1px solid #3e6169; }\n.sofa-details { padding: 28px 4%; }\n.sofa-details .sofa-dialog-head { margin-bottom: 12px; }\n.sofa-details .sofa-dialog-head h1 { font-size: 34px; margin: 8px 0; }\n.sofa-details .sofa-row { margin-top: 12px; }\n.sofa-details .sofa-error-report { height: calc(100vh - 330px); min-height: 150px; overflow-y: auto; margin-top: 4px; }\n.sofa-streams { padding: 32px 4% 80px; overflow: hidden; }\n.sofa-streams .sofa-dialog-head { margin-bottom: 10px; }\n.sofa-streams .sofa-dialog-head h1 { margin: 6px 0; }\n.sofa-streams .sofa-dialog-head .sofa-muted { font-size: 20px; }\n.sofa-streams .sofa-row { margin-top: 10px; }\n.sofa-streams .sofa-row .sofa-button,.sofa-stream-tabs .sofa-button { min-height: 44px; padding: 10px 15px; font-size: 18px; }\n.sofa-stream-tabs { white-space: nowrap; overflow-x: auto; padding: 6px; margin: 0 -6px 12px; }\n.sofa-stream-list { display: flex; flex-wrap: wrap; align-content: flex-start; overflow-y: auto; height: calc(100vh - 360px); padding: 8px; margin: -8px; }\n.sofa-match { display: block; width: calc(50% - 16px); min-height: 160px; text-align: left; padding: 22px 25px; margin: 8px; background: #1b303c; border-color: #3e6169; }\n.sofa-match-meta { display: block; font-size: 16px; color: #b3f1d3; margin-bottom: 12px; }\n.sofa-match-title { display: block; font-size: 27px; line-height: 1.3; white-space: normal; }\n.sofa-match-footer { display: block; font-size: 19px; color: #bccbd5; margin-top: 14px; }\n@media (min-width: 1600px) { .sofa-streams { padding: 45px 5% 80px; } .sofa-stream-list { height: calc(100vh - 390px); } .sofa-match { min-height: 205px; padding: 30px; } .sofa-match-title { font-size: 35px; } .sofa-match-meta { font-size: 20px; } .sofa-match-footer { font-size: 24px; } }\n.sofa-page-focus { outline: 4px solid #73f3b7 !important; outline-offset: 4px !important; box-shadow: 0 0 0 7px rgba(12,30,21,.7) !important; }\n/* The event page's grid, var() minimum height and inset collapse on Chromium 47.\n   Keep the original player, source links and access notices in their document. */\nhtml.sofa-player-page,html.sofa-player-page body { height: auto !important; min-height: 100% !important; overflow-y: auto !important; background: #0c1119 !important; color: #eef2f5 !important; }\n.sofa-player-page .streameast-video-page,.sofa-player-page .se-video { display: block !important; height: auto !important; max-height: none !important; overflow: visible !important; }\n.sofa-player-page .se-video { padding: 12px 24px 100px !important; }\n.sofa-player-page .se-layout,.sofa-player-page .se-main { display: block !important; width: 100% !important; height: auto !important; max-height: none !important; min-width: 0 !important; overflow: visible !important; }\n.sofa-player-page #se-streams-list { display: flex !important; flex-wrap: nowrap !important; overflow-x: auto !important; list-style: none !important; padding: 8px !important; margin: 0 0 12px !important; }\n.sofa-player-page #se-streams-list .se-stream { display: block !important; flex: 0 0 auto !important; margin: 0 12px 8px 0 !important; border: 2px solid #3e6169 !important; border-radius: 8px !important; background: #1b303c !important; }\n.sofa-player-page #se-streams-list .se-stream__link { display: block !important; font: 24px/1.35 Arial,sans-serif !important; padding: 16px 22px !important; color: #eef2f5 !important; }\n.sofa-player-page #se-streams-list .se-stream.is-active { border-color: #b3f1d3 !important; }\n.sofa-player-page #se-streams-list .se-stream.is-pro .se-stream__link:after { content: ' · Premium'; color: #f6d684; font-size: 18px; }\n.sofa-player-page .se-board { display: block !important; height: auto !important; min-height: 0 !important; padding: 12px !important; background: #18212d !important; color: #eef2f5 !important; }\n.sofa-player-page .se-board__row { display: flex !important; align-items: center !important; justify-content: space-between !important; }\n.sofa-player-page .se-board__side { display: flex !important; align-items: center !important; width: 38% !important; }\n.sofa-player-page .se-board__crest { width: 48px !important; height: 48px !important; margin-right: 14px !important; }\n.sofa-player-page .se-board__crest img { max-width: 48px !important; max-height: 48px !important; }\n.sofa-player-page .se-board__name { color: #eef2f5 !important; font: bold 24px/1.3 Arial,sans-serif !important; }\n.sofa-player-page .se-board__name-mob { display: none !important; }\n.sofa-player-page #se-player-root { position: relative !important; display: block !important; width: 100% !important; height: 65vh !important; min-height: 360px !important; max-height: none !important; background: #000 !important; border-radius: 0 !important; overflow: hidden !important; }\n.sofa-player-page #se-player-root[data-state=\"live\"] > iframe,.sofa-player-page #se-player-root[data-state=\"live\"] > video,.sofa-player-page #se-player-root[data-state=\"live\"] #VideoFrame { position: absolute !important; top: 0 !important; right: 0 !important; bottom: 0 !important; left: 0 !important; display: block !important; width: 100% !important; height: 100% !important; min-height: 0 !important; border: 0 !important; }\n.sofa-player-page #chat-container { display: block !important; width: 100% !important; height: 320px !important; margin-top: 18px !important; }\n.sofa-player-page #live-chat-iframe { width: 100% !important; height: 260px !important; }\n.sofa-player-page #se-player-root:-webkit-full-screen { height: 100vh !important; }\n.sofa-player-page #se-player-root:fullscreen { height: 100vh !important; }\n.sofa-player-page #se-player-root:not([data-state=\"live\"]) { height: auto !important; overflow: visible !important; }\n.sofa-guide p { font-size: 20px; margin: 0 0 16px; color: #abb8c4; }\n.sofa-guide b { color: #b3f1d3; }\n.sofa-diagnostics { font-size: 13px; color: #929fab !important; white-space: pre-line; padding: 18px; border: 1px solid #303c49; border-radius: 8px; margin: 20px 0 !important; word-break: break-word; }\n.sofa-guide + .sofa-muted { margin: 20px 0; }\n.sofa-player { pointer-events: auto; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #000; }\n.sofa-player-surface,.sofa-av-object,.sofa-html-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }\n.sofa-player-controls { position: absolute; z-index: 2; bottom: 0; left: 0; width: 100%; padding: 20px 5% 22px; background: linear-gradient(transparent, rgba(0,0,0,.88)); }\n.sofa-player-status { font-size: 22px; }\n.sofa-player-controls p { color: #b4c0cb; font-size: 15px; }\n@media (max-height: 760px) { .sofa-main { padding-top: 30px; } .sofa-hero { height: 210px; margin-top: 18px; } .sofa-remote-art { transform: scale(.8); transform-origin: center; } .sofa-section-label { margin-top: 22px; margin-bottom: 16px; } .sofa-card { height: 128px; padding: 15px 19px; } .sofa-card-symbol { margin-bottom: 10px; } .sofa-home-footer { margin-top: 17px; padding-top: 15px; } .sofa-keyboard { padding: 18px 25px; } .sofa-keyboard-display { font-size: 23px; margin-bottom: 16px; } }\n@media (min-width: 1600px) { .sofa-sidebar { flex-basis: 300px; width: 300px; padding: 65px 40px; } .sofa-main { padding: 65px 70px 35px; } .sofa-hero { height: 390px; margin: 45px 0 24px; } .sofa-hero h1 { font-size: 88px; } .sofa-intro { font-size: 23px; } .sofa-remote-art { transform: scale(1.3); transform-origin: center; margin-left: 70px; } .sofa-address-launch { padding: 29px 32px; font-size: 28px; } .sofa-address-hint { font-size: 18px; } .sofa-section-label { margin-top: 45px; } .sofa-card { height: 195px; padding: 28px; } .sofa-card strong { font-size: 24px; } .sofa-card small { font-size: 16px; } .sofa-card-symbol { font-size: 34px; margin-bottom: 24px; } .sofa-nav { font-size: 22px; margin-bottom: 20px; } .sofa-device { font-size: 16px; } .sofa-home-footer { font-size: 16px; margin-top: 40px; } .sofa-home-footer .sofa-muted { font-size: 15px; } .sofa-keyboard { width: 70%; left: 15%; padding: 35px; } .sofa-key { min-height: 65px; font-size: 28px; } }\n@media (max-width: 1050px) { .sofa-sidebar { flex-basis: 180px; width: 180px; padding: 25px 15px; } .sofa-main { padding: 28px; } .sofa-brand-sub { margin-bottom: 28px; } .sofa-hero h1 { font-size: 46px; } .sofa-hero { height: 220px; } .sofa-remote-art { transform: scale(.75); transform-origin: left center; } .sofa-intro { font-size: 13px; } .sofa-device { left: 22px; font-size: 10px; } .sofa-address-hint { display: none; } .sofa-card { height: 125px; padding: 14px; } .sofa-home-footer { margin-top: 20px; } .sofa-pill { font-size: 10px; } .sofa-home-top .sofa-eyebrow { font-size: 10px; } }\n";
+var SOFA_CSS = ".sofa-root { all: initial; position: fixed; z-index: 2147483646; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; font-family: Arial, Helvetica, sans-serif; color: #eef2f5; font-size: 22px; line-height: 1.5; text-align: left; }\n.sofa-root * { box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; }\n.sofa-root h1,.sofa-root h2,.sofa-root p { padding: 0; margin: 0; color: inherit; }\n.sofa-root h1 { font-size: 42px; font-weight: 500; line-height: 1.15; letter-spacing: -1px; }\n.sofa-root h2 { font-size: 24px; font-weight: 500; }\n.sofa-panel { pointer-events: auto; position: absolute; top: 0; left: 0; width: 100%; height: 100%; padding: 55px 6%; background: #0c1119; overflow-y: auto; }\n.sofa-dialog-head { margin-bottom: 28px; }\n.sofa-dialog-head h1 { margin: 12px 0 16px; }\n.sofa-eyebrow { color: #99a4b2; font-size: 13px; letter-spacing: 2px; font-weight: bold; }\n.sofa-muted { color: #96a1b0 !important; font-size: 17px; line-height: 1.6; }\n.sofa-button { all: initial; display: inline-block; box-sizing: border-box; cursor: pointer; pointer-events: auto; font: 20px/1.35 Arial, Helvetica, sans-serif; text-align: center; border: 2px solid #293341; border-radius: 10px; padding: 16px 23px; margin: 0 12px 12px 0; color: #edf2f6; background: #18212d; min-height: 60px; vertical-align: middle; transition: background-color .12s, border-color .12s; }\n.sofa-button:focus,.sofa-input:focus,.sofa-keyboard-display:focus { outline: 3px solid #a9f3d0 !important; outline-offset: 4px; border-color: #a9f3d0; background-color: #243c3a; }\n.sofa-button:hover { border-color: #a9f3d0; }\n.sofa-primary { background: #b3f1d3; color: #10221e; border-color: #b3f1d3; font-weight: bold; }\n.sofa-primary:focus { color: #0c211a; background: #ccffe7; }\n.sofa-secondary { color: #aeb9c6; }\n.sofa-row { display: flex; flex-wrap: wrap; align-items: center; margin-top: 22px; }\n.sofa-input { display: block; width: 100%; padding: 20px 25px; font-size: 26px; color: #edf2f6; background: #141e2a; border: 2px solid #3c4858; border-radius: 10px; margin-bottom: 24px; }\n.sofa-list { max-width: 1100px; }\n.sofa-list .sofa-button { display: block; width: 100%; text-align: left; overflow-wrap: break-word; word-wrap: break-word; }\n.sofa-menu-grid { display: flex; flex-wrap: wrap; margin-bottom: 22px; }\n.sofa-menu-grid .sofa-button { width: 31%; margin-bottom: 18px; text-align: left; font-size: 19px; }\n.sofa-home { padding: 0; display: flex !important; }\n.sofa-sidebar { flex: 0 0 235px; width: 235px; border-right: 1px solid #242b35; padding: 45px 26px; position: relative; }\n.sofa-brand-mark { display: inline-block; width: 45px; height: 45px; text-align: center; border: 2px solid #b3f1d3; border-radius: 15px; color: #b3f1d3; font-size: 33px; line-height: 35px; margin-right: 10px; vertical-align: middle; }\n.sofa-brand { display: inline-block; font-size: 39px; font-weight: bold; letter-spacing: -2px; vertical-align: middle; }\n.sofa-brand-sub { font-size: 9px; letter-spacing: 1.7px; color: #788492; margin: 16px 0 60px; }\n.sofa-nav { width: 100%; text-align: left; font-size: 17px; border: 1px solid transparent; background: transparent; padding: 16px 12px; margin: 0 0 10px; min-height: 54px; color: #96a1ae; }\n.sofa-selected { color: #b3f1d3; background: #172e2a; border-color: #29433b; }\n.sofa-device { white-space: pre-line; font-size: 12px; line-height: 1.9; position: absolute; bottom: 35px; left: 38px; color: #748292; }\n.sofa-main { flex: 1; min-width: 0; padding: 42px 48px 28px; }\n.sofa-home-top { display: flex; justify-content: space-between; align-items: center; }\n.sofa-pill { font-size: 12px; color: #b3f1d3; border: 1px solid #35443e; border-radius: 30px; padding: 8px 14px; background: #16261f; }\n.sofa-hero { display: flex; position: relative; height: 275px; margin: 32px 0 12px; align-items: center; }\n.sofa-hero-copy { width: 65%; z-index: 1; }\n.sofa-hero h1 { font-size: 62px; line-height: 1.02; font-weight: 500; letter-spacing: -2.6px; }\n.sofa-accent { color: #b3f1d3 !important; }\n.sofa-intro { color: #96a1af !important; font-size: 17px; line-height: 1.7; margin-top: 22px !important; white-space: pre-line; }\n.sofa-remote-art { position: relative; flex: 1; height: 260px; }\n.sofa-orbit { width: 260px; height: 260px; position: absolute; top: -5px; left: -14px; border-radius: 50%; border: 1px solid #2a403c; background: radial-gradient(ellipse at center, #224237 0%, #16251f 38%, #0c1119 70%); }\n.sofa-orbit:after { content: ''; position: absolute; top: 35px; left: 35px; right: 35px; bottom: 35px; border: 1px solid #294039; border-radius: 50%; }\n.sofa-remote { position: absolute; left: 68px; top: -10px; width: 92px; height: 236px; border-radius: 38px; transform: rotate(19deg); background: linear-gradient(110deg, #44514f, #222d2d 40%, #151e20 100%); box-shadow: -8px 12px 35px rgba(0,0,0,.4); border: 2px solid #50605a; }\n.sofa-remote i { position: absolute; top: 20px; left: 38px; width: 11px; height: 11px; border-radius: 100%; border: 2px solid #b3f1d3; }\n.sofa-dpad { position: absolute; top: 55px; left: 12px; width: 64px; height: 64px; border-radius: 100%; border: 1px solid #668075; background: #263d34; text-align: center; font-size: 11px; line-height: 16px; }\n.sofa-dpad b { display: block; font-size: 12px; line-height: 29px; color: #b3f1d3; }\n.sofa-remote-keys { position: absolute; top: 135px; left: 18px; color: #a8b9b2; font-size: 19px; }\n.sofa-remote-line { position: absolute; top: 183px; left: 31px; width: 24px; height: 3px; border-radius: 5px; background: #52655d; }\n.sofa-art-label { position: absolute; bottom: 0; width: 250px; text-align: center; font-size: 8px; letter-spacing: 1.4px; color: #73877d; }\n.sofa-address-launch { width: 100%; display: flex; align-items: center; text-align: left; background: #151e28; padding: 20px 25px; margin: 0; font-size: 20px; border-color: #45584f; border-radius: 12px; }\n.sofa-address-icon { color: #b3f1d3; font-size: 25px; margin-right: 18px; }\n.sofa-address-hint { font-size: 12px; color: #93a097; margin-left: auto; padding-left: 15px; }\n.sofa-section-label { display: flex; align-items: center; justify-content: space-between; margin: 30px 0 20px; }\n.sofa-section-label .sofa-muted { font-size: 9px; letter-spacing: 1.4px; }\n.sofa-cards { display: flex; }\n.sofa-card { flex: 1; display: block; min-width: 0; height: 147px; text-align: left; padding: 19px; background: #192026; border-color: #2f3c43; margin-right: 15px; }\n.sofa-card:last-child { margin-right: 0; }\n.sofa-card-symbol { display: block; color: #b3f1d3; font-size: 26px; margin-bottom: 15px; line-height: 1; }\n.sofa-card strong { display: block; font-size: 18px; margin-bottom: 6px; }\n.sofa-card small { display: block; font-size: 11px; color: #84919e; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }\n.sofa-card-0 { background: linear-gradient(130deg, #253433, #172127); }\n.sofa-card-1 { background: linear-gradient(130deg, #282d40, #181e2c); }\n.sofa-card-1 .sofa-card-symbol { color: #bcbdf5; }\n.sofa-card-2 { background: linear-gradient(130deg, #39342b, #211f20); }\n.sofa-add-card { background: transparent; border-style: dashed; }\n.sofa-add-card .sofa-card-symbol { color: #93a09c; }\n.sofa-home-footer { display: flex; justify-content: space-between; margin-top: 29px; padding-top: 20px; border-top: 1px solid #242c37; font-size: 11px; color: #acb7c0; }\n.sofa-home-footer .sofa-muted { font-size: 11px; }\n.sofa-keyboard { pointer-events: auto; position: absolute; z-index: 8; bottom: 3%; left: 10%; width: 80%; background: #121c29; border: 2px solid #43574f; border-radius: 20px; padding: 24px 30px; box-shadow: 0 0 0 2000px rgba(0,0,0,.65); }\n.sofa-keyboard-display { display: block; background: #0a1018; color: #eef2f5; border: 1px solid #50615b; border-radius: 8px; width: 100%; padding: 12px 18px; font-size: 26px; margin: 10px 0 20px; }\n.sofa-key-row { display: flex; margin-bottom: 9px; }\n.sofa-key { flex: 1; padding: 8px 0; margin: 0 8px 0 0; min-height: 40px; font-size: 21px; border-radius: 7px; }\n.sofa-key:last-child { margin-right: 0; }\n.sofa-keyboard .sofa-row { margin-top: 16px; }\n.sofa-keyboard .sofa-row .sofa-button { flex: 1; padding: 10px 8px; font-size: 17px; min-height: 42px; margin-bottom: 0; }\n.sofa-toast { pointer-events: none; display: none; position: absolute; bottom: 6%; left: 15%; width: 70%; padding: 18px 26px; border: 1px solid #587666; color: #ebfff4; background: #1b3029; border-radius: 12px; text-align: center; z-index: 10; font-size: 21px; }\n.sofa-cursor { pointer-events: none; position: absolute; display: none; z-index: 20; width: 36px; height: 46px; margin: 0; filter: drop-shadow(0 2px 3px #000); }\n.sofa-cursor svg,.sofa-cursor path { pointer-events: none; }\n.sofa-cursor-link svg path { fill: #ffffff; }\n.sofa-pointer-target { outline: 3px solid #b3ffd7 !important; outline-offset: 3px !important; }\n.sofa-hud { pointer-events: auto; position: absolute; display: none; z-index: 4; right: 30px; bottom: 18px; padding: 8px 12px 8px 18px; background: rgba(10,24,20,.95); border: 1px solid #5e8975; border-radius: 10px; color: #e1f9eb; }\n.sofa-hud-label { font-size: 17px; margin-right: 16px; }\n.sofa-hud .sofa-button { min-height: 34px; font-size: 16px; padding: 8px 12px; margin: 0; }\n.sofa-loading-message { padding: 28px 0; font-size: 26px; max-width: 1000px; line-height: 1.5; }\n.sofa-error-report { white-space: pre-wrap; word-wrap: break-word; font: 20px/1.6 Arial,sans-serif; color: #eef2f5; background: #17222e; padding: 20px; margin: 20px 0; border: 1px solid #3e6169; }\n.sofa-details { padding: 28px 4%; }\n.sofa-details .sofa-dialog-head { margin-bottom: 12px; }\n.sofa-details .sofa-dialog-head h1 { font-size: 34px; margin: 8px 0; }\n.sofa-details .sofa-row { margin-top: 12px; }\n.sofa-details .sofa-error-report { height: calc(100vh - 330px); min-height: 150px; overflow-y: auto; margin-top: 4px; }\n.sofa-streams { padding: 32px 4% 80px; overflow: hidden; }\n.sofa-streams .sofa-dialog-head { margin-bottom: 10px; }\n.sofa-streams .sofa-dialog-head h1 { margin: 6px 0; }\n.sofa-streams .sofa-dialog-head .sofa-muted { font-size: 20px; }\n.sofa-streams .sofa-row { margin-top: 10px; }\n.sofa-streams .sofa-row .sofa-button,.sofa-stream-tabs .sofa-button { min-height: 44px; padding: 10px 15px; font-size: 18px; }\n.sofa-stream-tabs { white-space: nowrap; overflow-x: auto; padding: 6px; margin: 0 -6px 12px; }\n.sofa-stream-list { display: flex; flex-wrap: wrap; align-content: flex-start; overflow-y: auto; height: calc(100vh - 360px); padding: 8px; margin: -8px; }\n.sofa-match { display: block; width: calc(50% - 16px); min-height: 160px; text-align: left; padding: 22px 25px; margin: 8px; background: #1b303c; border-color: #3e6169; }\n.sofa-match-meta { display: block; font-size: 16px; color: #b3f1d3; margin-bottom: 12px; }\n.sofa-match-title { display: block; font-size: 27px; line-height: 1.3; white-space: normal; }\n.sofa-match-footer { display: block; font-size: 19px; color: #bccbd5; margin-top: 14px; }\n@media (min-width: 1600px) { .sofa-streams { padding: 45px 5% 80px; } .sofa-stream-list { height: calc(100vh - 390px); } .sofa-match { min-height: 205px; padding: 30px; } .sofa-match-title { font-size: 35px; } .sofa-match-meta { font-size: 20px; } .sofa-match-footer { font-size: 24px; } }\n.sofa-page-focus { outline: 4px solid #73f3b7 !important; outline-offset: 4px !important; box-shadow: 0 0 0 7px rgba(12,30,21,.7) !important; }\n/* The event page's grid, var() minimum height and inset collapse on Chromium 47.\n   Keep the original player, source links and access notices in their document. */\nhtml.sofa-player-page,html.sofa-player-page body { height: auto !important; min-height: 100% !important; overflow-y: auto !important; background: #0c1119 !important; color: #eef2f5 !important; }\n.sofa-player-page .streameast-video-page,.sofa-player-page .se-video { display: block !important; height: auto !important; max-height: none !important; overflow: visible !important; }\n.sofa-player-page .se-video { padding: 12px 24px 100px !important; }\n.sofa-player-page .se-layout,.sofa-player-page .se-main { display: block !important; width: 100% !important; height: auto !important; max-height: none !important; min-width: 0 !important; overflow: visible !important; }\n.sofa-player-page #se-streams-list { display: flex !important; flex-wrap: nowrap !important; overflow-x: auto !important; list-style: none !important; padding: 8px !important; margin: 0 0 12px !important; }\n.sofa-player-page #se-streams-list .se-stream { display: block !important; flex: 0 0 auto !important; margin: 0 12px 8px 0 !important; border: 2px solid #3e6169 !important; border-radius: 8px !important; background: #1b303c !important; }\n.sofa-player-page #se-streams-list .se-stream__link { display: block !important; font: 24px/1.35 Arial,sans-serif !important; padding: 16px 22px !important; color: #eef2f5 !important; }\n.sofa-player-page #se-streams-list .se-stream.is-active { border-color: #b3f1d3 !important; }\n.sofa-player-page #se-streams-list .se-stream.is-pro .se-stream__link:after { content: ' · Premium'; color: #f6d684; font-size: 18px; }\n.sofa-player-page .se-board { display: block !important; height: auto !important; min-height: 0 !important; padding: 12px !important; background: #18212d !important; color: #eef2f5 !important; }\n.sofa-player-page .se-board__row { display: flex !important; align-items: center !important; justify-content: space-between !important; }\n.sofa-player-page .se-board__side { display: flex !important; align-items: center !important; width: 38% !important; }\n.sofa-player-page .se-board__crest { width: 48px !important; height: 48px !important; margin-right: 14px !important; }\n.sofa-player-page .se-board__crest img { max-width: 48px !important; max-height: 48px !important; }\n.sofa-player-page .se-board__name { color: #eef2f5 !important; font: bold 24px/1.3 Arial,sans-serif !important; }\n.sofa-player-page .se-board__name-mob { display: none !important; }\n.sofa-player-page #se-player-root { position: relative !important; display: block !important; width: 100% !important; height: 65vh !important; min-height: 360px !important; max-height: none !important; background: #000 !important; border-radius: 0 !important; overflow: hidden !important; }\n.sofa-player-page #se-player-root[data-state=\"live\"] > iframe,.sofa-player-page #se-player-root[data-state=\"live\"] > video,.sofa-player-page #se-player-root[data-state=\"live\"] #VideoFrame { position: absolute !important; top: 0 !important; right: 0 !important; bottom: 0 !important; left: 0 !important; display: block !important; width: 100% !important; height: 100% !important; min-height: 0 !important; border: 0 !important; }\n.sofa-player-page #chat-container { display: block !important; width: 100% !important; height: 320px !important; margin-top: 18px !important; }\n.sofa-player-page #live-chat-iframe { width: 100% !important; height: 260px !important; }\n.sofa-player-page #se-player-root:-webkit-full-screen { height: 100vh !important; }\n.sofa-player-page #se-player-root:fullscreen { height: 100vh !important; }\n.sofa-player-page #se-player-root:not([data-state=\"live\"]) { height: auto !important; overflow: visible !important; }\n.sofa-guide p { font-size: 20px; margin: 0 0 16px; color: #abb8c4; }\n.sofa-guide b { color: #b3f1d3; }\n.sofa-diagnostics { font-size: 13px; color: #929fab !important; white-space: pre-line; padding: 18px; border: 1px solid #303c49; border-radius: 8px; margin: 20px 0 !important; word-break: break-word; }\n.sofa-guide + .sofa-muted { margin: 20px 0; }\n.sofa-player { pointer-events: auto; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #000; }\n.sofa-player-surface,.sofa-av-object,.sofa-html-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }\n.sofa-root .sofa-player-surface,.sofa-root .sofa-av-object,.sofa-root .sofa-html-video { display: block; z-index: 1; visibility: visible; opacity: 1; }\n.sofa-root .sofa-av-object { background: transparent; }\n.sofa-player-controls { position: absolute; z-index: 2; bottom: 0; left: 0; width: 100%; padding: 20px 5% 22px; background: linear-gradient(transparent, rgba(0,0,0,.88)); }\n.sofa-player-status { font-size: 22px; }\n.sofa-player-controls p { color: #b4c0cb; font-size: 15px; }\n@media (max-height: 760px) { .sofa-main { padding-top: 30px; } .sofa-hero { height: 210px; margin-top: 18px; } .sofa-remote-art { transform: scale(.8); transform-origin: center; } .sofa-section-label { margin-top: 22px; margin-bottom: 16px; } .sofa-card { height: 128px; padding: 15px 19px; } .sofa-card-symbol { margin-bottom: 10px; } .sofa-home-footer { margin-top: 17px; padding-top: 15px; } .sofa-keyboard { padding: 18px 25px; } .sofa-keyboard-display { font-size: 23px; margin-bottom: 16px; } }\n@media (min-width: 1600px) { .sofa-sidebar { flex-basis: 300px; width: 300px; padding: 65px 40px; } .sofa-main { padding: 65px 70px 35px; } .sofa-hero { height: 390px; margin: 45px 0 24px; } .sofa-hero h1 { font-size: 88px; } .sofa-intro { font-size: 23px; } .sofa-remote-art { transform: scale(1.3); transform-origin: center; margin-left: 70px; } .sofa-address-launch { padding: 29px 32px; font-size: 28px; } .sofa-address-hint { font-size: 18px; } .sofa-section-label { margin-top: 45px; } .sofa-card { height: 195px; padding: 28px; } .sofa-card strong { font-size: 24px; } .sofa-card small { font-size: 16px; } .sofa-card-symbol { font-size: 34px; margin-bottom: 24px; } .sofa-nav { font-size: 22px; margin-bottom: 20px; } .sofa-device { font-size: 16px; } .sofa-home-footer { font-size: 16px; margin-top: 40px; } .sofa-home-footer .sofa-muted { font-size: 15px; } .sofa-keyboard { width: 70%; left: 15%; padding: 35px; } .sofa-key { min-height: 65px; font-size: 28px; } }\n@media (max-width: 1050px) { .sofa-sidebar { flex-basis: 180px; width: 180px; padding: 25px 15px; } .sofa-main { padding: 28px; } .sofa-brand-sub { margin-bottom: 28px; } .sofa-hero h1 { font-size: 46px; } .sofa-hero { height: 220px; } .sofa-remote-art { transform: scale(.75); transform-origin: left center; } .sofa-intro { font-size: 13px; } .sofa-device { left: 22px; font-size: 10px; } .sofa-address-hint { display: none; } .sofa-card { height: 125px; padding: 14px; } .sofa-home-footer { margin-top: 20px; } .sofa-pill { font-size: 10px; } .sofa-home-top .sofa-eyebrow { font-size: 10px; } }\n";
 /* Deliberately small first-party rule set. No remote filter downloads. */
 function SofaBlocker(core, enabled, notify) {
     'use strict';
@@ -199,44 +199,105 @@ function SofaBlocker(core, enabled, notify) {
 
 function SofaPlayer(core, status) {
     'use strict';
-    var av = null, video = null, layer = null, active = false, generation = 0, timer = null;
+    var av = null, video = null, layer = null, active = false, generation = 0, timer = null, playRequest = 0;
+    var phase = 'idle', engine = '', errorCode = '';
+    function current(id) { return active && id === generation; }
+    function update(next, message) { phase = next; status(message); }
+    function reason(error) {
+        // Only emit fixed descriptions. AVPlay errors can include signed URLs or headers.
+        var text = String(error && (error.name || '') || '') + ' ' + String(error && error.message || error || '');
+        if (/unsupported.*codec|codec.*(?:not.supported|unsupported)|NOT_SUPPORTED_(?:VIDEO|AUDIO)_CODEC/i.test(text)) return 'Unsupported codec';
+        if (/codec|decode/i.test(text)) return 'The TV could not decode this stream';
+        if (/NOT_SUPPORTED|NotSupported|unsupported.*format/i.test(text)) return 'Unsupported media format';
+        if (/CONNECTION|NETWORK|NetworkError/i.test(text)) return 'The stream connection failed';
+        if (/SecurityError|PERMISSION|AUTHENTICATION/i.test(text)) return 'This player was not allowed to access the stream';
+        if (/NotAllowedError/i.test(text)) return 'Playback needs a Play button press';
+        return 'The stream could not play';
+    }
     function close() {
-        generation++;
+        generation++; playRequest++;
         active = false;
-        clearTimeout(timer);
+        clearTimeout(timer); timer = null;
         if (av) {
             try { var s = av.getState(); if (s === 'PLAYING' || s === 'PAUSED' || s === 'READY') av.stop(); } catch (ignore) {}
             try { av.close(); } catch (ignore2) {}
         }
-        if (video) { video.pause(); video.removeAttribute('src'); video.load(); }
+        if (video) {
+            video.onplaying = video.onwaiting = video.onended = video.onerror = video.onpause = null;
+            try { video.pause(); video.removeAttribute('src'); video.load(); } catch (ignore3) {}
+        }
         if (layer && layer.parentNode) layer.parentNode.removeChild(layer);
-        av = null; video = null; layer = null;
+        av = null; video = null; layer = null; phase = 'idle'; engine = ''; errorCode = '';
+    }
+    function fail(id, code, message) {
+        if (!current(id)) return;
+        var previousEngine = engine;
+        close(); engine = previousEngine; errorCode = code;
+        update('error', code + ': ' + message + '. Try another stream or return to the website player.');
+    }
+    function ended(id) {
+        if (!current(id)) return;
+        var previousEngine = engine;
+        close(); engine = previousEngine;
+        update('ended', 'Stream ended. Press Back to return to the website.');
+    }
+    function waitForPlayback(id) {
+        clearTimeout(timer);
+        timer = setTimeout(function () { fail(id, 'PLAY-03', 'The stream did not start or resume within 30 seconds'); }, 30000);
+    }
+    function playing(id) {
+        if (!current(id)) return;
+        clearTimeout(timer); timer = null;
+        if (phase !== 'playing') update('playing', 'Playing · ' + engine);
     }
     function loadAPI(done) {
-        if (window.webapis && webapis.avplay) { done(webapis.avplay); return; }
+        if (window.webapis && window.webapis.avplay) { done(window.webapis.avplay); return; }
         if (!window.tizen) { done(null); return; }
-        var script = document.createElement('script'), ended = false;
+        var script = document.createElement('script'), finished = false, timeout;
         function finish() {
-            if (ended) return; ended = true;
-            done(window.webapis && webapis.avplay ? webapis.avplay : null);
+            if (finished) return; finished = true; clearTimeout(timeout);
+            script.onload = script.onerror = null;
+            done(window.webapis && window.webapis.avplay ? window.webapis.avplay : null);
         }
         script.onload = finish; script.onerror = finish;
         script.src = '$WEBAPIS/webapis/webapis.js';
+        timeout = setTimeout(finish, 2500);
         (document.head || document.documentElement).appendChild(script);
-        setTimeout(finish, 2500);
     }
-    function open(url, parent) {
+    function startHTML(id) {
+        if (!current(id) || !video) return;
+        var request = ++playRequest;
+        update('loading', 'Starting playback…'); waitForPlayback(id);
+        try {
+            var promise = video.play();
+            if (promise && promise.catch) promise.catch(function (error) {
+                if (!current(id) || request !== playRequest || phase === 'playing') return;
+                if (error && error.name === 'NotAllowedError') {
+                    clearTimeout(timer); timer = null;
+                    update('paused', 'Press Play to start this stream.');
+                } else fail(id, 'PLAY-02', reason(error));
+            });
+        } catch (error) { fail(id, 'PLAY-02', reason(error)); }
+    }
+    function startAV(id) {
+        if (!current(id) || !av) return;
+        update('loading', 'Starting playback · Samsung AVPlay…'); waitForPlayback(id);
+        try { av.play(); } catch (error) { fail(id, 'PLAY-02', reason(error)); }
+    }
+    function open(url, parent, options) {
+        // Request headers/cookies are deliberately not copied from the page.
+        // AVPlay has no documented general-purpose Referer setting for Tizen 3.
         url = core.normalize(url);
-        if (!url) { status('Enter a valid HTTP or HTTPS stream URL.'); return; }
+        if (!url) { status('Enter a valid HTTP or HTTPS stream URL.'); return false; }
         close(); active = true;
-        var current = generation;
+        var id = generation;
         layer = document.createElement('div'); layer.className = 'sofa-player-surface';
         parent.appendChild(layer);
-        status('Opening stream…');
+        update('loading', 'Opening stream…');
         loadAPI(function (api) {
-            if (!active || current !== generation) return;
+            if (!current(id)) return;
             if (api) {
-                av = api;
+                av = api; engine = 'Samsung AVPlay';
                 var object = document.createElement('object');
                 object.type = 'application/avplayer'; object.className = 'sofa-av-object'; layer.appendChild(object);
                 try {
@@ -244,56 +305,78 @@ function SofaPlayer(core, status) {
                     av.setDisplayRect(0, 0, 1920, 1080);
                     av.setDisplayMethod('PLAYER_DISPLAY_MODE_LETTER_BOX');
                     av.setListener({
-                        onbufferingstart: function () { if (active && current === generation) status('Buffering…'); },
-                        onbufferingcomplete: function () { if (active && current === generation) status('Playing · Samsung AVPlay'); },
-                        onstreamcompleted: function () { if (active && current === generation) { close(); status('Stream ended. Press Back to return.'); } },
-                        onerror: function (error) { if (active && current === generation) { close(); status('Playback failed: ' + error + '. Try another stream or use the website’s player.'); } }
+                        onbufferingstart: function () {
+                            if (!current(id) || phase === 'paused') return;
+                            update('buffering', 'Buffering…'); waitForPlayback(id);
+                        },
+                        onbufferingcomplete: function () {
+                            if (!current(id) || phase === 'paused') return;
+                            update('loading', 'Buffer ready. Waiting for playback…');
+                        },
+                        oncurrentplaytime: function () {
+                            if (!current(id) || !av) return;
+                            try { if (av.getState() === 'PLAYING') playing(id); } catch (ignore) {}
+                        },
+                        onstreamcompleted: function () { ended(id); },
+                        onerror: function (error) { fail(id, 'PLAY-01', reason(error)); }
                     });
-                    timer = setTimeout(function () { if (active && current === generation) { close(); status('Stream timed out. Check the URL, then try again.'); } }, 30000);
+                    waitForPlayback(id);
                     av.prepareAsync(function () {
-                        if (!active || current !== generation) return;
-                        clearTimeout(timer);
-                        try { av.play(); status('Playing · Samsung AVPlay'); } catch (error) { close(); status('Could not start playback: ' + error.message); }
-                    }, function (error) {
-                        if (!active || current !== generation) return;
-                        close(); status('Unable to prepare this stream: ' + (error && error.message || error) + '. Check codec, login and stream availability.');
-                    });
-                } catch (error) { close(); status('Samsung player error: ' + error.message); }
+                        if (!current(id)) return;
+                        startAV(id);
+                    }, function (error) { fail(id, 'PLAY-01', reason(error)); });
+                } catch (error) { fail(id, 'PLAY-01', reason(error)); }
             } else {
-                video = document.createElement('video'); video.controls = false; video.autoplay = true; video.className = 'sofa-html-video';
-                video.onplaying = function () { status('Playing · HTML5'); };
-                video.onwaiting = function () { status('Buffering…'); };
-                video.onended = function () { status('Stream ended. Press Back to return.'); };
-                video.onerror = function () { status('This stream could not play. HLS/DASH need Samsung AVPlay; codecs, login or CORS can also prevent playback.'); };
+                engine = 'HTML5';
+                video = document.createElement('video'); video.controls = false; video.autoplay = false; video.className = 'sofa-html-video';
+                video.onplaying = function () { playing(id); };
+                video.onwaiting = function () {
+                    if (!current(id) || phase === 'paused') return;
+                    update('buffering', 'Buffering…'); waitForPlayback(id);
+                };
+                video.onpause = function () {
+                    if (!current(id)) return;
+                    clearTimeout(timer); timer = null; update('paused', 'Paused');
+                };
+                video.onended = function () { ended(id); };
+                video.onerror = function () {
+                    if (!current(id)) return;
+                    var code = video && video.error && video.error.code;
+                    var message = code === 2 ? 'The stream connection failed' : code === 3 ? 'The TV could not decode this stream' : 'This browser could not play the stream format';
+                    fail(id, 'PLAY-02', message);
+                };
                 layer.appendChild(video); video.src = url;
-                var promise = video.play();
-                if (promise && promise.catch) promise.catch(function () { if (active) status('Press Play to start; this browser may not support the stream.'); });
+                startHTML(id);
             }
         });
+        return true;
     }
     function command(action) {
         if (!active) return;
+        var id = generation;
         try {
             var s = av ? av.getState() : video && (video.paused ? 'PAUSED' : 'PLAYING');
             if (action === 'toggle') action = s === 'PLAYING' ? 'pause' : 'play';
-            if (action === 'pause' && s === 'PLAYING') { if (av) av.pause(); else video.pause(); status('Paused'); }
+            if (action === 'pause' && s === 'PLAYING') {
+                playRequest++; clearTimeout(timer); timer = null;
+                if (av) av.pause(); else video.pause(); update('paused', 'Paused');
+            }
             if (action === 'play' && (s === 'PAUSED' || s === 'READY')) {
-                var result = av ? av.play() : video.play(); if (result && result.catch) result.catch(function () { status('Could not resume playback.'); });
-                status('Playing');
+                if (av) startAV(id); else startHTML(id);
             }
             if ((action === 'forward' || action === 'rewind') && (s === 'PLAYING' || s === 'PAUSED')) {
                 var delta = action === 'forward' ? 10 : -10;
                 if (av) {
                     var duration = av.getDuration(), target = Math.max(0, av.getCurrentTime() + delta * 1000);
                     if (duration > 0) target = Math.min(target, Math.max(0, duration - 1000));
-                    av.seekTo(target, function () {}, function () { status('Seeking is unavailable for this stream.'); });
+                    av.seekTo(target, function () {}, function () { if (current(id)) status('Seeking is unavailable for this stream.'); });
                 } else if (video) video.currentTime = Math.max(0, Math.min(video.currentTime + delta, isFinite(video.duration) ? Math.max(0, video.duration - 1) : Infinity));
             }
-        } catch (error) { status('Player: ' + error.message); }
+        } catch (error) { if (current(id)) status('This player control is unavailable.'); }
     }
     document.addEventListener('visibilitychange', function () { if (document.hidden) command('pause'); });
     window.addEventListener('pagehide', close);
-    return {open: open, close: close, command: command, active: function () { return active; }};
+    return {open: open, close: close, command: command, active: function () { return active; }, state: function () { return {phase: phase, engine: engine, errorCode: errorCode}; }};
 }
 
 function SofaSites(core) {
@@ -639,6 +722,249 @@ function SofaDiagnostics(core) {
     }};
 }
 
+function SofaMedia(core) {
+    'use strict';
+    var limit = 24, ranks = {current: 3, declared: 2, observed: 1};
+    var sourceNames = {video: 'Website video', jwplayer: 'JW Player', videojs: 'Video.js', resource: 'Loaded media request'};
+    function absolute(value) {
+        if (typeof value !== 'string' || !value || value.length > 8192 || /[\x00-\x20\x7f\\]/.test(value)) return null;
+        try {
+            var link = document.createElement('a'); link.href = value;
+            if (!/^https?:$/.test(link.protocol)) return null;
+            return core.normalize(link.href);
+        } catch (ignore) { return null; }
+    }
+    function kind(url, type) {
+        url = url.split(/[?#]/)[0];
+        type = typeof type === 'string' ? type.toLowerCase().split(';')[0] : '';
+        if (/\.(m3u8)(?:[?#]|$)/i.test(url) || /^(?:application\/(?:x-mpegurl|vnd\.apple\.mpegurl)|hls)$/.test(type)) return 'hls';
+        if (/\.mpd(?:[?#]|$)/i.test(url) || /^(?:application\/dash\+xml|dash)$/.test(type)) return 'dash';
+        return 'video';
+    }
+    function protectedSource(value) {
+        return !!(value && typeof value === 'object' && (value.drm || value.keySystems || value.keySystemOptions || value.encrypted === true));
+    }
+    function owned(element) {
+        for (var i = 0; element && i < 100; i++, element = element.parentNode) if (element.id === 'sofa-browser') return true;
+        return false;
+    }
+    function label(candidate) {
+        return sourceNames[candidate.source] + ' · ' + (candidate.kind === 'video' ? 'Video' : candidate.kind.toUpperCase()) + ' · ' + core.host(candidate.url).slice(0, 100);
+    }
+    function add(list, value, type, source, confidence) {
+        var url = absolute(value);
+        if (!url) return;
+        var candidate = {url: url, kind: kind(url, type), source: source, confidence: confidence};
+        candidate.label = label(candidate);
+        for (var i = 0; i < list.length; i++) {
+            if (list[i].url !== url) continue;
+            if (ranks[confidence] > ranks[list[i].confidence]) list[i] = candidate;
+            return;
+        }
+        if (list.length < limit) list.push(candidate);
+    }
+    function sanitizeCandidates(input) {
+        var result = [];
+        if (!Array.isArray(input)) return result;
+        for (var i = 0; i < input.length && i < limit; i++) {
+            var entry = input[i];
+            if (!entry || typeof entry !== 'object' || typeof entry.url !== 'string' || core.normalize(entry.url) !== entry.url ||
+                    !Object.prototype.hasOwnProperty.call(sourceNames, entry.source) || !Object.prototype.hasOwnProperty.call(ranks, entry.confidence) ||
+                    !/^(hls|dash|video)$/.test(entry.kind)) continue;
+            /* Recreate labels instead of accepting untrusted frame labels or signed URL fragments. */
+            add(result, entry.url, entry.kind, entry.source, entry.confidence);
+        }
+        return result;
+    }
+    function scan() {
+        var result = {candidates: [], videos: [], players: [], hasController: false, hasBlob: false, protectedMedia: false};
+        var nodes = document.querySelectorAll('video'), i, j;
+        function declared(value, source) {
+            if (!value || typeof value !== 'object') return;
+            if (protectedSource(value)) { result.protectedMedia = true; return; }
+            add(result.candidates, value.file || value.src, value.type, source, 'declared');
+        }
+        for (i = 0; i < nodes.length && i < 12; i++) {
+            try {
+                var video = nodes[i]; if (owned(video)) continue;
+                result.videos.push(video);
+                if (/^blob:/i.test(video.currentSrc || video.src || '')) result.hasBlob = true;
+                if (video.mediaKeys || video.webkitKeys) { result.protectedMedia = true; continue; }
+                add(result.candidates, video.currentSrc, video.type, 'video', 'current');
+                add(result.candidates, video.src, video.type, 'video', 'declared');
+                var sources = video.querySelectorAll('source[src]');
+                for (j = 0; j < sources.length && j < 8; j++) declared(sources[j], 'video');
+            } catch (ignoreVideo) {}
+        }
+        function readJW(api) {
+            if (!api || typeof api.getPlaylistItem !== 'function' && typeof api.getPlaylist !== 'function') return;
+            for (var a = 0; a < result.players.length; a++) if (result.players[a].api === api) return;
+            result.players.push({source: 'jwplayer', api: api});
+            var item = null;
+            if (typeof api.getPlaylistItem === 'function') item = api.getPlaylistItem();
+            else if (typeof api.getPlaylistIndex === 'function') {
+                var playlist = api.getPlaylist(), index = api.getPlaylistIndex();
+                if (Array.isArray(playlist) && typeof index === 'number' && index >= 0 && index === Math.floor(index)) item = playlist[index];
+            }
+            if (!item || typeof item !== 'object') return;
+            if (protectedSource(item)) { result.protectedMedia = true; return; }
+            declared(item, 'jwplayer');
+            var sources = Array.isArray(item.sources) ? item.sources : [];
+            for (var b = 0; b < sources.length && b < 8; b++) declared(sources[b], 'jwplayer');
+        }
+        /* Read existing player getter APIs only. Never invoke setup/load or fetch a playlist URL. */
+        try {
+            if (typeof window.jwplayer === 'function') {
+                try { readJW(window.jwplayer()); } catch (ignoreDefaultJW) {}
+                var jwNodes = document.querySelectorAll('.jwplayer[id]');
+                for (i = 0; i < jwNodes.length && i < 8; i++) {
+                    if (owned(jwNodes[i])) continue;
+                    try { readJW(window.jwplayer(jwNodes[i].id)); } catch (ignoreJW) {}
+                }
+            }
+        } catch (ignoreJWAccess) {}
+        try {
+            var vjs = window.videojs;
+            var players = vjs && (typeof vjs.getPlayers === 'function' ? vjs.getPlayers() : vjs.players);
+            if (players && typeof players === 'object') {
+                var ids = Object.keys(players);
+                for (i = 0; i < ids.length && i < 8; i++) {
+                    try {
+                        var api = players[ids[i]];
+                        if (!api || typeof api.currentSource !== 'function' && typeof api.currentSrc !== 'function') continue;
+                        if (typeof api.el === 'function' && owned(api.el())) continue;
+                        result.players.push({source: 'videojs', api: api});
+                        var current = typeof api.currentSource === 'function' ? api.currentSource() : {src: api.currentSrc(), type: typeof api.currentType === 'function' ? api.currentType() : ''};
+                        if (protectedSource(current)) { result.protectedMedia = true; continue; }
+                        if (current) add(result.candidates, current.src, current.type, 'videojs', 'current');
+                        var choices = typeof api.currentSources === 'function' ? api.currentSources() : [];
+                        for (j = 0; Array.isArray(choices) && j < choices.length && j < 8; j++) declared(choices[j], 'videojs');
+                    } catch (ignoreVJS) {}
+                }
+            }
+        } catch (ignoreVJSAccess) {}
+        /* Resource entries are observations, not proof that a URL still plays or belongs to the main video.
+           Keep them below active player sources; never mistake MSE segments for a complete movie. */
+        if (!result.protectedMedia) {
+            try {
+                var entries = window.performance && window.performance.getEntriesByType && window.performance.getEntriesByType('resource');
+                for (i = entries ? entries.length - 1 : -1; i >= 0 && i >= entries.length - 150; i--) {
+                    var entry = entries[i], url = absolute(entry.name), initiator = String(entry.initiatorType || '').toLowerCase();
+                    if (!url || entry.responseStatus >= 400 || !/^(?:video|xmlhttprequest|fetch|other|)$/.test(initiator)) continue;
+                    var path = url.split(/[?#]/)[0];
+                    if (/\.(m3u8|mpd)$/i.test(path)) add(result.candidates, url, '', 'resource', 'observed');
+                    else if (initiator === 'video' && /\.(mp4|m4v|webm)$/i.test(path) && !/(?:^|[\/_.-])(?:init|segment|chunk|fragment)(?:[\/_.-]|\d)/i.test(path)) add(result.candidates, url, '', 'resource', 'observed');
+                }
+            } catch (ignoreResources) {}
+        }
+        /* ES5 does not guarantee a stable Array.sort. Preserve source order within confidence levels. */
+        for (i = 1; i < result.candidates.length; i++) {
+            var candidate = result.candidates[i]; j = i - 1;
+            while (j >= 0 && ranks[result.candidates[j].confidence] < ranks[candidate.confidence]) {
+                result.candidates[j + 1] = result.candidates[j]; j--;
+            }
+            result.candidates[j + 1] = candidate;
+        }
+        for (i = 0; i < result.players.length; i++) if (typeof result.players[i].api.play === 'function') result.hasController = true;
+        return result;
+    }
+    function command(action) {
+        if (!/^(play|pause|toggle)$/.test(action)) return false;
+        var players = scan().players;
+        for (var i = 0; i < players.length; i++) {
+            try {
+                var entry = players[i], api = entry.api, next = action, response;
+                if (next === 'toggle') {
+                    var playing = entry.source === 'jwplayer' ? typeof api.getState === 'function' && /^(playing|buffering)$/i.test(api.getState()) : typeof api.paused === 'function' && api.paused() === false;
+                    next = playing ? 'pause' : 'play';
+                }
+                if (typeof api[next] !== 'function') continue;
+                response = entry.source === 'jwplayer' ? api[next](true) : api[next]();
+                if (response && typeof response.catch === 'function') response.catch(function () {});
+                return true;
+            } catch (ignoreCommand) {}
+        }
+        return false;
+    }
+    /* URLs exist only in this returned scan. No persistence, logging, hooks, requests or URL reconstruction. */
+    return {scan: scan, sanitizeCandidates: sanitizeCandidates, command: command};
+}
+
+/* Top-level navigation recovery. TizenBrew uses the same location API. */
+function SofaNavigation(core, onState, environment) {
+    'use strict';
+    var env = environment || window, pending = null, disposed = false;
+    var last = {state: 'idle', host: '', code: '', errorName: ''};
+
+    function announce(state, request, code, errorName) {
+        last = {state: state, host: request ? core.host(request.url) : '', code: code || '', errorName: errorName || ''};
+        if (onState) onState({state: last.state, host: last.host, code: last.code, errorName: last.errorName});
+    }
+    function clear(request) {
+        if (!request) return;
+        env.clearTimeout(request.defer);
+        env.clearTimeout(request.deadline);
+    }
+    function stop() {
+        try { env.stop(); } catch (ignoreStop) {}
+    }
+    function safeName(error) {
+        var name = error && error.name;
+        return /^(SecurityError|SyntaxError|TypeError|NotSupportedError|InvalidStateError|NetworkError|AbortError)$/.test(name || '') ? name : 'NavigationError';
+    }
+    function fail(request, code, errorName) {
+        if (pending !== request || disposed) return;
+        pending = null;
+        clear(request);
+        stop();
+        announce('failed', request, code, errorName);
+    }
+    function cancel() {
+        if (!pending) return false;
+        var request = pending;
+        pending = null;
+        clear(request);
+        stop();
+        announce('cancelled', request);
+        return true;
+    }
+    function start(value) {
+        var url = core.normalize(value);
+        if (!url || disposed) return false;
+        cancel();
+        var request = {url: url, defer: null, deadline: null};
+        pending = request;
+        announce('opening', request);
+        /* A UI callback may cancel or replace a request before it is scheduled. */
+        if (pending !== request) return true;
+        request.deadline = env.setTimeout(function () { fail(request, 'OPEN-01'); }, 15000);
+        request.defer = env.setTimeout(function () {
+            if (pending !== request || disposed) return;
+            try { env.location.assign(url); }
+            catch (error) { fail(request, 'OPEN-02', safeName(error)); }
+        }, 50);
+        return true;
+    }
+    function departed() {
+        if (!pending) return;
+        var request = pending;
+        pending = null;
+        clear(request);
+        /* pagehide means the old page left, not that the destination finished. */
+        announce('departed', request);
+    }
+    function dispose() {
+        disposed = true;
+        cancel();
+        if (env.removeEventListener) env.removeEventListener('pagehide', departed, false);
+    }
+    if (env.addEventListener) env.addEventListener('pagehide', departed, false);
+    return {start: start, cancel: cancel, dispose: dispose, snapshot: function () {
+        return {state: last.state, host: last.host, code: last.code, errorName: last.errorName};
+    }};
+}
+if (typeof module === 'object' && module.exports) module.exports = SofaNavigation;
+
 (function () {
     'use strict';
     var C = window.SofaCore;
@@ -649,11 +975,26 @@ function SofaDiagnostics(core) {
     var root, panel, toastBox, cursor, outline, focused, keyboard, focusBeforeKeyboard, hud, hoverTarget;
     var mode = 'pointer', panelOpen = false, enterTimer = null, enterHeld = false, enterDown = false;
     var px = window.innerWidth / 2, py = window.innerHeight / 2;
-    var currentView = 'home', toastTimer, playerStatus, playerPanel, lastVideoRoute = null;
+    var currentView = 'home', toastTimer, playerStatus, playerPanel, lastVideoRoute = null, playingURL = null;
+    var mediaFinder = SofaMedia(C), playerControlIndex = 1;
     var frameActive = topFrame, activeChildWindow = null, frameEntryTimer = null, pagePolicyKnown = topFrame;
     var storageWarning = false;
     var sites = SofaSites(C), matchCategory = 'All', matchLiveOnly = false, matchQuery = '', matchViewDismissed = false;
-    var loadingTimer = null, navigationNumber = 0, compatibilityText = null, compatibilityState = '';
+    var openingURL = '', compatibilityText = null, compatibilityState = '';
+    var navigation = SofaNavigation(C, function (state) {
+        if (state.state !== 'failed' || !root) return;
+        var p = base('Could not open ' + state.host, state.code), url = openingURL;
+        currentView = 'open-failed';
+        p.appendChild(el('p', 'sofa-loading-message', state.code === 'OPEN-02' ?
+            'The TV rejected this page change (' + state.errorName + ').' :
+            'The website did not replace the current page. Sofa cannot see the reason from here.'));
+        if (state.host === 'aether.ist') p.appendChild(el('p', 'sofa-muted', 'Aether’s compatibility loader has not started. Try https://aether.ist in the TV’s Internet app and check whether it gives a specific error.'));
+        var actions = row(p);
+        actions.appendChild(button('Back to Sofa', function () { home(); }, 'sofa-primary'));
+        actions.appendChild(button('Retry', function () { go(url); }));
+        actions.appendChild(button('Error details', function () { showDiagnostics(state.code + ' · ' + state.host, diagnostics.report()); }));
+        choose(actions.querySelector('button'));
+    });
     function get(key, fallback) {
         try { var raw = localStorage.getItem('sofa.' + key); return raw === null ? fallback : JSON.parse(raw); }
         catch (ignore) { storageWarning = true; return fallback; }
@@ -859,22 +1200,14 @@ function SofaDiagnostics(core) {
         if (!url) { toast('Enter a website address, such as https://example.com'); return; }
         if (blocker.enabled && C.blocked(url)) { toast('That address matches the ad blocklist.'); return; }
         if (forceMedia || C.isMedia(url)) { startStream(url); return; }
-        clearTimeout(loadingTimer);
-        var number = ++navigationNumber;
+        navigation.cancel(); openingURL = url;
         var p = base('Opening ' + C.host(url), 'Connecting to the website…'); currentView = 'opening';
         var message = el('p', 'sofa-loading-message', sites.isAether || C.host(url) === 'aether.ist' ? 'Aether may need extra time to start on this TV.' : 'Please wait while the website opens.'); p.appendChild(message);
         var cancel = button('Cancel', cancelNavigation); p.appendChild(cancel); choose(cancel);
-        loadingTimer = setTimeout(function () {
-            if (number !== navigationNumber || currentView !== 'opening') return;
-            message.textContent = 'OPEN-01: The TV has not finished opening this site. The website has not replaced the current page. Sofa cannot identify the connection or certificate error from this page. Try again or return to Sofa.';
-            var actions = row(p); actions.appendChild(button('Retry', function () { go(url); })); actions.appendChild(button('Back to Sofa', function () { window.stop(); home(); }));
-            actions.appendChild(button('Error details', function () { window.stop(); showDiagnostics('OPEN-01 · ' + C.host(url), diagnostics.report()); }));
-        }, 15000);
-        // Defer navigation so loading feedback is painted before a slow TLS handshake.
-        setTimeout(function () { if (number === navigationNumber) location.assign(url); }, 50);
+        navigation.start(url);
     }
     function cancelNavigation() {
-        navigationNumber++; clearTimeout(loadingTimer); window.stop();
+        navigation.cancel();
         atHome ? renderHome() : closePanel();
     }
     function home(action, value) {
@@ -893,6 +1226,7 @@ function SofaDiagnostics(core) {
     }
     function base(title, subtitle) {
         if (keyboard) dismissKeyboard();
+        if (toastBox) { clearTimeout(toastTimer); toastBox.style.display = 'none'; }
         panelOpen = true; panel.style.display = 'block'; panel.className = 'sofa-panel'; panel.textContent = '';
         cursor.style.display = 'none'; currentView = title;
         if (hud) hud.style.display = 'none';
@@ -942,7 +1276,7 @@ function SofaDiagnostics(core) {
         showList('Choose a stream server', items, items.length ? 'These are the source links on this event page. Try another free server if one does not load.' : 'No server links were found on this page.');
     }
     function showDiagnostics(title, report) {
-        var p = base('Error details', title + ' · Sofa 0.3.0'); currentView = 'diagnostics'; p.className = 'sofa-panel sofa-details';
+        var p = base('Error details', title + ' · Sofa 0.4.0'); currentView = 'diagnostics'; p.className = 'sofa-panel sofa-details';
         p.appendChild(el('p', 'sofa-muted', 'Report the OPEN/AETHER code or the first error line. These details stay on the TV.'));
         var content = el('pre', 'sofa-error-report', String(report || 'No details available.').slice(0, 5000));
         var controls = row(p);
@@ -958,7 +1292,7 @@ function SofaDiagnostics(core) {
         choose(list.querySelector('button'));
     }
     function renderHome() {
-        navigationNumber++; clearTimeout(loadingTimer);
+        navigation.cancel();
         player.close();
         var p = base('home'); p.className = 'sofa-panel sofa-home'; p.textContent = '';
         var side = el('aside', 'sofa-sidebar');
@@ -970,7 +1304,7 @@ function SofaDiagnostics(core) {
         side.appendChild(button('▷  Play a stream', function () { address(true); }, 'sofa-nav'));
         side.appendChild(button('☆  Saved sites', savedSites, 'sofa-nav'));
         side.appendChild(button('?  Remote guide', help, 'sofa-nav'));
-        side.appendChild(el('div', 'sofa-device', 'MADE FOR YOUR TV\nSamsung UN55MU630D\nTizen 3 · Sofa 0.3.0'));
+        side.appendChild(el('div', 'sofa-device', 'MADE FOR YOUR TV\nSamsung UN55MU630D\nTizen 3 · Sofa 0.4.0'));
         p.appendChild(side);
         var main = el('main', 'sofa-main'); p.appendChild(main);
         var top = el('div', 'sofa-home-top');
@@ -1113,6 +1447,7 @@ function SofaDiagnostics(core) {
         actions.appendChild(button('Open another website', function () { address(false); }));
         actions.appendChild(button('← Page back', function () { closePanel(); if (history.length > 1) history.back(); else home(); }));
         actions.appendChild(button('⌂ Home & saved sites', function () { home(); }));
+        actions.appendChild(button('Play in Sofa', findVideos, 'sofa-primary'));
         actions.appendChild(button('Find video on this page', findVideos));
         actions.appendChild(button('Page and player diagnostics', function () { findVideos(true); }));
         actions.appendChild(button('Play a direct stream', function () { address(true); }));
@@ -1137,7 +1472,7 @@ function SofaDiagnostics(core) {
     function help() {
         var p = base('One remote is all you need.', 'Your UN55MU630D · Tizen 3 compatibility profile');
         var guide = el('div', 'sofa-guide');
-        guide.innerHTML = '<p><b>Arrows</b> Move between controls. In Pointer mode, move the cursor; keep pushing at the edge to scroll.</p><p><b>OK / Select</b> Click. On a page, hold for 0.7 seconds to open the browser menu.</p><p><b>Back</b> Open the menu or close a dialog. Use “Page back” for website history.</p><p><b>Red / F2</b> Browser menu. <b>Green</b> Switch Focus / Pointer. <b>Yellow</b> Find video. <b>Blue</b> Home.</p><p><b>Play / Pause</b> Control video. <b>Rewind / Fast forward</b> Seek 10 seconds. During direct playback, Left / Right also seek.</p><p><b>Embedded players</b> Select the player frame to enter it. Back returns to the menu. Find video can discover accessible videos and direct media links.</p>';
+        guide.innerHTML = '<p><b>Arrows</b> Move between controls. In Pointer mode, move the cursor; keep pushing at the edge to scroll.</p><p><b>OK / Select</b> Click. On a page, hold for 0.7 seconds to open the browser menu.</p><p><b>Back</b> Open the menu or close a dialog. Use “Page back” for website history.</p><p><b>Red / F2</b> Browser menu. <b>Green</b> Switch Focus / Pointer. <b>Yellow</b> Find video. <b>Blue</b> Home.</p><p><b>Play / Pause</b> Control video. <b>Rewind / Fast forward</b> Seek 10 seconds. During Sofa playback, Left / Right choose controls and OK selects.</p><p><b>Embedded players</b> Select the player frame to enter it. Back returns to the menu. Find video can discover accessible videos and direct media links.</p>';
         p.appendChild(guide);
         var avAvailable = !!(window.webapis && webapis.avplay);
         p.appendChild(el('p', 'sofa-diagnostics', 'Tizen APIs: ' + (window.tizen ? 'present' : 'not detected (desktop preview)') + '\nAVPlay: ' + (avAvailable ? 'available' : 'loaded on demand on TV') + '\nFilters: ' + C.domains.length + ' domains · document: ' + blocker.count + ' filtered / ' + blocker.popups + ' pop-ups\n' + navigator.userAgent));
@@ -1145,22 +1480,35 @@ function SofaDiagnostics(core) {
         var b = button('Back', function () { atHome ? renderHome() : showMenu(); }, 'sofa-primary'); p.appendChild(b); choose(b);
     }
     function startStream(url) {
-        if (!atHome) { home('play', url); return; }
-        base('Direct player'); panel.style.display = 'none'; panelOpen = false;
+        url = C.normalize(url);
+        if (!url || !/^https?:\/\//i.test(url)) { toast('That stream address is not supported.'); return; }
+        navigation.cancel();
+        restoreFrameControl();
+        // Keep the original document and player frames alive. Moving to the launcher
+        // loses the loaded player's state and adds signed media URLs to history.
+        discoveries.forEach(function (entry) { if (entry.data.hasVideo || entry.data.hasController) sendMedia(entry.route, 'pause'); });
+        player.close();
+        if (playerPanel && playerPanel.parentNode) playerPanel.parentNode.removeChild(playerPanel);
+        playingURL = url;
+        base('Sofa player'); panel.style.display = 'none'; panelOpen = false;
         playerPanel = el('div', 'sofa-player'); root.appendChild(playerPanel);
         var controls = el('div', 'sofa-player-controls'); playerPanel.appendChild(controls);
+        controls.appendChild(el('h2', '', 'Sofa player'));
         playerStatus = el('div', 'sofa-player-status', 'Opening stream…'); controls.appendChild(playerStatus);
         var r = row(controls);
         r.appendChild(button('−10 s', function () { player.command('rewind'); }));
         r.appendChild(button('Play / Pause', function () { player.command('toggle'); }));
         r.appendChild(button('+10 s', function () { player.command('forward'); }));
+        r.appendChild(button('Retry stream', function () { if (playingURL) player.open(playingURL, playerPanel); }));
         r.appendChild(button('Close player', stopStream));
-        controls.appendChild(el('p', '', 'OK: Play / Pause    ·    ← →: Seek 10 seconds    ·    Back: Close'));
+        controls.appendChild(el('p', '', '← →: Choose a control    ·    OK: Select    ·    Back: Return to the page'));
         player.open(url, playerPanel);
+        playerControlIndex = 1; choose(r.querySelectorAll('button')[playerControlIndex]); updateCursor();
     }
     function stopStream() {
         player.close(); if (playerPanel) playerPanel.parentNode.removeChild(playerPanel);
-        playerPanel = null; playerStatus = null; renderHome();
+        playerPanel = null; playerStatus = null; playingURL = null;
+        if (atHome) renderHome(); else { closePanel(); focused = null; updateCursor(); }
     }
     function controlVideo(video, action) {
         if (!video) return;
@@ -1195,13 +1543,16 @@ function SofaDiagnostics(core) {
     }
     var discoveries = [], discoveryToken = 0, waitingFrames = [], mediaRoutes = {}, mediaRouteCount = 0, receivedMedia = [];
     function sendMedia(route, action) {
-        if (route === 'self') { controlVideo(localVideo(), action); return true; }
+        if (route === 'self') {
+            if (!mediaFinder.command(action)) controlVideo(localVideo(), action);
+            return true;
+        }
         var destination = mediaRoutes[route];
         if (!destination || !isChildWindow(destination.source)) return false;
         destination.source.postMessage({sofa: 1, action: 'media', route: destination.route, command: action}, '*'); return true;
     }
     function collectMedia() {
-        var urls = [], videos = document.querySelectorAll('video'), seen = {};
+        var scan = mediaFinder.scan(), urls = [], videos = document.querySelectorAll('video'), seen = {};
         function add(value) { var safe = C.normalize(value); if (safe && !seen[safe] && urls.length < 20) { seen[safe] = true; urls.push(safe); } }
         for (var i = 0; i < videos.length; i++) {
             if (root && root.contains(videos[i])) continue;
@@ -1210,7 +1561,9 @@ function SofaDiagnostics(core) {
         }
         var links = document.querySelectorAll('a[href]');
         for (var k = 0; k < links.length && k < 2000; k++) if (C.isMedia(links[k].href)) add(links[k].href);
-        return {urls: urls, hasVideo: !!localVideo(), host: C.host(location.href), details: diagnostics.snapshot()};
+        scan.candidates.forEach(function (candidate) { add(candidate.url); });
+        return {urls: urls, candidates: scan.candidates, hasVideo: !!localVideo(), hasController: scan.hasController === true,
+            hasBlob: scan.hasBlob === true, protectedMedia: scan.protectedMedia === true, host: C.host(location.href), details: diagnostics.snapshot()};
     }
     function discoverFrames(token) {
         discoveryToken = token; waitingFrames = []; receivedMedia = []; mediaRoutes = {}; mediaRouteCount = 0; lastVideoRoute = null;
@@ -1229,20 +1582,47 @@ function SofaDiagnostics(core) {
         showList('Looking for video…', [], 'Checking page videos, direct media links and embedded frames.');
         setTimeout(function () {
             if (token !== discoveryToken || currentView !== 'Looking for video…') return;
-            var items = [], seen = {};
+            var items = [], streams = [], seen = {}, number = 0, controllers = [], blob = false, protectedMedia = false;
             discoveries.forEach(function (entry) {
                 if (detailsOnly) { items.push({text: 'Error details · ' + entry.data.host, action: function () { showDiagnostics(entry.data.host, diagnostics.format(entry.data.details)); }}); return; }
-                if (entry.data.hasVideo) {
+                blob = blob || entry.data.hasBlob; protectedMedia = protectedMedia || entry.data.protectedMedia;
+                if (entry.data.hasVideo || entry.data.hasController) {
+                    controllers.push(entry);
                     items.push({text: 'Play / pause website video · ' + entry.data.host, action: function () { lastVideoRoute = entry.route; closePanel(); mediaCommand('toggle'); }});
                     items.push({text: 'Full-screen website video · ' + entry.data.host, action: function () { lastVideoRoute = entry.route; closePanel(); mediaCommand('fullscreen'); }});
                 }
+                if (entry.data.protectedMedia) return;
+                var candidates = (entry.data.candidates || []).slice();
+                // Retain explicit DOM media links as well as the richer player sources.
                 entry.data.urls.forEach(function (url) {
+                    for (var i = 0; i < candidates.length; i++) if (candidates[i].url === url) return;
+                    candidates.push({url: url, kind: /\.m3u8(?:[?#]|$)/i.test(url) ? 'hls' : /\.mpd(?:[?#]|$)/i.test(url) ? 'dash' : 'video'});
+                });
+                candidates.forEach(function (candidate) {
+                    var url = candidate.url;
                     if (seen[url]) return; seen[url] = true;
-                    items.push({text: 'Open direct stream · ' + url.slice(0, 130), action: function () { startStream(url); }});
+                    number++;
+                    streams.push({text: 'Play in Sofa · ' + candidate.kind.toUpperCase() + ' ' + number + ' · ' + C.host(url), action: function () { startStream(url); }});
                 });
             });
             if (detailsOnly) showList('Page and player diagnostics', items, 'Choose the main page or an embedded player to view captured errors and video state. Frames without Sofa injection cannot report details.');
-            else showList('Video on this page', items, items.length ? 'Native playback may fail if a stream needs the website’s cookies or DRM. The website player keeps its own session.' : 'No accessible video found yet. Start the site’s player, try again, or use Pointer mode. Blob / DRM streams cannot be extracted as direct URLs.');
+            else {
+                items = streams.concat(items);
+                if (controllers.length && !number) items.unshift({text: 'Start website player, then find stream', action: function () {
+                    controllers.forEach(function (entry) { sendMedia(entry.route, 'play'); });
+                    showList('Starting website player…', [], 'Waiting for the player to expose its stream.');
+                    setTimeout(function () { if (currentView === 'Starting website player…') findVideos(); }, 1800);
+                }});
+                items.push({text: 'Refresh stream list', action: findVideos});
+                if (sites.servers().length) items.push({text: 'Choose another server', action: showServers});
+                items.push({text: 'Return to website player', action: closePanel});
+                var hint = number ? 'Choose a stream to play in the Sofa overlay. The website stays open. Some providers require their original player.' :
+                    protectedMedia ? 'This player requires protected playback. Use its website controls or choose another server.' :
+                    controllers.length ? 'Start the website player to request its stream, then choose Play in Sofa when a source appears.' :
+                    'This server has not exposed a usable stream or controllable player. Try another server or check Page and player diagnostics.';
+                if (blob && !number && !protectedMedia) hint += ' Its current video uses an in-memory source; Sofa needs the original stream request.';
+                showList('Play in Sofa', items, hint);
+            }
         }, 900);
     }
     window.addEventListener('message', function (event) {
@@ -1282,7 +1662,10 @@ function SofaDiagnostics(core) {
             mediaRoutes[route] = {source: event.source, route: data.route};
             var details = diagnostics.sanitizeSnapshot(data.data.details);
             var safeHost = C.normalize(typeof data.data.host === 'string' ? data.data.host : '');
-            var media = {hasVideo: data.data.hasVideo === true, host: safeHost ? C.host(safeHost).slice(0, 120) : 'embedded player', urls: data.data.urls.slice(0, 20).filter(function (url) { return typeof url === 'string' && C.normalize(url) === url; }), details: details};
+            var media = {hasVideo: data.data.hasVideo === true, hasController: data.data.hasController === true,
+                hasBlob: data.data.hasBlob === true, protectedMedia: data.data.protectedMedia === true,
+                candidates: mediaFinder.sanitizeCandidates(data.data.candidates),
+                host: safeHost ? C.host(safeHost).slice(0, 120) : 'embedded player', urls: data.data.urls.slice(0, 20).filter(function (url) { return typeof url === 'string' && /^https?:\/\//i.test(url) && C.normalize(url) === url; }), details: details};
             if (topFrame) discoveries.push({route: route, data: media});
             else window.parent.postMessage({sofa: 1, action: 'discovered', token: discoveryToken, route: route, data: media}, '*');
         }
@@ -1313,9 +1696,14 @@ function SofaDiagnostics(core) {
         if (key === 10009 || key === 27) { cancelEnter(); back(); }
         else if (key === 403 || key === 113) { cancelEnter(); if (keyboard) dismissKeyboard(); showMenu(); }
         else if (playerPanel) {
-            if (key === 37 || key === 412) player.command('rewind');
-            else if (key === 39 || key === 417) player.command('forward');
-            else if (key === 13 || key === 10252) { if (!event.repeat) player.command('toggle'); }
+            if (key === 37 || key === 39) {
+                var controls = playerPanel.querySelectorAll('button');
+                playerControlIndex = Math.max(0, Math.min(controls.length - 1, playerControlIndex + (key === 37 ? -1 : 1))); choose(controls[playerControlIndex]);
+            }
+            else if (key === 412) player.command('rewind');
+            else if (key === 417) player.command('forward');
+            else if (key === 13) { if (!event.repeat && focused && playerPanel.contains(focused)) focused.click(); }
+            else if (key === 10252) { if (!event.repeat) player.command('toggle'); }
             else if (key === 415) player.command('play'); else if (key === 19) player.command('pause');
             else if (key === 413) stopStream();
         }
@@ -1351,6 +1739,7 @@ function SofaDiagnostics(core) {
             pageZoom = Number(get('playerPageZoom', 1));
             if ([1, 1.25, 1.5, 1.75, 2].indexOf(pageZoom) === -1) pageZoom = 1;
             hud.appendChild(button('Servers', showServers));
+            hud.appendChild(button('Play in Sofa', findVideos, 'sofa-primary'));
             hud.appendChild(button('Go to player', function () { closePanel(); sites.playerElement().scrollIntoView(true); }));
         }
         hud.appendChild(button('Menu / Back', showMenu)); root.appendChild(hud); applyZoom(); updateCursor();
@@ -1388,7 +1777,7 @@ function SofaDiagnostics(core) {
                 if (sites.isAether) compatibility.begin(false);
             }
         }
-        window.SofaBrowser = {version: '0.3.0', diagnostics: function () { return {blocking: blocker.enabled, blocked: blocker.count, popups: blocker.popups, atHome: atHome, topFrame: topFrame, mode: mode, pageZoom: pageZoom, matches: sites.matches().length, servers: sites.servers().length, compatibility: compatibility.status(), page: diagnostics.snapshot()}; }};
+        window.SofaBrowser = {version: '0.4.0', diagnostics: function () { return {blocking: blocker.enabled, blocked: blocker.count, popups: blocker.popups, atHome: atHome, topFrame: topFrame, mode: mode, pageZoom: pageZoom, matches: sites.matches().length, servers: sites.servers().length, compatibility: compatibility.status(), page: diagnostics.snapshot()}; }};
     }
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
 }());
