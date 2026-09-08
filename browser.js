@@ -58,7 +58,7 @@ window.__sofaBrowserInstalled = true;
     return {domains: domains, host: host, blocked: blocked, normalize: normalize, isMedia: isMedia, nearest: nearest, time: time};
 }));
 
-var SOFA_CSS = ".sofa-root { all: initial; position: fixed; z-index: 2147483646; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; font-family: Arial, Helvetica, sans-serif; color: #eef2f5; font-size: 22px; line-height: 1.5; text-align: left; }\n.sofa-root * { box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; }\n.sofa-root h1,.sofa-root h2,.sofa-root p { padding: 0; margin: 0; color: inherit; }\n.sofa-root h1 { font-size: 42px; font-weight: 500; line-height: 1.15; letter-spacing: -1px; }\n.sofa-root h2 { font-size: 24px; font-weight: 500; }\n.sofa-panel { pointer-events: auto; position: absolute; top: 0; left: 0; width: 100%; height: 100%; padding: 55px 6%; background: #0c1119; overflow-y: auto; }\n.sofa-dialog-head { margin-bottom: 28px; }\n.sofa-dialog-head h1 { margin: 12px 0 16px; }\n.sofa-eyebrow { color: #99a4b2; font-size: 13px; letter-spacing: 2px; font-weight: bold; }\n.sofa-muted { color: #96a1b0 !important; font-size: 17px; line-height: 1.6; }\n.sofa-button { all: initial; display: inline-block; box-sizing: border-box; cursor: pointer; pointer-events: auto; font: 20px/1.35 Arial, Helvetica, sans-serif; text-align: center; border: 2px solid #293341; border-radius: 10px; padding: 16px 23px; margin: 0 12px 12px 0; color: #edf2f6; background: #18212d; min-height: 60px; vertical-align: middle; transition: background-color .12s, border-color .12s; }\n.sofa-button:focus,.sofa-input:focus,.sofa-keyboard-display:focus { outline: 3px solid #a9f3d0 !important; outline-offset: 4px; border-color: #a9f3d0; background-color: #243c3a; }\n.sofa-button:hover { border-color: #a9f3d0; }\n.sofa-primary { background: #b3f1d3; color: #10221e; border-color: #b3f1d3; font-weight: bold; }\n.sofa-primary:focus { color: #0c211a; background: #ccffe7; }\n.sofa-secondary { color: #aeb9c6; }\n.sofa-row { display: flex; flex-wrap: wrap; align-items: center; margin-top: 22px; }\n.sofa-input { display: block; width: 100%; padding: 20px 25px; font-size: 26px; color: #edf2f6; background: #141e2a; border: 2px solid #3c4858; border-radius: 10px; margin-bottom: 24px; }\n.sofa-list { max-width: 1100px; }\n.sofa-list .sofa-button { display: block; width: 100%; text-align: left; overflow-wrap: break-word; word-wrap: break-word; }\n.sofa-menu-grid { display: flex; flex-wrap: wrap; margin-bottom: 22px; }\n.sofa-menu-grid .sofa-button { width: 31%; margin-bottom: 18px; text-align: left; font-size: 19px; }\n.sofa-home { padding: 0; display: flex !important; }\n.sofa-sidebar { flex: 0 0 235px; width: 235px; border-right: 1px solid #242b35; padding: 45px 26px; position: relative; }\n.sofa-brand-mark { display: inline-block; width: 45px; height: 45px; text-align: center; border: 2px solid #b3f1d3; border-radius: 15px; color: #b3f1d3; font-size: 33px; line-height: 35px; margin-right: 10px; vertical-align: middle; }\n.sofa-brand { display: inline-block; font-size: 39px; font-weight: bold; letter-spacing: -2px; vertical-align: middle; }\n.sofa-brand-sub { font-size: 9px; letter-spacing: 1.7px; color: #788492; margin: 16px 0 60px; }\n.sofa-nav { width: 100%; text-align: left; font-size: 17px; border: 1px solid transparent; background: transparent; padding: 16px 12px; margin: 0 0 10px; min-height: 54px; color: #96a1ae; }\n.sofa-selected { color: #b3f1d3; background: #172e2a; border-color: #29433b; }\n.sofa-device { white-space: pre-line; font-size: 12px; line-height: 1.9; position: absolute; bottom: 35px; left: 38px; color: #748292; }\n.sofa-main { flex: 1; min-width: 0; padding: 42px 48px 28px; }\n.sofa-home-top { display: flex; justify-content: space-between; align-items: center; }\n.sofa-pill { font-size: 12px; color: #b3f1d3; border: 1px solid #35443e; border-radius: 30px; padding: 8px 14px; background: #16261f; }\n.sofa-hero { display: flex; position: relative; height: 275px; margin: 32px 0 12px; align-items: center; }\n.sofa-hero-copy { width: 65%; z-index: 1; }\n.sofa-hero h1 { font-size: 62px; line-height: 1.02; font-weight: 500; letter-spacing: -2.6px; }\n.sofa-accent { color: #b3f1d3 !important; }\n.sofa-intro { color: #96a1af !important; font-size: 17px; line-height: 1.7; margin-top: 22px !important; white-space: pre-line; }\n.sofa-remote-art { position: relative; flex: 1; height: 260px; }\n.sofa-orbit { width: 260px; height: 260px; position: absolute; top: -5px; left: -14px; border-radius: 50%; border: 1px solid #2a403c; background: radial-gradient(ellipse at center, #224237 0%, #16251f 38%, #0c1119 70%); }\n.sofa-orbit:after { content: ''; position: absolute; top: 35px; left: 35px; right: 35px; bottom: 35px; border: 1px solid #294039; border-radius: 50%; }\n.sofa-remote { position: absolute; left: 68px; top: -10px; width: 92px; height: 236px; border-radius: 38px; transform: rotate(19deg); background: linear-gradient(110deg, #44514f, #222d2d 40%, #151e20 100%); box-shadow: -8px 12px 35px rgba(0,0,0,.4); border: 2px solid #50605a; }\n.sofa-remote i { position: absolute; top: 20px; left: 38px; width: 11px; height: 11px; border-radius: 100%; border: 2px solid #b3f1d3; }\n.sofa-dpad { position: absolute; top: 55px; left: 12px; width: 64px; height: 64px; border-radius: 100%; border: 1px solid #668075; background: #263d34; text-align: center; font-size: 11px; line-height: 16px; }\n.sofa-dpad b { display: block; font-size: 12px; line-height: 29px; color: #b3f1d3; }\n.sofa-remote-keys { position: absolute; top: 135px; left: 18px; color: #a8b9b2; font-size: 19px; }\n.sofa-remote-line { position: absolute; top: 183px; left: 31px; width: 24px; height: 3px; border-radius: 5px; background: #52655d; }\n.sofa-art-label { position: absolute; bottom: 0; width: 250px; text-align: center; font-size: 8px; letter-spacing: 1.4px; color: #73877d; }\n.sofa-address-launch { width: 100%; display: flex; align-items: center; text-align: left; background: #151e28; padding: 20px 25px; margin: 0; font-size: 20px; border-color: #45584f; border-radius: 12px; }\n.sofa-address-icon { color: #b3f1d3; font-size: 25px; margin-right: 18px; }\n.sofa-address-hint { font-size: 12px; color: #93a097; margin-left: auto; padding-left: 15px; }\n.sofa-section-label { display: flex; align-items: center; justify-content: space-between; margin: 30px 0 20px; }\n.sofa-section-label .sofa-muted { font-size: 9px; letter-spacing: 1.4px; }\n.sofa-cards { display: flex; }\n.sofa-card { flex: 1; display: block; min-width: 0; height: 147px; text-align: left; padding: 19px; background: #192026; border-color: #2f3c43; margin-right: 15px; }\n.sofa-card:last-child { margin-right: 0; }\n.sofa-card-symbol { display: block; color: #b3f1d3; font-size: 26px; margin-bottom: 15px; line-height: 1; }\n.sofa-card strong { display: block; font-size: 18px; margin-bottom: 6px; }\n.sofa-card small { display: block; font-size: 11px; color: #84919e; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }\n.sofa-card-0 { background: linear-gradient(130deg, #253433, #172127); }\n.sofa-card-1 { background: linear-gradient(130deg, #282d40, #181e2c); }\n.sofa-card-1 .sofa-card-symbol { color: #bcbdf5; }\n.sofa-card-2 { background: linear-gradient(130deg, #39342b, #211f20); }\n.sofa-add-card { background: transparent; border-style: dashed; }\n.sofa-add-card .sofa-card-symbol { color: #93a09c; }\n.sofa-home-footer { display: flex; justify-content: space-between; margin-top: 29px; padding-top: 20px; border-top: 1px solid #242c37; font-size: 11px; color: #acb7c0; }\n.sofa-home-footer .sofa-muted { font-size: 11px; }\n.sofa-keyboard { pointer-events: auto; position: absolute; z-index: 8; bottom: 3%; left: 10%; width: 80%; background: #121c29; border: 2px solid #43574f; border-radius: 20px; padding: 24px 30px; box-shadow: 0 0 0 2000px rgba(0,0,0,.65); }\n.sofa-keyboard-display { display: block; background: #0a1018; color: #eef2f5; border: 1px solid #50615b; border-radius: 8px; width: 100%; padding: 12px 18px; font-size: 26px; margin: 10px 0 20px; }\n.sofa-key-row { display: flex; margin-bottom: 9px; }\n.sofa-key { flex: 1; padding: 8px 0; margin: 0 8px 0 0; min-height: 40px; font-size: 21px; border-radius: 7px; }\n.sofa-key:last-child { margin-right: 0; }\n.sofa-keyboard .sofa-row { margin-top: 16px; }\n.sofa-keyboard .sofa-row .sofa-button { flex: 1; padding: 10px 8px; font-size: 17px; min-height: 42px; margin-bottom: 0; }\n.sofa-toast { pointer-events: none; display: none; position: absolute; bottom: 6%; left: 15%; width: 70%; padding: 18px 26px; border: 1px solid #587666; color: #ebfff4; background: #1b3029; border-radius: 12px; text-align: center; z-index: 10; font-size: 21px; }\n.sofa-cursor { pointer-events: none; position: absolute; display: none; z-index: 20; width: 36px; height: 46px; margin: 0; filter: drop-shadow(0 2px 3px #000); }\n.sofa-cursor svg,.sofa-cursor path { pointer-events: none; }\n.sofa-cursor-link svg path { fill: #ffffff; }\n.sofa-pointer-target { outline: 3px solid #b3ffd7 !important; outline-offset: 3px !important; }\n.sofa-hud { pointer-events: auto; position: absolute; display: none; z-index: 4; right: 30px; bottom: 18px; padding: 8px 12px 8px 18px; background: rgba(10,24,20,.95); border: 1px solid #5e8975; border-radius: 10px; color: #e1f9eb; }\n.sofa-hud-label { font-size: 17px; margin-right: 16px; }\n.sofa-hud .sofa-button { min-height: 34px; font-size: 16px; padding: 8px 12px; margin: 0; }\n.sofa-loading-message { padding: 28px 0; font-size: 26px; max-width: 1000px; line-height: 1.5; }\n.sofa-error-report { white-space: pre-wrap; word-wrap: break-word; font: 20px/1.6 Arial,sans-serif; color: #eef2f5; background: #17222e; padding: 20px; margin: 20px 0; border: 1px solid #3e6169; }\n.sofa-details { padding: 28px 4%; }\n.sofa-details .sofa-dialog-head { margin-bottom: 12px; }\n.sofa-details .sofa-dialog-head h1 { font-size: 34px; margin: 8px 0; }\n.sofa-details .sofa-row { margin-top: 12px; }\n.sofa-details .sofa-error-report { height: calc(100vh - 330px); min-height: 150px; overflow-y: auto; margin-top: 4px; }\n.sofa-streams { padding: 32px 4% 80px; overflow: hidden; }\n.sofa-streams .sofa-dialog-head { margin-bottom: 10px; }\n.sofa-streams .sofa-dialog-head h1 { margin: 6px 0; }\n.sofa-streams .sofa-dialog-head .sofa-muted { font-size: 20px; }\n.sofa-streams .sofa-row { margin-top: 10px; }\n.sofa-streams .sofa-row .sofa-button,.sofa-stream-tabs .sofa-button { min-height: 44px; padding: 10px 15px; font-size: 18px; }\n.sofa-stream-tabs { white-space: nowrap; overflow-x: auto; padding: 6px; margin: 0 -6px 12px; }\n.sofa-stream-list { display: flex; flex-wrap: wrap; align-content: flex-start; overflow-y: auto; height: calc(100vh - 360px); padding: 8px; margin: -8px; }\n.sofa-match { display: block; width: calc(50% - 16px); min-height: 160px; text-align: left; padding: 22px 25px; margin: 8px; background: #1b303c; border-color: #3e6169; }\n.sofa-match-meta { display: block; font-size: 16px; color: #b3f1d3; margin-bottom: 12px; }\n.sofa-match-title { display: block; font-size: 27px; line-height: 1.3; white-space: normal; }\n.sofa-match-footer { display: block; font-size: 19px; color: #bccbd5; margin-top: 14px; }\n@media (min-width: 1600px) { .sofa-streams { padding: 45px 5% 80px; } .sofa-stream-list { height: calc(100vh - 390px); } .sofa-match { min-height: 205px; padding: 30px; } .sofa-match-title { font-size: 35px; } .sofa-match-meta { font-size: 20px; } .sofa-match-footer { font-size: 24px; } }\n.sofa-page-focus { outline: 4px solid #73f3b7 !important; outline-offset: 4px !important; box-shadow: 0 0 0 7px rgba(12,30,21,.7) !important; }\n/* The event page's grid, var() minimum height and inset collapse on Chromium 47.\n   Keep the original player, source links and access notices in their document. */\nhtml.sofa-player-page,html.sofa-player-page body { height: auto !important; min-height: 100% !important; overflow-y: auto !important; background: #0c1119 !important; color: #eef2f5 !important; }\n.sofa-player-page .streameast-video-page,.sofa-player-page .se-video { display: block !important; height: auto !important; max-height: none !important; overflow: visible !important; }\n.sofa-player-page .se-video { padding: 12px 24px 100px !important; }\n.sofa-player-page .se-layout,.sofa-player-page .se-main { display: block !important; width: 100% !important; height: auto !important; max-height: none !important; min-width: 0 !important; overflow: visible !important; }\n.sofa-player-page #se-streams-list { display: flex !important; flex-wrap: nowrap !important; overflow-x: auto !important; list-style: none !important; padding: 8px !important; margin: 0 0 12px !important; }\n.sofa-player-page #se-streams-list .se-stream { display: block !important; flex: 0 0 auto !important; margin: 0 12px 8px 0 !important; border: 2px solid #3e6169 !important; border-radius: 8px !important; background: #1b303c !important; }\n.sofa-player-page #se-streams-list .se-stream__link { display: block !important; font: 24px/1.35 Arial,sans-serif !important; padding: 16px 22px !important; color: #eef2f5 !important; }\n.sofa-player-page #se-streams-list .se-stream.is-active { border-color: #b3f1d3 !important; }\n.sofa-player-page #se-streams-list .se-stream.is-pro .se-stream__link:after { content: ' · Premium'; color: #f6d684; font-size: 18px; }\n.sofa-player-page .se-board { display: block !important; height: auto !important; min-height: 0 !important; padding: 12px !important; background: #18212d !important; color: #eef2f5 !important; }\n.sofa-player-page .se-board__row { display: flex !important; align-items: center !important; justify-content: space-between !important; }\n.sofa-player-page .se-board__side { display: flex !important; align-items: center !important; width: 38% !important; }\n.sofa-player-page .se-board__crest { width: 48px !important; height: 48px !important; margin-right: 14px !important; }\n.sofa-player-page .se-board__crest img { max-width: 48px !important; max-height: 48px !important; }\n.sofa-player-page .se-board__name { color: #eef2f5 !important; font: bold 24px/1.3 Arial,sans-serif !important; }\n.sofa-player-page .se-board__name-mob { display: none !important; }\n.sofa-player-page #se-player-root { position: relative !important; display: block !important; width: 100% !important; height: 65vh !important; min-height: 360px !important; max-height: none !important; background: #000 !important; border-radius: 0 !important; overflow: hidden !important; }\n.sofa-player-page #se-player-root[data-state=\"live\"] > iframe,.sofa-player-page #se-player-root[data-state=\"live\"] > video,.sofa-player-page #se-player-root[data-state=\"live\"] #VideoFrame { position: absolute !important; top: 0 !important; right: 0 !important; bottom: 0 !important; left: 0 !important; display: block !important; width: 100% !important; height: 100% !important; min-height: 0 !important; border: 0 !important; }\n.sofa-player-page #chat-container { display: block !important; width: 100% !important; height: 320px !important; margin-top: 18px !important; }\n.sofa-player-page #live-chat-iframe { width: 100% !important; height: 260px !important; }\n.sofa-player-page #se-player-root:-webkit-full-screen { height: 100vh !important; }\n.sofa-player-page #se-player-root:fullscreen { height: 100vh !important; }\n.sofa-player-page #se-player-root:not([data-state=\"live\"]) { height: auto !important; overflow: visible !important; }\n.sofa-guide p { font-size: 20px; margin: 0 0 16px; color: #abb8c4; }\n.sofa-guide b { color: #b3f1d3; }\n.sofa-diagnostics { font-size: 13px; color: #929fab !important; white-space: pre-line; padding: 18px; border: 1px solid #303c49; border-radius: 8px; margin: 20px 0 !important; word-break: break-word; }\n.sofa-guide + .sofa-muted { margin: 20px 0; }\n.sofa-player { pointer-events: auto; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #000; }\n.sofa-player-surface,.sofa-av-object,.sofa-html-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }\n.sofa-root .sofa-player-surface,.sofa-root .sofa-av-object,.sofa-root .sofa-html-video { display: block; z-index: 1; visibility: visible; opacity: 1; }\n.sofa-root .sofa-av-object { background: transparent; }\n.sofa-player-controls { position: absolute; z-index: 2; bottom: 0; left: 0; width: 100%; padding: 20px 5% 22px; background: linear-gradient(transparent, rgba(0,0,0,.88)); }\n.sofa-player-status { font-size: 22px; }\n.sofa-player-controls p { color: #b4c0cb; font-size: 15px; }\n@media (max-height: 760px) { .sofa-main { padding-top: 30px; } .sofa-hero { height: 210px; margin-top: 18px; } .sofa-remote-art { transform: scale(.8); transform-origin: center; } .sofa-section-label { margin-top: 22px; margin-bottom: 16px; } .sofa-card { height: 128px; padding: 15px 19px; } .sofa-card-symbol { margin-bottom: 10px; } .sofa-home-footer { margin-top: 17px; padding-top: 15px; } .sofa-keyboard { padding: 18px 25px; } .sofa-keyboard-display { font-size: 23px; margin-bottom: 16px; } }\n@media (min-width: 1600px) { .sofa-sidebar { flex-basis: 300px; width: 300px; padding: 65px 40px; } .sofa-main { padding: 65px 70px 35px; } .sofa-hero { height: 390px; margin: 45px 0 24px; } .sofa-hero h1 { font-size: 88px; } .sofa-intro { font-size: 23px; } .sofa-remote-art { transform: scale(1.3); transform-origin: center; margin-left: 70px; } .sofa-address-launch { padding: 29px 32px; font-size: 28px; } .sofa-address-hint { font-size: 18px; } .sofa-section-label { margin-top: 45px; } .sofa-card { height: 195px; padding: 28px; } .sofa-card strong { font-size: 24px; } .sofa-card small { font-size: 16px; } .sofa-card-symbol { font-size: 34px; margin-bottom: 24px; } .sofa-nav { font-size: 22px; margin-bottom: 20px; } .sofa-device { font-size: 16px; } .sofa-home-footer { font-size: 16px; margin-top: 40px; } .sofa-home-footer .sofa-muted { font-size: 15px; } .sofa-keyboard { width: 70%; left: 15%; padding: 35px; } .sofa-key { min-height: 65px; font-size: 28px; } }\n@media (max-width: 1050px) { .sofa-sidebar { flex-basis: 180px; width: 180px; padding: 25px 15px; } .sofa-main { padding: 28px; } .sofa-brand-sub { margin-bottom: 28px; } .sofa-hero h1 { font-size: 46px; } .sofa-hero { height: 220px; } .sofa-remote-art { transform: scale(.75); transform-origin: left center; } .sofa-intro { font-size: 13px; } .sofa-device { left: 22px; font-size: 10px; } .sofa-address-hint { display: none; } .sofa-card { height: 125px; padding: 14px; } .sofa-home-footer { margin-top: 20px; } .sofa-pill { font-size: 10px; } .sofa-home-top .sofa-eyebrow { font-size: 10px; } }\n";
+var SOFA_CSS = ".sofa-root { all: initial; position: fixed; z-index: 2147483646; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; font-family: Arial, Helvetica, sans-serif; color: #eef2f5; font-size: 22px; line-height: 1.5; text-align: left; }\n.sofa-root * { box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; }\n.sofa-root h1,.sofa-root h2,.sofa-root p { padding: 0; margin: 0; color: inherit; }\n.sofa-root h1 { font-size: 42px; font-weight: 500; line-height: 1.15; letter-spacing: -1px; }\n.sofa-root h2 { font-size: 24px; font-weight: 500; }\n.sofa-panel { pointer-events: auto; position: absolute; top: 0; left: 0; width: 100%; height: 100%; padding: 55px 6%; background: #0c1119; overflow-y: auto; }\n.sofa-dialog-head { margin-bottom: 28px; }\n.sofa-dialog-head h1 { margin: 12px 0 16px; }\n.sofa-eyebrow { color: #99a4b2; font-size: 13px; letter-spacing: 2px; font-weight: bold; }\n.sofa-muted { color: #96a1b0 !important; font-size: 17px; line-height: 1.6; }\n.sofa-button { all: initial; display: inline-block; box-sizing: border-box; cursor: pointer; pointer-events: auto; font: 20px/1.35 Arial, Helvetica, sans-serif; text-align: center; border: 2px solid #293341; border-radius: 10px; padding: 16px 23px; margin: 0 12px 12px 0; color: #edf2f6; background: #18212d; min-height: 60px; vertical-align: middle; transition: background-color .12s, border-color .12s; }\n.sofa-button:focus,.sofa-input:focus,.sofa-keyboard-display:focus { outline: 3px solid #a9f3d0 !important; outline-offset: 4px; border-color: #a9f3d0; background-color: #243c3a; }\n.sofa-button:hover { border-color: #a9f3d0; }\n.sofa-primary { background: #b3f1d3; color: #10221e; border-color: #b3f1d3; font-weight: bold; }\n.sofa-primary:focus { color: #0c211a; background: #ccffe7; }\n.sofa-secondary { color: #aeb9c6; }\n.sofa-row { display: flex; flex-wrap: wrap; align-items: center; margin-top: 22px; }\n.sofa-input { display: block; width: 100%; padding: 20px 25px; font-size: 26px; color: #edf2f6; background: #141e2a; border: 2px solid #3c4858; border-radius: 10px; margin-bottom: 24px; }\n.sofa-list { max-width: 1100px; }\n.sofa-list .sofa-button { display: block; width: 100%; text-align: left; overflow-wrap: break-word; word-wrap: break-word; }\n.sofa-menu-grid { display: flex; flex-wrap: wrap; margin-bottom: 22px; }\n.sofa-menu-grid .sofa-button { width: 31%; margin-bottom: 18px; text-align: left; font-size: 19px; }\n.sofa-home { padding: 0; display: flex !important; }\n.sofa-sidebar { flex: 0 0 235px; width: 235px; border-right: 1px solid #242b35; padding: 45px 26px; position: relative; }\n.sofa-brand-mark { display: inline-block; width: 45px; height: 45px; text-align: center; border: 2px solid #b3f1d3; border-radius: 15px; color: #b3f1d3; font-size: 33px; line-height: 35px; margin-right: 10px; vertical-align: middle; }\n.sofa-brand { display: inline-block; font-size: 39px; font-weight: bold; letter-spacing: -2px; vertical-align: middle; }\n.sofa-brand-sub { font-size: 9px; letter-spacing: 1.7px; color: #788492; margin: 16px 0 60px; }\n.sofa-nav { width: 100%; text-align: left; font-size: 17px; border: 1px solid transparent; background: transparent; padding: 16px 12px; margin: 0 0 10px; min-height: 54px; color: #96a1ae; }\n.sofa-selected { color: #b3f1d3; background: #172e2a; border-color: #29433b; }\n.sofa-device { white-space: pre-line; font-size: 12px; line-height: 1.9; position: absolute; bottom: 35px; left: 38px; color: #748292; }\n.sofa-main { flex: 1; min-width: 0; padding: 42px 48px 28px; }\n.sofa-home-top { display: flex; justify-content: space-between; align-items: center; }\n.sofa-pill { font-size: 12px; color: #b3f1d3; border: 1px solid #35443e; border-radius: 30px; padding: 8px 14px; background: #16261f; }\n.sofa-hero { display: flex; position: relative; height: 275px; margin: 32px 0 12px; align-items: center; }\n.sofa-hero-copy { width: 65%; z-index: 1; }\n.sofa-hero h1 { font-size: 62px; line-height: 1.02; font-weight: 500; letter-spacing: -2.6px; }\n.sofa-accent { color: #b3f1d3 !important; }\n.sofa-intro { color: #96a1af !important; font-size: 17px; line-height: 1.7; margin-top: 22px !important; white-space: pre-line; }\n.sofa-remote-art { position: relative; flex: 1; height: 260px; }\n.sofa-orbit { width: 260px; height: 260px; position: absolute; top: -5px; left: -14px; border-radius: 50%; border: 1px solid #2a403c; background: radial-gradient(ellipse at center, #224237 0%, #16251f 38%, #0c1119 70%); }\n.sofa-orbit:after { content: ''; position: absolute; top: 35px; left: 35px; right: 35px; bottom: 35px; border: 1px solid #294039; border-radius: 50%; }\n.sofa-remote { position: absolute; left: 68px; top: -10px; width: 92px; height: 236px; border-radius: 38px; transform: rotate(19deg); background: linear-gradient(110deg, #44514f, #222d2d 40%, #151e20 100%); box-shadow: -8px 12px 35px rgba(0,0,0,.4); border: 2px solid #50605a; }\n.sofa-remote i { position: absolute; top: 20px; left: 38px; width: 11px; height: 11px; border-radius: 100%; border: 2px solid #b3f1d3; }\n.sofa-dpad { position: absolute; top: 55px; left: 12px; width: 64px; height: 64px; border-radius: 100%; border: 1px solid #668075; background: #263d34; text-align: center; font-size: 11px; line-height: 16px; }\n.sofa-dpad b { display: block; font-size: 12px; line-height: 29px; color: #b3f1d3; }\n.sofa-remote-keys { position: absolute; top: 135px; left: 18px; color: #a8b9b2; font-size: 19px; }\n.sofa-remote-line { position: absolute; top: 183px; left: 31px; width: 24px; height: 3px; border-radius: 5px; background: #52655d; }\n.sofa-art-label { position: absolute; bottom: 0; width: 250px; text-align: center; font-size: 8px; letter-spacing: 1.4px; color: #73877d; }\n.sofa-address-launch { width: 100%; display: flex; align-items: center; text-align: left; background: #151e28; padding: 20px 25px; margin: 0; font-size: 20px; border-color: #45584f; border-radius: 12px; }\n.sofa-address-icon { color: #b3f1d3; font-size: 25px; margin-right: 18px; }\n.sofa-address-hint { font-size: 12px; color: #93a097; margin-left: auto; padding-left: 15px; }\n.sofa-section-label { display: flex; align-items: center; justify-content: space-between; margin: 30px 0 20px; }\n.sofa-section-label .sofa-muted { font-size: 9px; letter-spacing: 1.4px; }\n.sofa-cards { display: flex; }\n.sofa-card { flex: 1; display: block; min-width: 0; height: 147px; text-align: left; padding: 19px; background: #192026; border-color: #2f3c43; margin-right: 15px; }\n.sofa-card:last-child { margin-right: 0; }\n.sofa-card-symbol { display: block; color: #b3f1d3; font-size: 26px; margin-bottom: 15px; line-height: 1; }\n.sofa-card strong { display: block; font-size: 18px; margin-bottom: 6px; }\n.sofa-card small { display: block; font-size: 11px; color: #84919e; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }\n.sofa-card-0 { background: linear-gradient(130deg, #253433, #172127); }\n.sofa-card-1 { background: linear-gradient(130deg, #282d40, #181e2c); }\n.sofa-card-1 .sofa-card-symbol { color: #bcbdf5; }\n.sofa-card-2 { background: linear-gradient(130deg, #39342b, #211f20); }\n.sofa-add-card { background: transparent; border-style: dashed; }\n.sofa-add-card .sofa-card-symbol { color: #93a09c; }\n.sofa-home-footer { display: flex; justify-content: space-between; margin-top: 29px; padding-top: 20px; border-top: 1px solid #242c37; font-size: 11px; color: #acb7c0; }\n.sofa-home-footer .sofa-muted { font-size: 11px; }\n.sofa-keyboard { pointer-events: auto; position: absolute; z-index: 8; bottom: 3%; left: 10%; width: 80%; background: #121c29; border: 2px solid #43574f; border-radius: 20px; padding: 24px 30px; box-shadow: 0 0 0 2000px rgba(0,0,0,.65); }\n.sofa-keyboard-display { display: block; background: #0a1018; color: #eef2f5; border: 1px solid #50615b; border-radius: 8px; width: 100%; padding: 12px 18px; font-size: 26px; margin: 10px 0 20px; }\n.sofa-key-row { display: flex; margin-bottom: 9px; }\n.sofa-key { flex: 1; padding: 8px 0; margin: 0 8px 0 0; min-height: 40px; font-size: 21px; border-radius: 7px; }\n.sofa-key:last-child { margin-right: 0; }\n.sofa-keyboard .sofa-row { margin-top: 16px; }\n.sofa-keyboard .sofa-row .sofa-button { flex: 1; padding: 10px 8px; font-size: 17px; min-height: 42px; margin-bottom: 0; }\n.sofa-toast { pointer-events: none; display: none; position: absolute; bottom: 6%; left: 15%; width: 70%; padding: 18px 26px; border: 1px solid #587666; color: #ebfff4; background: #1b3029; border-radius: 12px; text-align: center; z-index: 10; font-size: 21px; }\n.sofa-cursor { pointer-events: none; position: absolute; display: none; z-index: 20; width: 36px; height: 46px; margin: 0; filter: drop-shadow(0 2px 3px #000); }\n.sofa-cursor svg,.sofa-cursor path { pointer-events: none; }\n.sofa-cursor-link svg path { fill: #ffffff; }\n.sofa-pointer-target { outline: 3px solid #b3ffd7 !important; outline-offset: 3px !important; }\n.sofa-hud { pointer-events: auto; position: absolute; display: none; z-index: 4; right: 30px; bottom: 18px; padding: 8px 12px 8px 18px; background: rgba(10,24,20,.95); border: 1px solid #5e8975; border-radius: 10px; color: #e1f9eb; }\n.sofa-hud-label { font-size: 17px; margin-right: 16px; }\n.sofa-hud .sofa-button { min-height: 34px; font-size: 16px; padding: 8px 12px; margin: 0; }\n.sofa-loading-message { padding: 28px 0; font-size: 26px; max-width: 1000px; line-height: 1.5; }\n.sofa-error-report { white-space: pre-wrap; word-wrap: break-word; font: 20px/1.6 Arial,sans-serif; color: #eef2f5; background: #17222e; padding: 20px; margin: 20px 0; border: 1px solid #3e6169; }\n.sofa-details { padding: 28px 4%; }\n.sofa-details .sofa-dialog-head { margin-bottom: 12px; }\n.sofa-details .sofa-dialog-head h1 { font-size: 34px; margin: 8px 0; }\n.sofa-details .sofa-row { margin-top: 12px; }\n.sofa-details .sofa-error-report { height: calc(100vh - 330px); min-height: 150px; overflow-y: auto; margin-top: 4px; }\n.sofa-streams { padding: 32px 4% 80px; overflow: hidden; }\n.sofa-streams .sofa-dialog-head { margin-bottom: 10px; }\n.sofa-streams .sofa-dialog-head h1 { margin: 6px 0; }\n.sofa-streams .sofa-dialog-head .sofa-muted { font-size: 20px; }\n.sofa-streams .sofa-row { margin-top: 10px; }\n.sofa-streams .sofa-row .sofa-button,.sofa-stream-tabs .sofa-button { min-height: 44px; padding: 10px 15px; font-size: 18px; }\n.sofa-stream-tabs { white-space: nowrap; overflow-x: auto; padding: 6px; margin: 0 -6px 12px; }\n.sofa-stream-list { display: flex; flex-wrap: wrap; align-content: flex-start; overflow-y: auto; height: calc(100vh - 360px); padding: 8px; margin: -8px; }\n.sofa-match { display: block; width: calc(50% - 16px); min-height: 160px; text-align: left; padding: 22px 25px; margin: 8px; background: #1b303c; border-color: #3e6169; }\n.sofa-match-meta { display: block; font-size: 16px; color: #b3f1d3; margin-bottom: 12px; }\n.sofa-match-title { display: block; font-size: 27px; line-height: 1.3; white-space: normal; }\n.sofa-match-footer { display: block; font-size: 19px; color: #bccbd5; margin-top: 14px; }\n@media (min-width: 1600px) { .sofa-streams { padding: 45px 5% 80px; } .sofa-stream-list { height: calc(100vh - 390px); } .sofa-match { min-height: 205px; padding: 30px; } .sofa-match-title { font-size: 35px; } .sofa-match-meta { font-size: 20px; } .sofa-match-footer { font-size: 24px; } }\n.sofa-page-focus { outline: 4px solid #73f3b7 !important; outline-offset: 4px !important; box-shadow: 0 0 0 7px rgba(12,30,21,.7) !important; }\n/* The event page's grid, var() minimum height and inset collapse on Chromium 47.\n   Keep the original player, source links and access notices in their document. */\nhtml.sofa-player-page,html.sofa-player-page body { height: auto !important; min-height: 100% !important; overflow-y: auto !important; background: #0c1119 !important; color: #eef2f5 !important; }\n.sofa-player-page .streameast-video-page,.sofa-player-page .se-video { display: block !important; height: auto !important; max-height: none !important; overflow: visible !important; }\n.sofa-player-page .se-video { padding: 12px 24px 100px !important; }\n.sofa-player-page .se-layout,.sofa-player-page .se-main { display: block !important; width: 100% !important; height: auto !important; max-height: none !important; min-width: 0 !important; overflow: visible !important; }\n.sofa-player-page #se-streams-list { display: flex !important; flex-wrap: nowrap !important; overflow-x: auto !important; list-style: none !important; padding: 8px !important; margin: 0 0 12px !important; }\n.sofa-player-page #se-streams-list .se-stream { display: block !important; flex: 0 0 auto !important; margin: 0 12px 8px 0 !important; border: 2px solid #3e6169 !important; border-radius: 8px !important; background: #1b303c !important; }\n.sofa-player-page #se-streams-list .se-stream__link { display: block !important; font: 24px/1.35 Arial,sans-serif !important; padding: 16px 22px !important; color: #eef2f5 !important; }\n.sofa-player-page #se-streams-list .se-stream.is-active { border-color: #b3f1d3 !important; }\n.sofa-player-page #se-streams-list .se-stream.is-pro .se-stream__link:after { content: ' · Premium'; color: #f6d684; font-size: 18px; }\n.sofa-player-page .se-board { display: block !important; height: auto !important; min-height: 0 !important; padding: 12px !important; background: #18212d !important; color: #eef2f5 !important; }\n.sofa-player-page .se-board__row { display: flex !important; align-items: center !important; justify-content: space-between !important; }\n.sofa-player-page .se-board__side { display: flex !important; align-items: center !important; width: 38% !important; }\n.sofa-player-page .se-board__crest { width: 48px !important; height: 48px !important; margin-right: 14px !important; }\n.sofa-player-page .se-board__crest img { max-width: 48px !important; max-height: 48px !important; }\n.sofa-player-page .se-board__name { color: #eef2f5 !important; font: bold 24px/1.3 Arial,sans-serif !important; }\n.sofa-player-page .se-board__name-mob { display: none !important; }\n.sofa-player-page #se-player-root { position: relative !important; display: block !important; width: 100% !important; height: 65vh !important; min-height: 360px !important; max-height: none !important; background: #000 !important; border-radius: 0 !important; overflow: hidden !important; }\n.sofa-player-page #se-player-root[data-state=\"live\"] > iframe,.sofa-player-page #se-player-root[data-state=\"live\"] > video,.sofa-player-page #se-player-root[data-state=\"live\"] #VideoFrame { position: absolute !important; top: 0 !important; right: 0 !important; bottom: 0 !important; left: 0 !important; display: block !important; width: 100% !important; height: 100% !important; min-height: 0 !important; border: 0 !important; }\n.sofa-player-page #chat-container { display: block !important; width: 100% !important; height: 320px !important; margin-top: 18px !important; }\n.sofa-player-page #live-chat-iframe { width: 100% !important; height: 260px !important; }\n.sofa-player-page #se-player-root:-webkit-full-screen { height: 100vh !important; }\n.sofa-player-page #se-player-root:fullscreen { height: 100vh !important; }\n.sofa-player-page #se-player-root:not([data-state=\"live\"]) { height: auto !important; overflow: visible !important; }\n.sofa-guide p { font-size: 20px; margin: 0 0 16px; color: #abb8c4; }\n.sofa-guide b { color: #b3f1d3; }\n.sofa-diagnostics { font-size: 13px; color: #929fab !important; white-space: pre-line; padding: 18px; border: 1px solid #303c49; border-radius: 8px; margin: 20px 0 !important; word-break: break-word; }\n.sofa-guide + .sofa-muted { margin: 20px 0; }\n.sofa-player { pointer-events: auto; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #000; }\n.sofa-player-surface,.sofa-av-object,.sofa-html-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }\n.sofa-root .sofa-player-surface,.sofa-root .sofa-av-object,.sofa-root .sofa-html-video { display: block; z-index: 1; visibility: visible; opacity: 1; }\n.sofa-root .sofa-av-object { background: transparent; }\n.sofa-player-controls { position: absolute; z-index: 2; bottom: 0; left: 0; width: 100%; padding: 20px 5% 22px; background: linear-gradient(transparent, rgba(0,0,0,.88)); }\n.sofa-player-status { font-size: 22px; }\n.sofa-player-controls p { color: #b4c0cb; font-size: 15px; }\n@media (max-height: 760px) { .sofa-main { padding-top: 30px; } .sofa-hero { height: 210px; margin-top: 18px; } .sofa-remote-art { transform: scale(.8); transform-origin: center; } .sofa-section-label { margin-top: 22px; margin-bottom: 16px; } .sofa-card { height: 128px; padding: 15px 19px; } .sofa-card-symbol { margin-bottom: 10px; } .sofa-home-footer { margin-top: 17px; padding-top: 15px; } .sofa-keyboard { padding: 18px 25px; } .sofa-keyboard-display { font-size: 23px; margin-bottom: 16px; } }\n@media (min-width: 1600px) { .sofa-sidebar { flex-basis: 300px; width: 300px; padding: 65px 40px; } .sofa-main { padding: 65px 70px 35px; } .sofa-hero { height: 390px; margin: 45px 0 24px; } .sofa-hero h1 { font-size: 88px; } .sofa-intro { font-size: 23px; } .sofa-remote-art { transform: scale(1.3); transform-origin: center; margin-left: 70px; } .sofa-address-launch { padding: 29px 32px; font-size: 28px; } .sofa-address-hint { font-size: 18px; } .sofa-section-label { margin-top: 45px; } .sofa-card { height: 195px; padding: 28px; } .sofa-card strong { font-size: 24px; } .sofa-card small { font-size: 16px; } .sofa-card-symbol { font-size: 34px; margin-bottom: 24px; } .sofa-nav { font-size: 22px; margin-bottom: 20px; } .sofa-device { font-size: 16px; } .sofa-home-footer { font-size: 16px; margin-top: 40px; } .sofa-home-footer .sofa-muted { font-size: 15px; } .sofa-keyboard { width: 70%; left: 15%; padding: 35px; } .sofa-key { min-height: 65px; font-size: 28px; } }\n@media (max-width: 1050px) { .sofa-sidebar { flex-basis: 180px; width: 180px; padding: 25px 15px; } .sofa-main { padding: 28px; } .sofa-brand-sub { margin-bottom: 28px; } .sofa-hero h1 { font-size: 46px; } .sofa-hero { height: 220px; } .sofa-remote-art { transform: scale(.75); transform-origin: left center; } .sofa-intro { font-size: 13px; } .sofa-device { left: 22px; font-size: 10px; } .sofa-address-hint { display: none; } .sofa-card { height: 125px; padding: 14px; } .sofa-home-footer { margin-top: 20px; } .sofa-pill { font-size: 10px; } .sofa-home-top .sofa-eyebrow { font-size: 10px; } }\n\n.sofa-panel.sofa-cinejoy { display: flex; flex-direction: column; padding: 30px 4%; overflow: hidden; }\n.sofa-cinejoy .sofa-dialog-head { flex: 0 0 auto; margin-bottom: 8px; }\n.sofa-cinejoy .sofa-dialog-head h1 { font-size: 36px; margin: 5px 0 8px; line-height: 1.15; }\n.sofa-cinejoy .sofa-dialog-head p { font-size: 18px; margin: 0; line-height: 1.35; }\n.sofa-cinejoy .sofa-row { flex: 0 0 auto; margin-top: 8px; }\n.sofa-cinejoy .sofa-row .sofa-button { min-height: 48px; font-size: 18px; padding: 10px 16px; margin-bottom: 10px; }\n.sofa-cinejoy .sofa-button:disabled { opacity: .4; cursor: default; }\n.sofa-cinejoy-scroll { flex: 1 1 auto; min-height: 0; overflow-y: auto; padding: 10px 10px 20px; margin: 2px -10px 0; }\n.sofa-cinejoy-collections,.sofa-cinejoy-items { display: flex; flex-wrap: wrap; align-content: flex-start; align-items: flex-start; }\n.sofa-cinejoy .sofa-cinejoy-collection { flex: 0 0 calc(33.333% - 16px); display: block; text-align: left; margin: 0 16px 18px 0; padding: 22px; height: 190px; overflow: hidden; }\n.sofa-cinejoy-collection strong { display: block; font-size: 26px; line-height: 1.15; margin-bottom: 14px; }\n.sofa-cinejoy-collection span { display: block; font-size: 17px; color: #b5c1cd; max-height: 45px; overflow: hidden; }\n.sofa-cinejoy-collection small { display: block; margin-top: 14px; font-size: 16px; color: #b3f1d3; }\n.sofa-cinejoy .sofa-cinejoy-title { flex: 0 0 calc(50% - 16px); display: flex; align-items: center; text-align: left; margin: 0 16px 18px 0; padding: 14px; height: 168px; overflow: hidden; }\n.sofa-cinejoy-poster { position: relative; flex: 0 0 88px; width: 88px; height: 132px; display: block; overflow: hidden; background: #263342; border-radius: 6px; }\n.sofa-cinejoy-placeholder { position: absolute; width: 100%; height: 100%; text-align: center; top: 0; left: 0; padding-top: 45%; color: #91a8b8; font-size: 28px; }\n.sofa-cinejoy-poster img,.sofa-cinejoy-detail-poster img { position: absolute; display: block; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; }\n.sofa-cinejoy-title-copy { display: block; flex: 1 1 auto; min-width: 0; margin-left: 20px; }\n.sofa-cinejoy-title-copy strong { display: block; font-size: 25px; line-height: 1.2; max-height: 61px; overflow: hidden; word-wrap: break-word; }\n.sofa-cinejoy-meta { display: block; margin-top: 10px; font-size: 18px; color: #b5c1cd; }\n.sofa-cinejoy-title-copy small { display: block; margin-top: 10px; font-size: 16px; color: #b3f1d3; }\n.sofa-cinejoy-detail { display: flex; align-items: flex-start; }\n.sofa-cinejoy-detail-poster { position: relative; display: block; flex: 0 0 230px; width: 230px; height: 345px; overflow: hidden; border-radius: 9px; background: #263342; }\n.sofa-cinejoy-detail-copy { min-width: 0; flex: 1 1 auto; margin-left: 35px; }\n.sofa-cinejoy .sofa-cinejoy-limitation { color: #f3d6a7; border-left: 4px solid #d8ae6c; padding: 5px 0 5px 20px; margin: 0 0 26px; font-size: 24px; line-height: 1.45; }\n.sofa-cinejoy .sofa-cinejoy-synopsis { font-size: 22px; line-height: 1.55; white-space: normal; }\n.sofa-cinejoy-note { font-size: 24px; line-height: 1.5; max-width: 900px; }\n@media (min-width: 1600px) { .sofa-panel.sofa-cinejoy { padding: 45px 5%; } .sofa-cinejoy .sofa-dialog-head h1 { font-size: 48px; } .sofa-cinejoy .sofa-dialog-head p { font-size: 23px; } .sofa-cinejoy .sofa-row .sofa-button { font-size: 23px; min-height: 62px; } .sofa-cinejoy .sofa-cinejoy-title { height: 215px; padding: 20px; } .sofa-cinejoy-poster { flex-basis: 110px; width: 110px; height: 165px; } .sofa-cinejoy-title-copy strong { font-size: 31px; max-height: 76px; } .sofa-cinejoy-meta { font-size: 23px; } .sofa-cinejoy-title-copy small { font-size: 20px; } .sofa-cinejoy .sofa-cinejoy-collection { height: 230px; } .sofa-cinejoy-collection strong { font-size: 32px; } .sofa-cinejoy-collection span { font-size: 21px; max-height: 55px; } .sofa-cinejoy-collection small { font-size: 21px; } }\n";
 /* Deliberately small first-party rule set. No remote filter downloads. */
 function SofaBlocker(core, enabled, notify) {
     'use strict';
@@ -965,6 +965,312 @@ function SofaNavigation(core, onState, environment) {
 }
 if (typeof module === 'object' && module.exports) module.exports = SofaNavigation;
 
+function SofaBookmarks(core) {
+    'use strict';
+    var marker = 'cinejoyShortcutAdded', maximum = 32;
+
+    function clean(value) {
+        var result = [], i, item;
+        if (!Array.isArray(value)) return result;
+        /* JSON storage is untrusted; keep the work bounded even for an oversized array. */
+        for (i = 0; i < Math.min(value.length, 128) && result.length < maximum; i++) {
+            item = value[i];
+            if (!item || typeof item.name !== 'string' || typeof item.url !== 'string' || !core.normalize(item.url)) continue;
+            result.push({name: item.name, url: item.url});
+        }
+        return result;
+    }
+    function isCinejoyHome(value) {
+        var url = core.normalize(value), match;
+        if (!url) return false;
+        match = /^(https?):\/\/((?:www\.)?cinejoy\.to\.?)(?::([0-9]+))?(\/[^?#]*)?(?:[?#].*)?$/i.exec(url);
+        if (!match || (match[4] && !/^\/*$/.test(match[4]))) return false;
+        return !match[3] || (match[1].toLowerCase() === 'https' ? match[3] === '443' : match[3] === '80');
+    }
+    function persist(write, key, value) {
+        try { return typeof write === 'function' && write(key, value) === true; }
+        catch (ignoreStorage) { return false; }
+    }
+    function migrate(value, completed, write) {
+        var saved = clean(value), proposed, found = false, added = false, reason, i;
+        if (completed === true) return {saved: saved, completed: true, added: false, reason: 'completed'};
+        for (i = 0; i < saved.length; i++) if (isCinejoyHome(saved[i].url)) found = true;
+        reason = found ? 'already-present' : saved.length >= maximum ? 'full' : 'added';
+        if (reason === 'added') {
+            proposed = saved.concat([{name: 'Cinejoy', url: 'https://cinejoy.to/'}]);
+            /* Save the bookmark first. A failed marker write can safely retry without duplication. */
+            if (!persist(write, 'saved', proposed)) return {saved: saved, completed: false, added: false, reason: 'saved-write-failed'};
+            saved = proposed;
+            added = true;
+        }
+        /* Mark full lists too: freeing a slot later must not silently insert a removed/default shortcut. */
+        if (!persist(write, marker, true)) return {saved: saved, completed: false, added: added, reason: 'marker-write-failed'};
+        return {saved: saved, completed: true, added: added, reason: reason};
+    }
+    return {migrate: migrate, marker: marker};
+}
+
+/* Read-only public Cinejoy collections; no account keys or playback resolver. */
+function SofaCinejoyCatalog() {
+    'use strict';
+    var origin = 'https://lists.shegu.st', pageSize = 40, maxBytes = 524288;
+    var active = null, timer = null, generation = 0;
+    function clean(value, limit) {
+        return typeof value === 'string' ? value.replace(/[\x00-\x1f\x7f]/g, ' ').replace(/\s+/g, ' ').replace(/^\s+|\s+$/g, '').slice(0, limit) : '';
+    }
+    function integer(value, maximum) { return typeof value === 'number' && isFinite(value) && Math.floor(value) === value && value >= 0 && value <= maximum; }
+    function validId(value) { return typeof value === 'string' && /^[a-z0-9][a-z0-9-]{0,99}$/.test(value); }
+    function error(code) { return {code: code, message: code === 'CINE-01' ? 'CINE-01: Cinejoy collections could not be reached. Try again.' : 'CINE-02: Cinejoy returned collection data Sofa could not read.'}; }
+    function cancel() {
+        generation++;
+        if (timer !== null) { clearTimeout(timer); timer = null; }
+        var previous = active; active = null;
+        if (previous) { previous.onreadystatechange = previous.onerror = previous.ontimeout = previous.onprogress = previous.onabort = null; try { previous.abort(); } catch (ignore) {} }
+    }
+    function byteLength(text) {
+        var bytes = 0, code, i;
+        for (i = 0; i < text.length; i++) {
+            code = text.charCodeAt(i);
+            if (code < 128) bytes++;
+            else if (code < 2048) bytes += 2;
+            else if (code >= 55296 && code <= 56319 && i + 1 < text.length && text.charCodeAt(i + 1) >= 56320 && text.charCodeAt(i + 1) <= 57343) { bytes += 4; i++; }
+            else bytes += 3;
+            if (bytes > maxBytes) return bytes;
+        }
+        return bytes;
+    }
+    function request(path, normalize, callback) {
+        cancel();
+        var token = generation, xhr, ended = false;
+        function finish(problem, data) {
+            if (ended || token !== generation) return;
+            ended = true;
+            if (timer !== null) { clearTimeout(timer); timer = null; }
+            active = null;
+            if (xhr) { xhr.onreadystatechange = xhr.onerror = xhr.ontimeout = xhr.onprogress = xhr.onabort = null; if (problem) { try { xhr.abort(); } catch (ignore) {} } }
+            callback(problem, data);
+        }
+        try {
+            xhr = new XMLHttpRequest(); active = xhr;
+            xhr.open('GET', origin + path, true);
+            xhr.timeout = 15000;
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState !== 4 || ended || token !== generation) return;
+                if (xhr.status < 200 || xhr.status >= 300) { finish(error('CINE-01')); return; }
+                var text, data;
+                try {
+                    text = xhr.responseText;
+                    if (typeof text !== 'string' || text.length > maxBytes || byteLength(text) > maxBytes) throw new Error('size');
+                    data = normalize(JSON.parse(text));
+                } catch (ignore) { finish(error('CINE-02')); return; }
+                finish(null, data);
+            };
+            xhr.onerror = xhr.ontimeout = xhr.onabort = function () { finish(error('CINE-01')); };
+            xhr.onprogress = function (event) { if (event && event.loaded > maxBytes) finish(error('CINE-02')); };
+            timer = setTimeout(function () { finish(error('CINE-01')); }, 15000);
+            xhr.send();
+        } catch (ignore) { finish(error('CINE-01')); }
+    }
+    function collections(callback) {
+        request('/joy', function (data) {
+            if (!data || !Array.isArray(data.collections) || data.collections.length > 100) throw new Error('shape');
+            var result = [], seen = {}, i, item, title;
+            for (i = 0; i < data.collections.length; i++) {
+                item = data.collections[i];
+                if (!item || !validId(item.id) || item.path !== '/joy/' + item.id || seen['$' + item.id]) continue;
+                title = clean(item.title, 160); if (!title) continue;
+                seen['$' + item.id] = true;
+                result.push({id: item.id, title: title, description: clean(item.description, 800)});
+            }
+            if (data.collections.length && !result.length) throw new Error('items');
+            return {collections: result, count: result.length};
+        }, callback);
+    }
+    function image(value) {
+        return typeof value === 'string' && value.length <= 400 && /^https:\/\/image\.tmdb\.org\/t\/p\/(?:w[0-9]{2,4}|original)\/[a-zA-Z0-9_-]+\.(?:jpg|jpeg|png|webp)$/.test(value) ? value : '';
+    }
+    function items(collection, page, callback) {
+        var id = typeof collection === 'string' ? collection : collection && collection.id;
+        if (!validId(id) || !integer(page, 25000) || page < 1) { cancel(); callback(error('CINE-02')); return; }
+        var offset = (page - 1) * pageSize;
+        request('/joy/' + id + '?limit=40&offset=' + offset, function (data) {
+            var pagination = data && data.pagination;
+            if (!data || !Array.isArray(data.items) || data.items.length > pageSize || !pagination || pagination.offset !== offset || pagination.limit !== pageSize || pagination.returned !== data.items.length || !integer(pagination.total, 1000000) || (data.items.length && pagination.total < offset + data.items.length)) throw new Error('shape');
+            var result = [], seen = {}, i, item, tmdb, title, kind, year;
+            for (i = 0; i < data.items.length; i++) {
+                item = data.items[i]; if (!item) continue;
+                tmdb = item.ids && item.ids.tmdb; title = clean(item.title, 160); kind = item.type;
+                if (!title || !integer(tmdb, 2147483647) || !tmdb || (kind !== 'movie' && kind !== 'tv') || seen[kind + tmdb]) continue;
+                seen[kind + tmdb] = true;
+                year = integer(item.year, 2200) && item.year >= 1880 ? item.year : '';
+                result.push({title: title, year: year, kind: kind, url: 'https://cinejoy.to/' + (kind === 'movie' ? 'movie/' : 'series/') + tmdb, image: image(item.poster), description: clean(item.description, 1200)});
+            }
+            if (data.items.length && !result.length) throw new Error('items');
+            return {items: result, page: page, pageSize: pageSize, total: pagination.total, hasNext: data.items.length > 0 && offset + data.items.length < pagination.total};
+        }, callback);
+    }
+    return {collections: collections, items: items, cancel: cancel};
+}
+
+function SofaCinejoyView(ui, catalog) {
+    'use strict';
+    var opened = false, generation = 0, screen = 'collections', collections = [], selected = null;
+    var pageData = null, filter = 'All', query = '', selectedItem = null, returnScreen = 'collections';
+    var limitation = 'Cinejoy playback needs browser features missing from Tizen 3. No working playback path is available in Sofa yet.';
+    function stopRequest() { generation++; catalog.cancel(); return generation; }
+    function cancel() { opened = false; stopRequest(); }
+    function base(title, subtitle, kind) {
+        var panel = ui.base(title, subtitle);
+        panel.className += ' sofa-cinejoy';
+        panel.style.display = 'flex';
+        panel.setAttribute('data-cinejoy-screen', kind);
+        return panel;
+    }
+    function home() { cancel(); ui.home(); }
+    function button(text, action, cls) { return ui.button(text, action, cls || ''); }
+    function clean(value, length) { return String(value || '').replace(/\s+/g, ' ').replace(/^ | $/g, '').slice(0, length || 180); }
+    function kind(item) { return item.kind === 'movie' ? 'Movie' : item.kind === 'tv' ? 'Series' : ''; }
+    function metadata(item) { return (kind(item) + (item.year ? ' · ' + clean(item.year, 4) : '')).replace(/^ · /, ''); }
+    function image(item, cls) {
+        var box = ui.el('span', cls || 'sofa-cinejoy-poster');
+        box.appendChild(ui.el('span', 'sofa-cinejoy-placeholder', 'C'));
+        if (item.image) {
+            var img = ui.el('img'); img.alt = ''; img.src = item.image;
+            img.onerror = function () { if (img.parentNode) img.parentNode.removeChild(img); };
+            box.appendChild(img);
+        }
+        return box;
+    }
+    function loading(title, target) {
+        screen = 'loading'; returnScreen = target;
+        var panel = base(title, 'Connecting to Cinejoy’s catalog…', 'loading');
+        panel.appendChild(ui.el('p', 'sofa-cinejoy-note', 'Catalog browsing does not enable video playback on this TV.'));
+        var controls = ui.row(panel), backButton = button('Back', back);
+        controls.appendChild(backButton); controls.appendChild(button('Sofa home', home));
+        ui.choose(backButton);
+    }
+    function errorView(error, retry, target) {
+        screen = 'error'; returnScreen = target;
+        var panel = base('Cinejoy could not load', 'The catalog request did not finish.', 'error');
+        var code = error && /^CINE-0[12]$/.test(error.code) ? error.code : 'CINE-01';
+        panel.appendChild(ui.el('p', 'sofa-cinejoy-note', code + ' · Try again, or return to Sofa.'));
+        var controls = ui.row(panel), retryButton = button('Retry', retry, 'sofa-primary');
+        controls.appendChild(retryButton); controls.appendChild(button('Back', back)); controls.appendChild(button('Sofa home', home));
+        ui.choose(retryButton);
+    }
+    function renderCollections() {
+        if (!opened) return;
+        screen = 'collections';
+        var panel = base('Cinejoy', 'Browse collections with your remote. Video playback is unavailable on this TV.', 'collections');
+        var controls = ui.row(panel);
+        controls.appendChild(button('Sofa home', home));
+        controls.appendChild(button('Refresh collections', loadCollections));
+        var list = ui.el('div', 'sofa-cinejoy-scroll sofa-cinejoy-collections'); panel.appendChild(list);
+        collections.forEach(function (collection) {
+            var card = button('', function () { selected = collection; filter = 'All'; query = ''; pageData = null; loadItems(1); }, 'sofa-cinejoy-collection');
+            card.setAttribute('data-cinejoy-collection', String(collection.id));
+            card.appendChild(ui.el('strong', '', clean(collection.title) || 'Collection'));
+            if (collection.description) card.appendChild(ui.el('span', '', clean(collection.description, 140)));
+            card.appendChild(ui.el('small', '', 'Browse titles →')); list.appendChild(card);
+        });
+        if (!collections.length) list.appendChild(ui.el('p', 'sofa-muted', 'No collections are available right now. Try Refresh collections.'));
+        ui.choose(list.querySelector('button') || controls.querySelector('button'));
+    }
+    function loadCollections() {
+        if (!opened) return;
+        var token = stopRequest(); loading('Cinejoy', 'home');
+        catalog.collections(function (error, data) {
+            if (!opened || token !== generation) return;
+            if (error || !data || !Array.isArray(data.collections)) { errorView(error, loadCollections, 'home'); return; }
+            collections = data.collections.slice(0, 80); renderCollections();
+        });
+    }
+    function search() {
+        var input = ui.el('input'); input.value = query;
+        var token = generation;
+        ui.keyboard(input, 'Search titles on this loaded page', function () {
+            if (!opened || token !== generation || screen !== 'items') return;
+            query = clean(input.value, 100); renderItems();
+        });
+    }
+    function renderItems(focusURL) {
+        if (!opened || !pageData || !selected) return;
+        screen = 'items';
+        var subtitle = 'Cinejoy · Page ' + pageData.page + ' · ' + pageData.items.length + ' loaded titles · Playback unavailable on Tizen 3';
+        var panel = base(clean(selected.title) || 'Cinejoy titles', subtitle, 'items');
+        var controls = ui.row(panel); controls.className += ' sofa-cinejoy-controls';
+        controls.appendChild(button('Collections', back));
+        controls.appendChild(button(query ? 'Search this page: ' + clean(query, 24) : 'Search this page', search, 'sofa-cinejoy-search'));
+        if (query) controls.appendChild(button('Clear search', function () { query = ''; renderItems(); }));
+        controls.appendChild(button('Sofa home', home));
+        var tabs = ui.row(panel); tabs.className += ' sofa-cinejoy-controls';
+        ['All', 'Movies', 'Series'].forEach(function (value) {
+            var tab = button(value, function () { filter = value; renderItems(); }, value === filter ? 'sofa-primary' : '');
+            tab.setAttribute('aria-pressed', value === filter ? 'true' : 'false'); tabs.appendChild(tab);
+        });
+        var previous = button('← Previous page', function () { if (pageData.page > 1) loadItems(pageData.page - 1); }, 'sofa-cinejoy-prev');
+        previous.disabled = pageData.page <= 1; tabs.appendChild(previous);
+        var next = button('Next page →', function () { if (pageData.hasNext) loadItems(pageData.page + 1); }, 'sofa-cinejoy-next');
+        next.disabled = !pageData.hasNext; tabs.appendChild(next);
+        var list = ui.el('div', 'sofa-cinejoy-scroll sofa-cinejoy-items'); panel.appendChild(list);
+        var matches = 0, restored = null;
+        pageData.items.forEach(function (item) {
+            if ((filter === 'Movies' && item.kind !== 'movie') || (filter === 'Series' && item.kind !== 'tv') ||
+                    (query && String(item.title || '').toLowerCase().indexOf(query.toLowerCase()) === -1)) return;
+            var card = button('', function () { selectedItem = item; renderDetail(); }, 'sofa-cinejoy-title');
+            card.setAttribute('data-cinejoy-url', item.url); card.appendChild(image(item));
+            var copy = ui.el('span', 'sofa-cinejoy-title-copy');
+            copy.appendChild(ui.el('strong', '', clean(item.title) || 'Untitled'));
+            copy.appendChild(ui.el('span', 'sofa-cinejoy-meta', metadata(item)));
+            copy.appendChild(ui.el('small', '', 'View details →')); card.appendChild(copy); list.appendChild(card); matches++;
+            if (focusURL && item.url === focusURL) restored = card;
+        });
+        if (!matches) list.appendChild(ui.el('p', 'sofa-muted', 'No titles on this loaded page match your filters. Clear the search, choose All, or try another page.'));
+        ui.choose(restored || list.querySelector('button') || controls.querySelector('button'));
+    }
+    function loadItems(page) {
+        if (!opened || !selected) return;
+        var token = stopRequest(); loading(clean(selected.title) || 'Cinejoy titles', pageData ? 'items' : 'collections');
+        catalog.items(selected, page, function (error, data) {
+            if (!opened || token !== generation) return;
+            if (error || !data || !Array.isArray(data.items)) { errorView(error, function () { loadItems(page); }, pageData ? 'items' : 'collections'); return; }
+            pageData = data; renderItems();
+        });
+    }
+    function renderDetail() {
+        if (!opened || !selectedItem) return;
+        screen = 'detail';
+        var item = selectedItem, panel = base(clean(item.title) || 'Cinejoy title', metadata(item), 'detail');
+        var body = ui.el('div', 'sofa-cinejoy-scroll sofa-cinejoy-detail');
+        var controls = ui.row(panel);
+        var backButton = button('Back to titles', back, 'sofa-primary'); controls.appendChild(backButton);
+        controls.appendChild(button('Earlier text ↑', function () { body.scrollTop -= 220; }));
+        controls.appendChild(button('More text ↓', function () { body.scrollTop += 220; }));
+        controls.appendChild(button('Open website details', function () { cancel(); ui.go(item.url); }));
+        panel.appendChild(body);
+        body.appendChild(image(item, 'sofa-cinejoy-detail-poster'));
+        var text = ui.el('div', 'sofa-cinejoy-detail-copy'); body.appendChild(text);
+        text.appendChild(ui.el('p', 'sofa-cinejoy-limitation', limitation));
+        if (item.description) text.appendChild(ui.el('p', 'sofa-cinejoy-synopsis', clean(item.description, 1200)));
+        text.appendChild(ui.el('p', 'sofa-muted', 'Opening website details may also fail on this TV.'));
+        ui.choose(backButton);
+    }
+    function back() {
+        if (!opened) return false;
+        stopRequest();
+        if (screen === 'detail') renderItems(selectedItem && selectedItem.url);
+        else if (screen === 'items') renderCollections();
+        else if (screen === 'loading' || screen === 'error') {
+            if (returnScreen === 'items' && pageData) renderItems();
+            else if (returnScreen === 'collections') renderCollections();
+            else home();
+        } else home();
+        return true;
+    }
+    function open() { cancel(); opened = true; selected = null; pageData = null; selectedItem = null; filter = 'All'; query = ''; loadCollections(); }
+    return {open: open, back: back, cancel: cancel, active: function () { return opened; }};
+}
+
 (function () {
     'use strict';
     var C = window.SofaCore;
@@ -977,6 +1283,7 @@ if (typeof module === 'object' && module.exports) module.exports = SofaNavigatio
     var px = window.innerWidth / 2, py = window.innerHeight / 2;
     var currentView = 'home', toastTimer, playerStatus, playerPanel, lastVideoRoute = null, playingURL = null;
     var mediaFinder = SofaMedia(C), playerControlIndex = 1;
+    var cinejoyView = null, bookmarks = SofaBookmarks(C);
     var frameActive = topFrame, activeChildWindow = null, frameEntryTimer = null, pagePolicyKnown = topFrame;
     var storageWarning = false;
     var sites = SofaSites(C), matchCategory = 'All', matchLiveOnly = false, matchQuery = '', matchViewDismissed = false;
@@ -1025,6 +1332,12 @@ if (typeof module === 'object' && module.exports) module.exports = SofaNavigatio
     var saved = get('saved', [{name: 'Aether', url: 'https://aether.ist/'}, {name: 'StreamEast', url: 'https://v2.streameast.ga/'}]);
     if (!Array.isArray(saved)) saved = [];
     saved = saved.filter(function (item) { return item && typeof item.name === 'string' && C.normalize(item.url); }).slice(0, 32);
+    if (topFrame && atHome) saved = bookmarks.migrate(saved, get(bookmarks.marker, false), put).saved;
+    function isCinejoyHome(url) { return /^(?:https:\/\/(?:www\.)?cinejoy\.to\.?(?::443)?|http:\/\/(?:www\.)?cinejoy\.to\.?(?::80)?)\/*(?:[?#].*)?$/i.test(url); }
+    function openCinejoy() {
+        if (!topFrame || !cinejoyView) return;
+        navigation.cancel(); compatibility.cancel(); restoreFrameControl(); cinejoyView.open();
+    }
     function el(tag, cls, text) {
         var node = document.createElement(tag);
         if (cls) node.className = cls;
@@ -1109,6 +1422,15 @@ if (typeof module === 'object' && module.exports) module.exports = SofaNavigatio
         var scope = keyboard || (panelOpen ? panel : document), list = candidates(scope);
         if (!list.length) { if (!panelOpen) window.scrollBy(0, key === 38 ? -250 : key === 40 ? 250 : 0); return; }
         var anchor = focused && document.documentElement.contains(focused) && (scope === document || scope.contains(focused)) ? focused : null;
+        if (anchor && cinejoyView && cinejoyView.active()) {
+            // Keep horizontal moves within a card row; toolbar buttons must not
+            // win merely because their centers are nearer than the next card.
+            var from = anchor.getBoundingClientRect();
+            list = list.filter(function (item) {
+                var r = item.rect;
+                return key === 37 || key === 39 ? r.top < from.bottom && r.bottom > from.top : r.left < from.right && r.right > from.left;
+            });
+        }
         var next = anchor ? C.nearest(anchor.getBoundingClientRect(), list, key) : list[0].el;
         if (next) choose(next);
         else if (!panelOpen) window.scrollBy(key === 37 ? -250 : key === 39 ? 250 : 0, key === 38 ? -250 : key === 40 ? 250 : 0);
@@ -1200,6 +1522,7 @@ if (typeof module === 'object' && module.exports) module.exports = SofaNavigatio
         if (!url) { toast('Enter a website address, such as https://example.com'); return; }
         if (blocker.enabled && C.blocked(url)) { toast('That address matches the ad blocklist.'); return; }
         if (forceMedia || C.isMedia(url)) { startStream(url); return; }
+        if (isCinejoyHome(url) && topFrame) { openCinejoy(); return; }
         navigation.cancel(); openingURL = url;
         var p = base('Opening ' + C.host(url), 'Connecting to the website…'); currentView = 'opening';
         var message = el('p', 'sofa-loading-message', sites.isAether || C.host(url) === 'aether.ist' ? 'Aether may need extra time to start on this TV.' : 'Please wait while the website opens.'); p.appendChild(message);
@@ -1211,6 +1534,7 @@ if (typeof module === 'object' && module.exports) module.exports = SofaNavigatio
         atHome ? renderHome() : closePanel();
     }
     function home(action, value) {
+        if (cinejoyView) cinejoyView.cancel();
         if (!topFrame) { requestParent('home'); return; }
         if (atHome && !action) { renderHome(); return; }
         var hash = '#sofa-home';
@@ -1219,15 +1543,18 @@ if (typeof module === 'object' && module.exports) module.exports = SofaNavigatio
     }
     function closePanel() {
         if (keyboard) { dismissKeyboard(); return; }
+        if (cinejoyView) cinejoyView.cancel();
         if (atHome) return;
         panelOpen = false; panel.style.display = 'none';
         updateCursor();
         if (focused && root.contains(focused)) focused = null;
     }
-    function base(title, subtitle) {
+    function base(title, subtitle, keepCinejoy) {
+        if (cinejoyView && !keepCinejoy) cinejoyView.cancel();
         if (keyboard) dismissKeyboard();
         if (toastBox) { clearTimeout(toastTimer); toastBox.style.display = 'none'; }
         panelOpen = true; panel.style.display = 'block'; panel.className = 'sofa-panel'; panel.textContent = '';
+        panel.removeAttribute('data-cinejoy-screen');
         cursor.style.display = 'none'; currentView = title;
         if (hud) hud.style.display = 'none';
         var head = el('div', 'sofa-dialog-head');
@@ -1276,7 +1603,7 @@ if (typeof module === 'object' && module.exports) module.exports = SofaNavigatio
         showList('Choose a stream server', items, items.length ? 'These are the source links on this event page. Try another free server if one does not load.' : 'No server links were found on this page.');
     }
     function showDiagnostics(title, report) {
-        var p = base('Error details', title + ' · Sofa 0.4.0'); currentView = 'diagnostics'; p.className = 'sofa-panel sofa-details';
+        var p = base('Error details', title + ' · Sofa 0.5.0'); currentView = 'diagnostics'; p.className = 'sofa-panel sofa-details';
         p.appendChild(el('p', 'sofa-muted', 'Report the OPEN/AETHER code or the first error line. These details stay on the TV.'));
         var content = el('pre', 'sofa-error-report', String(report || 'No details available.').slice(0, 5000));
         var controls = row(p);
@@ -1304,7 +1631,7 @@ if (typeof module === 'object' && module.exports) module.exports = SofaNavigatio
         side.appendChild(button('▷  Play a stream', function () { address(true); }, 'sofa-nav'));
         side.appendChild(button('☆  Saved sites', savedSites, 'sofa-nav'));
         side.appendChild(button('?  Remote guide', help, 'sofa-nav'));
-        side.appendChild(el('div', 'sofa-device', 'MADE FOR YOUR TV\nSamsung UN55MU630D\nTizen 3 · Sofa 0.4.0'));
+        side.appendChild(el('div', 'sofa-device', 'MADE FOR YOUR TV\nSamsung UN55MU630D\nTizen 3 · Sofa 0.5.0'));
         p.appendChild(side);
         var main = el('main', 'sofa-main'); p.appendChild(main);
         var top = el('div', 'sofa-home-top');
@@ -1443,6 +1770,7 @@ if (typeof module === 'object' && module.exports) module.exports = SofaNavigatio
         var actions = el('div', 'sofa-menu-grid'); p.appendChild(actions);
         actions.appendChild(button('Resume browsing', closePanel, 'sofa-primary'));
         if (sites.isStreamEast) actions.appendChild(button('StreamEast TV match list', showMatches));
+        actions.appendChild(button('Cinejoy TV catalog', openCinejoy));
         if (sites.playerElement()) actions.appendChild(button('Choose stream server', showServers));
         actions.appendChild(button('Open another website', function () { address(false); }));
         actions.appendChild(button('← Page back', function () { closePanel(); if (history.length > 1) history.back(); else home(); }));
@@ -1675,6 +2003,7 @@ if (typeof module === 'object' && module.exports) module.exports = SofaNavigatio
     function back() {
         if (keyboard) { dismissKeyboard(); return; }
         if (playerPanel) { stopStream(); return; }
+        if (cinejoyView && cinejoyView.active()) { cinejoyView.back(); return; }
         if (currentView === 'opening' && panelOpen) { cancelNavigation(); return; }
         if (currentView === 'compatibility' && panelOpen) { compatibility.cancel(); home(); return; }
         if (!topFrame) { requestParent('menu'); return; }
@@ -1695,6 +2024,9 @@ if (typeof module === 'object' && module.exports) module.exports = SofaNavigatio
         var used = true;
         if (key === 10009 || key === 27) { cancelEnter(); back(); }
         else if (key === 403 || key === 113) { cancelEnter(); if (keyboard) dismissKeyboard(); showMenu(); }
+        else if (cinejoyView && cinejoyView.active() && [404, 405, 10252, 415, 19, 412, 417, 413].indexOf(key) !== -1) {
+            toast(key === 404 ? 'Use the arrows to select a Cinejoy card and OK to open it.' : 'Cinejoy playback is not available on Tizen 3. This overlay browses its catalog.');
+        }
         else if (playerPanel) {
             if (key === 37 || key === 39) {
                 var controls = playerPanel.querySelectorAll('button');
@@ -1743,6 +2075,11 @@ if (typeof module === 'object' && module.exports) module.exports = SofaNavigatio
             hud.appendChild(button('Go to player', function () { closePanel(); sites.playerElement().scrollIntoView(true); }));
         }
         hud.appendChild(button('Menu / Back', showMenu)); root.appendChild(hud); applyZoom(); updateCursor();
+        if (topFrame) cinejoyView = SofaCinejoyView({
+            base: function (title, subtitle) { var p = base(title, subtitle, true); currentView = 'cinejoy'; return p; },
+            el: el, button: button, row: row, choose: choose, keyboard: showKeyboard,
+            home: function () { home(); }, go: go
+        }, SofaCinejoyCatalog());
         if (!topFrame) window.parent.postMessage({sofa: 1, action: 'page-policy-request'}, '*');
         else sharePagePolicy();
         document.addEventListener('focusin', function (event) { focused = event.target; }, true);
@@ -1775,9 +2112,10 @@ if (typeof module === 'object' && module.exports) module.exports = SofaNavigatio
                     }, 500);
                 }
                 if (sites.isAether) compatibility.begin(false);
+                if (isCinejoyHome(location.href)) openCinejoy();
             }
         }
-        window.SofaBrowser = {version: '0.4.0', diagnostics: function () { return {blocking: blocker.enabled, blocked: blocker.count, popups: blocker.popups, atHome: atHome, topFrame: topFrame, mode: mode, pageZoom: pageZoom, matches: sites.matches().length, servers: sites.servers().length, compatibility: compatibility.status(), page: diagnostics.snapshot()}; }};
+        window.SofaBrowser = {version: '0.5.0', diagnostics: function () { return {blocking: blocker.enabled, blocked: blocker.count, popups: blocker.popups, atHome: atHome, topFrame: topFrame, mode: mode, pageZoom: pageZoom, matches: sites.matches().length, servers: sites.servers().length, compatibility: compatibility.status(), page: diagnostics.snapshot()}; }};
     }
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
 }());

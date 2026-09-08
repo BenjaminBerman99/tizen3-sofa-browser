@@ -1,4 +1,4 @@
-# Sofa Browser 0.4.0 for Tizen 3
+# Sofa Browser 0.5.0 for Tizen 3
 
 A remote-friendly TizenBrew browser for the Samsung UN55MU630D, with an arrow cursor, large event cards, bookmarks, best-effort ad filtering and an in-app video overlay.
 
@@ -7,10 +7,18 @@ A remote-friendly TizenBrew browser for the Samsung UN55MU630D, with an arrow cu
 In TizenBrew, open **Module Manager → Add GitHub Module** and enter:
 
 ```text
-BenjaminBerman99/tizen3-sofa-browser@v0.4.0
+BenjaminBerman99/tizen3-sofa-browser@v0.5.0
 ```
 
-Leave the field to save. Remove the older Sofa entry, fully close and reopen TizenBrew, then launch Sofa. Confirm **Sofa 0.4.0** on the home screen. No npm account or always-on computer is needed.
+Leave the field to save. Remove the older Sofa entry, fully close and reopen TizenBrew, then launch Sofa. Confirm **Sofa 0.5.0** on the home screen. No npm account or always-on computer is needed.
+
+## Cinejoy TV catalog
+
+Select **Cinejoy** from Sofa’s home screen. Browse collections and large title cards with the arrows and OK; Back returns to the previous catalog view. Each page holds up to 40 titles. Search and Movies/Series filters apply to the loaded page only. The collection catalog is a subset of Cinejoy’s website, not its full search service.
+
+The overlay loads directly from Sofa using Cinejoy’s credential-free public collection service at `https://lists.shegu.st/joy` and posters from `image.tmdb.org`. It does not need Cinejoy’s original page to start. A Cinejoy shortcut is added once if there is room in saved sites; existing entries keep their order. You can also enter `https://cinejoy.to/` in Open website.
+
+**Cinejoy playback does not work on Tizen 3 through this overlay.** The observed website player requires modern browser features including WebAssembly, which [Samsung supports from Tizen 5.5](https://developer.samsung.com/smarttv/develop/extension-libraries/webassembly/overview.html). Title details state this limitation. The original website link is optional; no full movie is inferred from its background trailer. An interface change cannot upgrade the TV’s engine. Catalog and poster connections also still need a physical-TV check.
 
 ## Play in Sofa
 
@@ -36,6 +44,6 @@ The experimental loader is retained for Aether HTML that successfully loads. AET
 
 ## Compatibility
 
-Tizen 3 uses Chromium 47. This module does not upgrade the browser engine, certificates or codecs. All 72 controlled checks passed, using ES5 parsing, desktop fixtures and mocked AVPlay; they cannot establish physical-TV streaming compatibility. Earlier home, match navigation and player layout improvements were confirmed on the target TV. Ad filtering is best effort.
+Tizen 3 uses Chromium 47. This module does not upgrade the browser engine, certificates or codecs. All 104 controlled checks passed, using ES5 parsing, desktop fixtures and mocked AVPlay; they cannot establish physical-TV streaming compatibility. Earlier home, match navigation and player layout improvements were confirmed on the target TV. Ad filtering is best effort.
 
-Default shortcuts: https://aether.ist/ and https://v2.streameast.ga/.
+Default shortcuts: https://aether.ist/, https://v2.streameast.ga/ and https://cinejoy.to/.
