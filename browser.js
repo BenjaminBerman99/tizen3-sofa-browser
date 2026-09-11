@@ -62,7 +62,7 @@ var SOFA_CSS = ".sofa-root { all: initial; position: fixed; z-index: 2147483646;
 /* The Mac helper owns its page, player and remote controls. */
 function SofaHelper() {
     'use strict';
-    var pagePath = '/sofa-movy/';
+    var pagePath = '/sofa-movy/v2/';
     function normalizeOrigin(value) {
         if (typeof value !== 'string') return null;
         var text = value.replace(/^\s+|\s+$/g, ''), match, parts, i;
@@ -81,7 +81,7 @@ function SofaHelper() {
     function isPage(value) {
         if (typeof value !== 'string' || /[\x00-\x20\x7f\\]/.test(value)) return false;
         var match = /^(http:\/\/[^/?#]+)(\/[^?#]*)(?:[?#].*)?$/i.exec(value);
-        return !!(match && match[2] === pagePath && normalizeOrigin(match[1]) === match[1].toLowerCase());
+        return !!(match && (match[2] === pagePath || match[2] === '/sofa-movy/') && normalizeOrigin(match[1]) === match[1].toLowerCase());
     }
     return {normalizeOrigin: normalizeOrigin, launchURL: launchURL, isPage: isPage};
 }
@@ -1663,7 +1663,7 @@ function SofaCinejoyView(ui, catalog) {
         showList('Choose a stream server', items, items.length ? 'These are the source links on this event page. Try another free server if one does not load.' : 'No server links were found on this page.');
     }
     function showDiagnostics(title, report) {
-        var p = base('Error details', title + ' · Sofa 0.6.0'); currentView = 'diagnostics'; p.className = 'sofa-panel sofa-details';
+        var p = base('Error details', title + ' · Sofa 0.7.0'); currentView = 'diagnostics'; p.className = 'sofa-panel sofa-details';
         p.appendChild(el('p', 'sofa-muted', 'Report the OPEN/AETHER code or the first error line. These details stay on the TV.'));
         var content = el('pre', 'sofa-error-report', String(report || 'No details available.').slice(0, 5000));
         var controls = row(p);
@@ -1692,7 +1692,7 @@ function SofaCinejoyView(ui, catalog) {
         side.appendChild(button('☆  Saved sites', savedSites, 'sofa-nav'));
         side.appendChild(button('Movy settings', movySettings, 'sofa-nav'));
         side.appendChild(button('?  Remote guide', help, 'sofa-nav'));
-        side.appendChild(el('div', 'sofa-device', 'MADE FOR YOUR TV\nSamsung UN55MU630D\nTizen 3 · Sofa 0.6.0'));
+        side.appendChild(el('div', 'sofa-device', 'MADE FOR YOUR TV\nSamsung UN55MU630D\nTizen 3 · Sofa 0.7.0'));
         p.appendChild(side);
         var main = el('main', 'sofa-main'); p.appendChild(main);
         var top = el('div', 'sofa-home-top');
@@ -1725,7 +1725,7 @@ function SofaCinejoyView(ui, catalog) {
         var movy = button('', openMovy, 'sofa-movy-card');
         movy.appendChild(el('span', 'sofa-card-symbol', 'M'));
         movy.appendChild(el('strong', '', 'Movy'));
-        movy.appendChild(el('small', '', movyOrigin ? 'From your Mac' : 'Connect your Mac')); cards.appendChild(movy);
+        movy.appendChild(el('small', '', movyOrigin ? 'Player 2 · Seek, resume & quality' : 'Connect your Mac')); cards.appendChild(movy);
         var add = button('', addSite, 'sofa-card sofa-add-card');
         add.appendChild(el('span', 'sofa-card-symbol', '+')); add.appendChild(el('strong', '', 'Add a website'));
         add.appendChild(el('small', '', 'Make yourself at home')); cards.appendChild(add);
@@ -2182,7 +2182,7 @@ function SofaCinejoyView(ui, catalog) {
                 if (isCinejoyHome(location.href)) openCinejoy();
             }
         }
-        window.SofaBrowser = {version: '0.6.0', diagnostics: function () { return {blocking: blocker.enabled, blocked: blocker.count, popups: blocker.popups, atHome: atHome, topFrame: topFrame, mode: mode, pageZoom: pageZoom, matches: sites.matches().length, servers: sites.servers().length, compatibility: compatibility.status(), page: diagnostics.snapshot()}; }};
+        window.SofaBrowser = {version: '0.7.0', diagnostics: function () { return {blocking: blocker.enabled, blocked: blocker.count, popups: blocker.popups, atHome: atHome, topFrame: topFrame, mode: mode, pageZoom: pageZoom, matches: sites.matches().length, servers: sites.servers().length, compatibility: compatibility.status(), page: diagnostics.snapshot()}; }};
     }
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
 }());
