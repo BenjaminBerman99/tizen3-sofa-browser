@@ -74,14 +74,14 @@ function SofaHelper() {
         if (!(parts[0] === 10 || parts[0] === 172 && parts[1] >= 16 && parts[1] <= 31 || parts[0] === 192 && parts[1] === 168)) return null;
         return 'http://' + parts.join('.') + ':8790';
     }
-    function launchURL(value) {
+    function launchURL(value, mode) {
         var origin = normalizeOrigin(value);
-        return origin ? origin + pagePath : null;
+        return origin ? origin + (mode === 'sports' ? '/sofa-sports/' : pagePath) : null;
     }
     function isPage(value) {
         if (typeof value !== 'string' || /[\x00-\x20\x7f\\]/.test(value)) return false;
         var match = /^(http:\/\/[^/?#]+)(\/[^?#]*)(?:[?#].*)?$/i.exec(value);
-        return !!(match && (match[2] === pagePath || match[2] === '/sofa-movy/') && normalizeOrigin(match[1]) === match[1].toLowerCase());
+        return !!(match && (match[2] === pagePath || match[2] === '/sofa-movy/' || match[2] === '/sofa-sports/') && normalizeOrigin(match[1]) === match[1].toLowerCase());
     }
     return {normalizeOrigin: normalizeOrigin, launchURL: launchURL, isPage: isPage};
 }
@@ -1372,27 +1372,38 @@ function SofaCinejoyView(ui, catalog) {
         if (!topFrame || !cinejoyView) return;
         navigation.cancel(); compatibility.cancel(); restoreFrameControl(); cinejoyView.open();
     }
+    var helperMode = 'movy';
+    function openSports() {
+        if (!atHome) { home('sports', 'open'); return; }
+        helperMode = 'sports';
+        if (!movyOrigin) { movySettings('sports'); return; }
+        go(helper.launchURL(movyOrigin, 'sports'));
+    }
     function openMovy() {
+        helperMode = 'movy';
         if (!atHome) { home('movy', 'open'); return; }
         if (!movyOrigin) { movySettings(); return; }
         go(helper.launchURL(movyOrigin));
     }
-    function movySettings() {
+    function movySettings(mode) {
+        helperMode = mode === 'sports' ? 'sports' : 'movy';
+        var isSports = helperMode === 'sports';
+        function openSelected() { if (isSports) openSports(); else openMovy(); }
         if (!atHome) { home('movy', 'settings'); return; }
-        var p = base('Movy from your Mac', 'Keep the Movy helper running on your Mac while you watch.');
+        var p = base(isSports ? 'Live sports from your Mac' : 'Movy from your Mac', 'Keep the helper running on your Mac while you watch.');
         currentView = 'movy-settings';
         p.appendChild(el('p', 'sofa-muted', 'Enter the Mac IP address shown by the helper. Your TV and Mac must be on the same network.'));
         var input = el('input', 'sofa-input'); input.type = 'text'; input.value = movyOrigin || '';
         input.placeholder = 'Mac IP address'; input.setAttribute('aria-label', 'Mac address'); p.appendChild(input);
         var controls = row(p);
-        var save = button('Save and open Movy', function () {
+        var save = button(isSports ? 'Save and open live sports' : 'Save and open Movy', function () {
             var origin = helper.normalizeOrigin(input.value);
             if (!origin) { toast('Enter the private Mac IP address shown by the helper. Use HTTP and port 8790 if you include them.'); choose(input); return; }
             movyOrigin = origin; input.value = origin; open.disabled = false;
             if (!put('movyHelper', origin)) { choose(open); return; }
-            openMovy();
+            openSelected();
         }, 'sofa-primary'); controls.appendChild(save);
-        var open = button('Open Movy', openMovy); open.disabled = !movyOrigin; controls.appendChild(open);
+        var open = button(isSports ? 'Open live sports' : 'Open Movy', openSelected); open.disabled = !movyOrigin; controls.appendChild(open);
         controls.appendChild(button('Back to Sofa', renderHome));
         input.onclick = function () { showKeyboard(input, 'Mac address', function () { choose(save); }); };
         choose(input);
@@ -1581,6 +1592,7 @@ function SofaCinejoyView(ui, catalog) {
         var url = C.normalize(value);
         if (!url) { toast('Enter a website address, such as https://example.com'); return; }
         if (blocker.enabled && C.blocked(url)) { toast('That address matches the ad blocklist.'); return; }
+        if (/^(?:www\.)?(?:v2\.)?streameast\.(?:ga|to|io|xyz|app)$/i.test(C.host(url))) { openSports(); return; }
         if (forceMedia || C.isMedia(url)) { startStream(url); return; }
         if (isCinejoyHome(url) && topFrame) { openCinejoy(); return; }
         navigation.cancel(); openingURL = url;
@@ -1663,7 +1675,7 @@ function SofaCinejoyView(ui, catalog) {
         showList('Choose a stream server', items, items.length ? 'These are the source links on this event page. Try another free server if one does not load.' : 'No server links were found on this page.');
     }
     function showDiagnostics(title, report) {
-        var p = base('Error details', title + ' · Sofa 0.7.0'); currentView = 'diagnostics'; p.className = 'sofa-panel sofa-details';
+        var p = base('Error details', title + ' · Sofa 0.8.0'); currentView = 'diagnostics'; p.className = 'sofa-panel sofa-details';
         p.appendChild(el('p', 'sofa-muted', 'Report the OPEN/AETHER code or the first error line. These details stay on the TV.'));
         var content = el('pre', 'sofa-error-report', String(report || 'No details available.').slice(0, 5000));
         var controls = row(p);
@@ -1690,9 +1702,10 @@ function SofaCinejoyView(ui, catalog) {
         side.appendChild(button('↗  Open website', function () { address(false); }, 'sofa-nav'));
         side.appendChild(button('▷  Play a stream', function () { address(true); }, 'sofa-nav'));
         side.appendChild(button('☆  Saved sites', savedSites, 'sofa-nav'));
+        side.appendChild(button('Live sports', openSports, 'sofa-nav'));
         side.appendChild(button('Movy settings', movySettings, 'sofa-nav'));
         side.appendChild(button('?  Remote guide', help, 'sofa-nav'));
-        side.appendChild(el('div', 'sofa-device', 'MADE FOR YOUR TV\nSamsung UN55MU630D\nTizen 3 · Sofa 0.7.0'));
+        side.appendChild(el('div', 'sofa-device', 'MADE FOR YOUR TV\nSamsung UN55MU630D\nTizen 3 · Sofa 0.8.0'));
         p.appendChild(side);
         var main = el('main', 'sofa-main'); p.appendChild(main);
         var top = el('div', 'sofa-home-top');
@@ -1837,6 +1850,7 @@ function SofaCinejoyView(ui, catalog) {
         if (sites.isStreamEast) actions.appendChild(button('StreamEast TV match list', showMatches));
         actions.appendChild(button('Cinejoy TV catalog', openCinejoy));
         actions.appendChild(button('Movy from your Mac', openMovy));
+        actions.appendChild(button('Live sports from your Mac', openSports));
         if (sites.playerElement()) actions.appendChild(button('Choose stream server', showServers));
         actions.appendChild(button('Open another website', function () { address(false); }));
         actions.appendChild(button('← Page back', function () { closePanel(); if (history.length > 1) history.back(); else home(); }));
@@ -2162,12 +2176,13 @@ function SofaCinejoyView(ui, catalog) {
             ['MediaPlayPause', 'MediaPlay', 'MediaPause', 'MediaStop', 'MediaFastForward', 'MediaRewind', 'ColorF0Red', 'ColorF1Green', 'ColorF2Yellow', 'ColorF3Blue'].forEach(function (name) { try { tizen.tvinputdevice.registerKey(name); } catch (ignore) {} });
             if (atHome) {
                 document.title = 'Sofa Browser'; document.body.style.background = '#0c1119'; renderHome();
-                var hash = location.hash, match = hash.match(/&play=([^&]*)/), save = hash.match(/&save=([^&]*)/), movy = hash.match(/&movy=(open|settings)(?:&|$)/);
+                var hash = location.hash, match = hash.match(/&play=([^&]*)/), save = hash.match(/&save=([^&]*)/), movy = hash.match(/&movy=(open|settings)(?:&|$)/), sports = /&sports=open(?:&|$)/.test(hash);
                 try {
-                    if (match || save || movy) history.replaceState(null, '', HOME + '#sofa-home');
+                    if (match || save || movy || sports) history.replaceState(null, '', HOME + '#sofa-home');
                     if (match) { var url = C.normalize(decodeURIComponent(match[1])); if (url) startStream(url); }
                     if (save) { var data = JSON.parse(decodeURIComponent(save[1])); if (C.normalize(data.url)) addSite(data.url, typeof data.name === 'string' ? data.name : ''); }
-                    if (!match && !save && movy) { if (movy[1] === 'open') openMovy(); else movySettings(); }
+                    if (!match && !save && sports) openSports();
+                    if (!match && !save && !sports && movy) { if (movy[1] === 'open') openMovy(); else movySettings(); }
                 } catch (ignore2) { toast('That saved address could not be read.'); }
             } else {
                 toast('Arrows move the cursor · OK selects · Back opens menu');
@@ -2182,7 +2197,7 @@ function SofaCinejoyView(ui, catalog) {
                 if (isCinejoyHome(location.href)) openCinejoy();
             }
         }
-        window.SofaBrowser = {version: '0.7.0', diagnostics: function () { return {blocking: blocker.enabled, blocked: blocker.count, popups: blocker.popups, atHome: atHome, topFrame: topFrame, mode: mode, pageZoom: pageZoom, matches: sites.matches().length, servers: sites.servers().length, compatibility: compatibility.status(), page: diagnostics.snapshot()}; }};
+        window.SofaBrowser = {version: '0.8.0', diagnostics: function () { return {blocking: blocker.enabled, blocked: blocker.count, popups: blocker.popups, atHome: atHome, topFrame: topFrame, mode: mode, pageZoom: pageZoom, matches: sites.matches().length, servers: sites.servers().length, compatibility: compatibility.status(), page: diagnostics.snapshot()}; }};
     }
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
 }());

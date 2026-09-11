@@ -1,10 +1,18 @@
 # Sofa Browser for Samsung UN55MU630D
 
-**Sofa 0.7.0** is a remote-friendly TizenBrew module for Tizen 3, with bookmarks, an on-screen keyboard, best-effort ad filtering and video controls. Movy movies and TV shows use a separate Mac companion.
+**Sofa 0.8.0** is a remote-friendly TizenBrew module for Tizen 3, with bookmarks, an on-screen keyboard, best-effort ad filtering and video controls. Movy movies and TV shows use a separate Mac companion.
 
-## New in 0.7: Movy Player 2
+## New in 0.8: Sofa live sports
 
-Sofa's Movy card now opens a separate player provided by **Mac helper 0.3.0**. It includes:
+Select **StreamEast** or **Live sports** in Sofa. The same Mac address used for Movy opens Sofa's own event list, sport filters, server picker and full-screen live player. **Mac helper 0.4.0 is required and must stay running.**
+
+The TV does not load StreamEast pages, remote player frames, chat or ads in this workflow. The Mac opens the chosen free server and converts a supported stream to a rolling 720p H.264/AAC MPEG-TS stream. TV controls include **Play/Pause**, **Go live**, **Change server** and **Back**. Resuming a paused live event catches up toward the live edge; this is not a recording or a full-event rewind feature.
+
+Server availability varies. A failed server offers retry or another server. Subscription-labelled servers stay unavailable in the helper; encrypted or unsupported streams are rejected. The Mac may show its separate helper browser while preparing or playing a source. No browser extension is required.
+
+## Movy Player 2
+
+Sofa's Movy card now opens a separate player provided by **Mac helper 0.4.0**. It includes:
 
 - **Seek to time:** a dedicated timeline. Left/right moves ten seconds; holding moves in one-minute steps. OK applies the time; Back cancels.
 - **Resume / Start over:** reopening a partly watched movie or episode offers its saved position. Every episode is tracked separately.
@@ -18,10 +26,10 @@ The new controls have their own dialogs and two rows of player buttons. The help
 In **TizenBrew → Module Manager → Add GitHub Module**, enter:
 
 ```text
-BenjaminBerman99/tizen3-sofa-browser@v0.7.0
+BenjaminBerman99/tizen3-sofa-browser@v0.8.0
 ```
 
-Leave the entry field to save. Remove the older Sofa module entry, fully close and reopen TizenBrew, and launch Sofa. Its home screen should show **Sofa 0.7.0**. No npm account is needed. A versioned tag avoids cached older module files.
+Leave the entry field to save. Remove the older Sofa module entry, fully close and reopen TizenBrew, and launch Sofa. Its home screen should show **Sofa 0.8.0**. No npm account is needed. A versioned tag avoids cached older module files.
 
 ### Mac companion
 
@@ -47,7 +55,7 @@ Quality choices vary by title. Only supported H.264/AAC sources up to **720p** a
 The launchpad keeps the supplied Aether and StreamEast addresses and the Cinejoy catalog. Add other sites with **Add a website**. Saved bookmarks remain separate from the Movy card.
 
 - **Aether** still does not open on this TV, including in Samsung Internet. Its experimental JavaScript compatibility loader cannot fix a connection/certificate failure before the page loads.
-- **StreamEast** has a larger match list, server controls, pointer navigation and accessible-video discovery. Playback remains dependent on its players and the TV's capabilities.
+- **StreamEast** now opens Sofa live sports through the Mac helper. Existing bookmarks are retained, but selecting a StreamEast bookmark hands off to the local Sofa interface.
 - **Cinejoy** has a custom catalog, but its playback did not work on Tizen 3.
 
 On websites, arrows move the pointer. Push against the screen's top/bottom edge to scroll. OK activates an element; holding OK opens Sofa's menu. Back opens the menu. The menu offers page history, zoom, focus/pointer navigation and video discovery. Select a text box to use the remote keyboard.
@@ -66,7 +74,7 @@ Bookmarks and the Mac address use localStorage on TizenBrew's launcher origin; s
 
 ## Verification and development
 
-Sofa 0.7 passed **62 unit checks and 53 controlled desktop browser checks**, including helper setup, handoff, remote navigation and 720p/1080p layouts. Helper 0.3 has separate source, streaming and Player 2 control checks. The owner previously confirmed movies and Friends S3 E3 playing on the physical UN55MU630D, plus a complete 366.378-second MPEG-TS/HLS sample. **The new Player 2 controls still require a physical-TV check.** These tests do not establish that every title plays or that a full movie has been watched reliably.
+The owner confirmed Movy Player 2 working on the Samsung UN55MU630D. Sofa 0.8 adds separately tested live-sports catalogue, controls and H.264/AAC conversion. Desktop testing verifies that the sports interface requests only local Mac resources, including its live video. Physical-TV verification of the new live player remains pending. Source availability can change, and a working server does not establish that every event or server works.
 
 For the full source package:
 
